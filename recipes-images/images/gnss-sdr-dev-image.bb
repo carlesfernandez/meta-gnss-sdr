@@ -8,6 +8,9 @@ LICENSE = "MIT"
 
 require gnuradio-dev-image.bb
 
+CORE_IMAGE_EXTRA_INSTALL += "\
+    packagegroup-gnss-sdr-base \
+"
 
 FORTRAN_TOOLS = " \
     gfortran \
@@ -16,7 +19,7 @@ FORTRAN_TOOLS = " \
     libgfortran-dev \
  "
 
-IMAGE_INSTALL += "${FORTRAN_TOOLS}"
+#IMAGE_INSTALL += "${FORTRAN_TOOLS}"
 
 
 
