@@ -1,0 +1,72 @@
+#
+# This file is your local configuration file and is where all local user settings
+# are placed. The comments in this file give some guide to the options a new user
+# to the system might want to change but pretty much any configuration option can
+# be set in this file. More adventurous users can look at local.conf.extended 
+# which contains other examples of configuration which can be placed in this file
+# but new users likely won't need any of them initially.
+#
+# Lines starting with the '#' character are commented out and in some cases the 
+# default values are provided as comments to show people example syntax. Enabling
+# the option is a question of removing the # character and making any change to the
+# variable as required.
+
+DISTRO_FEATURES_append = " opengl x11"
+
+#MACHINE ?= "qemuarm"
+#MACHINE ?= "qemumips"
+#MACHINE ?= "qemuppc"
+#MACHINE ?= "qemux86"
+#MACHINE ?= "qemux86-64"
+#
+# This sets the default machine to be qemux86 if no other machine is selected:
+MACHINE ??= "zedboard-zynq7"
+
+DEFAULTTUNE_ettus-e300 = "armv7ahf-neon"
+DEFAULTTUNE_ettus-e1xx = "armv7ahf-neon"
+DEFAULTTUNE_zedboard-zynq7 = "armv7ahf-neon"
+DEFAULTTUNE_zc702-zynq7 = "armv7ahf-neon"
+DEFAULTTUNE_odroid-xu = "armv7ahf-neon"
+DEFAULTTUNE_nitrogen6x = "armv7ahf-neon"
+DEFAULTTUNE_keystone-evm = "armv7ahf-neon"
+
+#DL_DIR ?= "${TOPDIR}/downloads"
+#SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
+#TMPDIR = "${TOPDIR}/tmp"
+
+PACKAGE_CLASSES ?= "package_ipk"
+
+#SDKMACHINE ?= "i686"
+
+EXTRA_IMAGE_FEATURES = "debug-tweaks tools-profile tools-sdk dev-pkgs dbg-pkgs"
+EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
+
+IMAGE_FSTYPES = "tar.gz"
+
+USER_CLASSES ?= "buildstats image-mklibs rm_work"
+
+RM_WORK_EXCLUDE = "base-dev-image uhd-dev-image gnuradio-dev-image \
+                   gnuradio-demo-image gnuradio-video-demo-image"
+
+PATCHRESOLVE = "noop"
+
+BB_DISKMON_DIRS = "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    ABORT,${TMPDIR},100M,1K \
+    ABORT,${DL_DIR},100M,1K \
+    ABORT,${SSTATE_DIR},100M,1K" 
+
+#SSTATE_MIRRORS ?= "\
+#file://.* http://someserver.tld/share/sstate/PATH;downloadfilename=PATH \n \
+#file://.* file:///some/local/dir/sstate/PATH"
+
+CONF_VERSION = "1"
+
+FORTRAN_forcevariable = ",fortran"
+RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath"
+
+PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
+PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+
