@@ -21,11 +21,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = "\
     libbladerf \
     libbladerf-bin \
     gflags \
-    glog \
-    gfortran \
-    gfortran-symlinks \
-    libgfortran \
-    libgfortran-dev \
+    glog \ 
     lapack \
 "
 
