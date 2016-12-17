@@ -4,6 +4,7 @@ environment suitable for building GNURadio out of tree blocks installed."
 #EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs dbg-pkgs"
 LICENSE = "MIT"
 
+#TOOLCHAIN_HOST_TASK_append = "libquadmath"
 #EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
 
 require gnuradio-dev-image.bb
