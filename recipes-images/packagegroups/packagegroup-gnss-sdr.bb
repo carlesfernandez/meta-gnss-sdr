@@ -23,7 +23,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = "\
     libbladerf \
     libbladerf-bin \
     gflags \
-    glog \ 
+    glog \
     armadillo \
 "
 
