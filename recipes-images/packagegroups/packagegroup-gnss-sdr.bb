@@ -14,6 +14,8 @@ PROVIDES = "${PACKAGES}"
 SUMMARY_packagegroup-gnss-sdr-base = "Required packages."
 RDEPENDS_packagegroup-gnss-sdr-base = "\
     gnuradio \
+    python-mako \
+    python-six \
     gr-ettus \
     gr-osmosdr \
     uhd \
@@ -24,5 +26,4 @@ RDEPENDS_packagegroup-gnss-sdr-base = "\
     glog \ 
     armadillo \
 "
-
 
