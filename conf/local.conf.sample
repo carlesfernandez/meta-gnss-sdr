@@ -69,3 +69,6 @@ RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath"
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+
+PREFERRED_VERSION_python-six = "1.10.0"
+

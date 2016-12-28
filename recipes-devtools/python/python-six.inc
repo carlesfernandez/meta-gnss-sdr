@@ -10,6 +10,12 @@ SRC_URI[sha256sum] = "105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a
 
 UPSTREAM_CHECK_URI = "https://pypi.python.org/pypi/six/"
 UPSTREAM_CHECK_REGEX = "/six/(?P<pver>(\d+[\.\-_]*)+)"
+# need to export these variables for python-config to work
+export BUILD_SYS
+export HOST_SYS
+export STAGING_INCDIR
+export STAGING_LIBDIR
+
 
 BBCLASSEXTEND = "native nativesdk"
 
