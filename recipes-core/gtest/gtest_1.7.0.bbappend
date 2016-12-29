@@ -1,5 +1,7 @@
 # GTest developers recommend to use source code instead of linking
 # against a prebuilt library.
+BBCLASSEXTEND += " native"
+RDEPENDS_${PN}-dev = ""
 do_install() {
     _incdir=${includedir}/gtest
     _srcdir=${prefix}/src/gtest
