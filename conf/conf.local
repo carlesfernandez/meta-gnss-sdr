@@ -67,4 +67,4 @@ FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath"
 
 PREFERRED_VERSION_python-six = "1.10.0"
-
+PREFERRED_VERSION_glog = "0.3.4"
