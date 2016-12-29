@@ -3,14 +3,12 @@ URL = "http://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3c34afdc3adf82d2448f12715a255122"
 
-#PREFERRED_VERSION_python-six = "1.10.0"
-
-DEPENDS = "volk gnuradio armadillo uhd rtl-sdr libbladerf \
-           openssl gtest gflags glog python python-mako python-six python-six-native" 
+DEPENDS = "volk uhd gnuradio armadillo gflags glog  \
+           gnutls python-mako python-six python-six-native"
 
 PACKAGECONFIG ??= "osmosdr unittest"
 
-PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF, gr-osmosdr, "
+PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr libbladerf gr-osmosdr, "
 PACKAGECONFIG[unittest] = "-DENABLE_UNIT_TESTING=ON,-DENABLE_UNIT_TESTING=OFF, gtest, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 
