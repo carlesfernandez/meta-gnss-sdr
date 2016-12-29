@@ -7,6 +7,7 @@ inherit packagegroup
 
 PACKAGES = "\
     packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-bin \
 "
 
 PROVIDES = "${PACKAGES}"
@@ -25,5 +26,22 @@ RDEPENDS_packagegroup-gnss-sdr-base = "\
     gflags \
     glog \
     armadillo \
+"
+
+SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary"
+DEPENDS_packagegroup-gnss-sdr-bin = "\
+    gnuradio \
+    python-mako \
+    python-six \
+    gr-ettus \
+    gr-osmosdr \
+    uhd \
+    rtl-sdr \
+    libbladerf \
+    libbladerf-bin \
+    gflags \
+    glog \
+    armadillo \
+    gnss-sdr \
 "
 
