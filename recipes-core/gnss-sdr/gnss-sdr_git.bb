@@ -6,13 +6,12 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=3c34afdc3adf82d2448f12715a255122"
 #PREFERRED_VERSION_python-six = "1.10.0"
 
 DEPENDS = "volk gnuradio armadillo uhd rtl-sdr libbladerf \
-           openssh git-native gflags glog python python-mako python-six python-six-native" 
+           openssl gtest gflags glog python python-mako python-six python-six-native" 
 
-PACKAGECONFIG ??= "osmosdr"
+PACKAGECONFIG ??= "osmosdr unittest"
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF, gr-osmosdr, "
-PACKAGECONFIG[staticlibs] = "-DENABLE_STATIC_LIBS=ON,-DENABLE_STATIC_LIBS=OFF "
-PACKAGECONFIG[test] = "-DENABLE_UNIT_TESTING=ON,-DENABLE_UNIT_TESTING=OFF "
+PACKAGECONFIG[unittest] = "-DENABLE_UNIT_TESTING=ON,-DENABLE_UNIT_TESTING=OFF, gtest, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 
 export BUILD_SYS

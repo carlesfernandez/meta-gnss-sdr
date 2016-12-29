@@ -17,6 +17,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = "\
     gnuradio \
     python-mako \
     python-six \
+    openssh \
     gr-ettus \
     gr-osmosdr \
     uhd \
@@ -26,6 +27,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = "\
     gflags \
     glog \
     armadillo \
+    gtest \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary"
