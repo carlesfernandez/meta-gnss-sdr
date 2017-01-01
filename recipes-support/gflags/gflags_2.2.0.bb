@@ -18,3 +18,4 @@ EXTRA_OECMAKE="-DBUILD_SHARED_LIBS=ON"
 PACKAGES =+ "${PN}-bash-completion"
 FILES_${PN}-bash-completion += "${bindir}/gflags_completions.sh"
 RDEPENDS_${PN}-bash-completion = "bash-completion"
+
