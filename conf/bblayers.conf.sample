@@ -16,7 +16,6 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-fsl-arm \
   ##COREBASE##/../meta-fsl-arm-extra \
-  ##COREBASE##/../meta-ti \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
   "
