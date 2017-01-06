@@ -7,6 +7,11 @@ SRC_URI = "http://sourceforge.net/projects/arma/files/armadillo-7.600.1.tar.xz"
 SRC_URI[md5sum] = "7edc68972ad5f0121efcd1173551d9a1"
 SRC_URI[sha256sum] = "f3a35c2a56dc706e9c413438d5b3063a0df2141515efaf2d1170d1944573afb7"
 
-inherit cmake 
+inherit cmake
 
-
+FILES_${PN}-dev += " \
+  /usr/share/Armadillo/CMake/ArmadilloLibraryDepends-noconfig.cmake \
+  /usr/share/Armadillo/CMake/ArmadilloLibraryDepends.cmake \
+  /usr/share/Armadillo/CMake/ArmadilloConfig.cmake \
+  /usr/share/Armadillo/CMake/ArmadilloConfigVersion.cmake \
+"
