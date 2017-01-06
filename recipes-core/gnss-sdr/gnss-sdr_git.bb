@@ -1,5 +1,6 @@
 SUMMARY = "GNSS-SDR: An open source software defined GNSS receiver"
-URL = "http://gnss-sdr.org"
+AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
+HOMEPAGE = "http://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3c34afdc3adf82d2448f12715a255122"
 
@@ -15,8 +16,6 @@ PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
-# ALLOW_EMPTY_${PN} = "1"
-
 PV = "0.0.8"
 
 SRCREV = "e846b3154790fa4c284a54e16d212719237312b4"
@@ -30,22 +29,7 @@ S="${WORKDIR}/git"
 
 inherit distutils-base cmake pkgconfig
 
-
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
-
-# do_install() {
-#    install -d ${D}${bindir}
-#    install -d ${D}${mandir}/man1
-
-#    install -m 0755 ${S}/install/gnss-sdr ${D}${bindir}/
-#    install -m 0755 ${S}/install/volk_gnsssdr_profile ${D}${bindir}/
-#    install -m 0755 ${S}/install/volk_gnsssdr-config-info ${D}${bindir}/
-#    install -m 0755 ${S}/install/front-end-cal ${D}${bindir}/
-#    install -m 0644 volk_gnsssdr-config-info.1.gz ${D}${mandir}/man1/
-#    install -m 0644 gnss-sdr.1.gz ${D}${mandir}/man1/
-#    install -m 0644 front-end-cal.1.gz ${D}${mandir}/man1/
-#    install -m 0644 volk_gnsssdr_profile.1.gz ${D}${mandir}/man1/
-# }
 
 FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/volk_gnsssdr_profile \
@@ -95,7 +79,7 @@ FILES_${PN} = "${bindir}/gnss-sdr \
      /usr/share/gnss-sdr/conf/gnss-sdr_Hybrid_nsr.conf \
      /usr/share/gnss-sdr/conf/gnss-sdr_Galileo_E1_ishort.conf \
      /usr/share/gnss-sdr/conf/gnss-sdr_Galileo_E1_nsr.conf \
-    "
+"
 
 FILES_${PN}-dbg += " \
      /usr/src/debug/gnss-sdr/* \
