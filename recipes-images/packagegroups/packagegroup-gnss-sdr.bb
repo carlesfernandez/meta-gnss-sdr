@@ -5,46 +5,37 @@ LICENSE = "MIT"
 
 inherit packagegroup
 
-PACKAGES = "\
+PACKAGES = " \
     packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-bin \
+    packagegroup-gnss-sdr-drivers \
 "
 
 PROVIDES = "${PACKAGES}"
 
 SUMMARY_packagegroup-gnss-sdr-base = "Required packages."
-RDEPENDS_packagegroup-gnss-sdr-base = "\
+RDEPENDS_packagegroup-gnss-sdr-base = " \
     gnuradio \
-    python-mako \
-    python-six \
-    gnutls \
-    gr-ettus \
-    gr-osmosdr \
-    uhd \
-    rtl-sdr \
-    libbladerf \
-    libbladerf-bin \
     gflags \
     glog \
     armadillo \
     gtest \
-"
-
-SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary"
-DEPENDS_packagegroup-gnss-sdr-bin = "\
-    gnuradio \
+    gnutls \
     python-mako \
     python-six \
-    gr-ettus \
-    gr-osmosdr \
+    packagegroup-gnss-sdr-drivers \
+"
+
+SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
+DEPENDS_packagegroup-gnss-sdr-bin = " \
+    gnss-sdr \
+"
+
+SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers."
+DEPENDS_packagegroup-gnss-sdr-drivers = " \
     uhd \
     rtl-sdr \
     libbladerf \
     libbladerf-bin \
-    gflags \
-    glog \
-    armadillo \
-    gnutls \
-    gnss-sdr \
+    gr-osmosdr \
 "
-
