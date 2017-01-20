@@ -13,9 +13,8 @@ FILES_${PN}-dev += "${libdir}/cmake"
 
 inherit cmake
 
-EXTRA_OECMAKE="-DBUILD_SHARED_LIBS=ON"
+EXTRA_OECMAKE="-DBUILD_SHARED_LIBS=ON -DREGISTER_INSTALL_PREFIX=OFF"
 
 PACKAGES =+ "${PN}-bash-completion"
 FILES_${PN}-bash-completion += "${bindir}/gflags_completions.sh"
 RDEPENDS_${PN}-bash-completion = "bash-completion"
-
