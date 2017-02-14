@@ -15,7 +15,9 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-python \
   ##COREBASE##/../meta-qt4 \
   ##COREBASE##/../meta-raspberrypi \
+  ##COREBASE##/../meta-swupdate \
   ##COREBASE##/../meta-fsl-arm \
+  ##COREBASE##/../meta-freescale \
   ##COREBASE##/../meta-freescale-3rdparty \
   ##COREBASE##/../meta-ti \
   ##COREBASE##/../meta-sdr \
