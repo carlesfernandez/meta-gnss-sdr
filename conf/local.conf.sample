@@ -2,17 +2,21 @@
 # This file is your local configuration file and is where all local user settings
 # are placed. The comments in this file give some guide to the options a new user
 # to the system might want to change but pretty much any configuration option can
-# be set in this file. More adventurous users can look at local.conf.extended
-# which contains other examples of configuration which can be placed in this file
-# but new users likely won't need any of them initially.
+# be set in this file.
 #
 # Lines starting with the '#' character are commented out and in some cases the
 # default values are provided as comments to show people example syntax. Enabling
 # the option is a question of removing the # character and making any change to the
 # variable as required.
 
+#
+# GUI support
+#
 # Comment this line to remove GUI support:
 DISTRO_FEATURES_append = " opengl x11"
+# If you remove GUI support, please also uncomment the following two lines:
+#PACKAGECONFIG_pn-gnuradio = "uhd logging"
+#PACKAGECONFIG_pn-gr-ettus = ""
 
 
 #
@@ -120,7 +124,7 @@ USER_CLASSES ?= "buildstats image-mklibs rm_work"
 
 RM_WORK_EXCLUDE = "base-dev-image uhd-dev-image gnuradio-dev-image \
                    gnuradio-demo-image gnuradio-video-demo-image gnss-sdr-dev-image \
-                   gnss-sdr-demo-image"
+                   gnss-sdr-demo-image gnss-sdr-minimal-image"
 
 
 
