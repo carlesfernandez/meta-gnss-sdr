@@ -16,12 +16,12 @@ PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
-PV = "0.0.8"
+PV = "0.0.9"
 
-SRCREV = "e846b3154790fa4c284a54e16d212719237312b4"
+SRCREV = "32e4d227af032365cfd7f9291d9f2c2fca57d99d"
 
 # Make it easy to test against branches
-GIT_BRANCH = "next"
+GIT_BRANCH = "master"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
 
