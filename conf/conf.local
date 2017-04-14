@@ -36,7 +36,8 @@ DISTRO_FEATURES_append = " opengl x11"
 # This sets the default machine to be zedboard-zynq if no other machine is selected:
 MACHINE ??= "zedboard-zynq7"
 
-DEFAULTTUNE_ettus-e300 = "armv7ahf-neon"
+DEFAULTTUNE_ettus-e3xx-sg1 = "armv7ahf-neon"
+DEFAULTTUNE_ettus-e3xx-sg3 = "armv7ahf-neon"
 DEFAULTTUNE_ettus-e1xx = "armv7ahf-neon"
 DEFAULTTUNE_zedboard-zynq7 = "armv7ahf-neon"
 DEFAULTTUNE_zc702-zynq7 = "armv7ahf-neon"
