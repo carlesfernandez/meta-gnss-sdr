@@ -1,11 +1,11 @@
 SUMMARY = "C++ linear algebra library"
 HOMEPAGE = "http://arma.sourceforge.net/"
-LICENSE = "MPL-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=cfd7d66d2864c38232ec1ef20b27c13a"
+LICENSE = "Apache-2.0"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d273d63619c9aeaf15cdaf76422c4f87"
 SRC_URI = "http://sourceforge.net/projects/arma/files/armadillo-${PV}.tar.xz"
 
-SRC_URI[md5sum] = "8dee8bc37f7cb29323c20c4104126b5c"
-SRC_URI[sha256sum] = "6790d5e6b41fcac6733632a9c3775239806d00178886226dec3f986a884f4c2d"
+SRC_URI[md5sum] = "c601f3a5ec6d50666aa3a539fa20e6ca"
+SRC_URI[sha256sum] = "efd70600ab6f30449d90a3e58ff7499937985209bb0a03ce4e322474dbf11fe3"
 
 inherit cmake
 
