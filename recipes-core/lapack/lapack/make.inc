@@ -19,15 +19,15 @@ CFLAGS = -O3
 #  and handle these quantities appropriately. As a consequence, one
 #  should not compile LAPACK with flags such as -ffpe-trap=overflow.
 #
-FORTRAN = gfortran
-OPTS    = -O2 -frecursive
+FORTRAN = gcc
+OPTS    = -O2 -frecursive -fPIC
 DRVOPTS = $(OPTS)
-NOOPT   = -O0 -frecursive
+NOOPT   = -O0 -frecursive -fPIC
 
 #  Define LOADER and LOADOPTS to refer to the loader and desired
 #  load options for your machine.
 #
-LOADER   = gfortran
+LOADER   = gcc
 LOADOPTS =
 
 #  The archiver and the flag(s) to use when building an archive
@@ -78,8 +78,8 @@ TIMER = INT_ETIME
 #  machine-specific, optimized BLAS library should be used whenever
 #  possible.)
 #
-BLASLIB      = ../../librefblas.a
-CBLASLIB     = ../../libcblas.a
-LAPACKLIB    = liblapack.a
-TMGLIB       = libtmglib.a
-LAPACKELIB   = liblapacke.a
+BLASLIB      = ../../libblas.so
+CBLASLIB     = ../../libcblas.o
+LAPACKLIB    = liblapack.so
+TMGLIB       = libtmglib.o
+LAPACKELIB   = liblapacke.o
