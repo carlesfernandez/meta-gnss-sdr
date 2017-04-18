@@ -16,25 +16,14 @@ SRC_URI += "file://001-SRC_Makefile.patch;md5=36222be8bb239cdd62599f51f6720074"
 SRC_URI += "file://002-SRC_BLAS_Makefile.patch;md5=902cc505ecfff12f8e4d1f552b418ffc"
 
 EXTRA_OECMAKE = " -DBUILD_SHARED_LIBS=ON "
-#export BUILD_SYS
-#export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
 inherit distutils-base cmake pkgconfig
-
-#ALLOW_EMPTY_${PN} = "1"
-
-#S="${WORKDIR}"
 
 do_compile() {
      cp -f ${WORKDIR}/make.inc ${WORKDIR}/${PN}-${PV}/make.inc
      oe_runmake blas
      oe_runmake lapack
 }
-
-#do_install() {
-#     install -v -m 0644 ${S}/libblas.so ${D}${libdir}
-#     install -v -m 0644 ${S}/liblapack.so ${D}${libdir}
-#}
 
 FILES_${PN} += "${base_libdir}"
 FILES_${PN}-dbg += "${base_libdir}/.debug"
