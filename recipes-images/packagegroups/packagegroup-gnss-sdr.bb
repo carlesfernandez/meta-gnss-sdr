@@ -21,7 +21,6 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     armadillo \
     gtest \
     gnutls \
-    log4cpp \
     python-mako \
     python-six \
     packagegroup-gnss-sdr-drivers \
