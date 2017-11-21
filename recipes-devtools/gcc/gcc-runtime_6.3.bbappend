@@ -1,12 +1,22 @@
-FILES_${PN}-dev += " \
- /usr/lib/libgfortran.so.3.0.0 \
- /usr/lib/libgfortran.so \
- /usr/lib/libgfortran.spec \
- /usr/lib/libgfortran.a \
- /usr/lib/libgfortran.so.3 \
- /usr/lib/gcc/arm-oe-linux-gnueabi/6.3.0/libcaf_single.a \
- /usr/lib/gcc/arm-oe-linux-gnueabi/6.3.0/finclude \
- /usr/lib/gcc/arm-oe-linux-gnueabi/6.3.0/finclude/ieee_features.mod \
- /usr/lib/gcc/arm-oe-linux-gnueabi/6.3.0/finclude/ieee_exceptions.mod \
- /usr/lib/gcc/arm-oe-linux-gnueabi/6.3.0/finclude/ieee_arithmetic.mod \
+FORTRAN = ",fortran"
+
+PACKAGES += "\
+    libgfortran \
+    libgfortran-dev \
+    libgfortran-staticdev \
+"
+
+FILES_libgfortran += "/usr/lib/libgfortran.so.*"
+
+FILES_libgfortran-dev += "\
+    /usr/lib/libgfortran*.so \
+    /usr/lib/libgfortran.spec \
+    /usr/lib/libgfortran.la \
+    /usr/lib/gcc/${TARGET_SYS}/${BINV}/libgfortranbegin.* \
+    /usr/lib/gcc/${TARGET_SYS}/${BINV}/finclude/ \
+"
+
+FILES_libgfortran-staticdev += "\
+    /usr/lib/libgfortran.a \
+    /usr/lib/gcc/${TARGET_SYS}/${BINV}/libcaf_single.a \
 "
