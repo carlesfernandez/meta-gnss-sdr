@@ -20,3 +20,4 @@ FILES_libgfortran-staticdev += "\
     /usr/lib/libgfortran.a \
     /usr/lib/gcc/${TARGET_SYS}/${BINV}/libcaf_single.a \
 "
+
