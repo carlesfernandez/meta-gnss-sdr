@@ -14,10 +14,11 @@
 #
 # GUI support
 #
-# Comment this line to remove GUI support:
+# Comment these two lines to remove GUI support:
 DISTRO_FEATURES_append = " opengl x11"
+PACKAGECONFIG_pn-gnuradio = "qtgui grc uhd"
 # If you remove GUI support, please also uncomment the following two lines:
-#PACKAGECONFIG_pn-gnuradio = "uhd logging"
+#PACKAGECONFIG_pn-gnuradio = "uhd"
 #PACKAGECONFIG_pn-gr-ettus = ""
 
 
@@ -36,7 +37,8 @@ DISTRO_FEATURES_append = " opengl x11"
 # This sets the default machine to be zedboard-zynq if no other machine is selected:
 MACHINE ??= "zedboard-zynq7"
 
-DEFAULTTUNE_ettus-e300 = "armv7ahf-neon"
+DEFAULTTUNE_ettus-e3xx-sg1 = "armv7ahf-neon"
+DEFAULTTUNE_ettus-e3xx-sg3 = "armv7ahf-neon"
 DEFAULTTUNE_ettus-e1xx = "armv7ahf-neon"
 DEFAULTTUNE_zedboard-zynq7 = "armv7ahf-neon"
 DEFAULTTUNE_zc702-zynq7 = "armv7ahf-neon"
@@ -175,7 +177,7 @@ BB_DISKMON_DIRS = "\
 CONF_VERSION = "1"
 
 FORTRAN_forcevariable = ",fortran"
-RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath"
+RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"

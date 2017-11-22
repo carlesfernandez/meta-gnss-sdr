@@ -7,7 +7,6 @@ BBFILES ?= ""
 
 BBLAYERS ?= " \
   ##COREBASE##/meta \
-  ##COREBASE##/../meta-ettus \
   ##COREBASE##/../meta-xilinx \
   ##COREBASE##/../meta-oe/meta-oe \
   ##COREBASE##/../meta-oe/meta-networking \
@@ -15,8 +14,9 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-python \
   ##COREBASE##/../meta-qt4 \
   ##COREBASE##/../meta-raspberrypi \
-  ##COREBASE##/../meta-odroid \
+  ##COREBASE##/../meta-swupdate \
   ##COREBASE##/../meta-fsl-arm \
+  ##COREBASE##/../meta-freescale \
   ##COREBASE##/../meta-freescale-3rdparty \
   ##COREBASE##/../meta-ti \
   ##COREBASE##/../meta-sdr \

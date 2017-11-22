@@ -5,7 +5,7 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3c34afdc3adf82d2448f12715a255122"
 
 DEPENDS = "volk uhd gnuradio armadillo gflags glog  \
-           gnutls python-mako python-six python-six-native"
+           gnutls python-mako python-mako-native python-six python-six-native"
 
 PACKAGECONFIG ??= "osmosdr unittest"
 

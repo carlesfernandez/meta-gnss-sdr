@@ -21,6 +21,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     armadillo \
     gtest \
     gnutls \
+    log4cpp \
     matio \
     python-mako \
     python-six \
