@@ -6,7 +6,7 @@ LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://COPYING.txt;md5=c80d1a3b623f72bb85a4c75b556551df"
 
 SRC_URI = "git://github.com/gflags/gflags.git"
-SRCREV = "f8a0efe03aa69b3336d8e228b37d4ccb17324b88"
+SRCREV = "46f73f88b18aee341538c0dfc22b1710a6abedef"
 S = "${WORKDIR}/git/"
 
 FILES_${PN}-dev += "${libdir}/cmake"
