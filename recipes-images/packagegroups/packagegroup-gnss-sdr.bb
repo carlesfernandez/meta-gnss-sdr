@@ -40,4 +40,5 @@ DEPENDS_packagegroup-gnss-sdr-drivers = " \
     libbladerf \
     libbladerf-bin \
     gr-osmosdr \
+    gr-iio \
 "
