@@ -1,0 +1,12 @@
+--- a/BLAS/SRC/Makefile
++++ b/BLAS/SRC/Makefile
+@@ -138,8 +138,7 @@
+        $(ZBLAS2) $(ZBLAS3) $(ALLBLAS)
+
+ $(BLASLIB): $(ALLOBJ)
+-	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ)
+-	$(RANLIB) $@
++	$(LOADER) $(LOADOPTS) -z muldefs -shared -Wl,-soname,libblas.so -o $@ $(ALLOBJ)
+
+ single: $(SBLAS1) $(ALLBLAS) $(SBLAS2) $(SBLAS3)
+	$(ARCH) $(ARCHFLAGS) $(BLASLIB) $(SBLAS1) $(ALLBLAS) \
