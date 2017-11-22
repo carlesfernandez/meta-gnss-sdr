@@ -1,3 +1,3 @@
-FILES_libgfortran-dev += " \
-    /usr/lib/gcc/${TARGET_SYS}/${BINV}/finclude/ \
+FILES_${PN}-dev += " \
+    ${libdir}/gcc/${TARGET_SYS}/${BINV}/finclude/ \
 "
