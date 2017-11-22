@@ -185,6 +185,6 @@ PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 
 
 PREFERRED_VERSION_python-six = "1.10.0"
-PREFERRED_VERSION_glog = "0.3.4"
+PREFERRED_VERSION_glog = "0.3.5"
 PACKAGECONFIG_glog = "gflags"
 PREFERRED_VERSION_gflags = "2.2.0"

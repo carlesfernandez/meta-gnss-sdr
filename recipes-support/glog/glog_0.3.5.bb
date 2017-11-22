@@ -12,7 +12,7 @@ SRC_URI = " \
     git://github.com/google/glog.git \
 "
 
-SRCREV = "d8cb47f77d1c31779f3ff890e1a5748483778d6a"
+SRCREV = "2063b387080c1e7adffd33ca07adff0eb346ff1a"
 
 S = "${WORKDIR}/git"
 
