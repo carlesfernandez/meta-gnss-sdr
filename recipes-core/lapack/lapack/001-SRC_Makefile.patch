@@ -1,0 +1,15 @@
+--- a/SRC/Makefile
++++ b/SRC/Makefile
+@@ -507,9 +507,8 @@
+
+ all: ../$(LAPACKLIB)
+
+-../$(LAPACKLIB): $(ALLOBJ) $(ALLXOBJ) $(DEPRECATED)
+-	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ) $(ALLXOBJ) $(DEPRECATED)
+-	$(RANLIB) $@
++../$(LAPACKLIB): $(ALLOBJ)
++	$(LOADER) $(LOADOPTS) -shared -Wl,-soname,liblapack.so -o $@ $(ALLOBJ) ../libblas.so
+
+ single: $(SLASRC) $(DSLASRC) $(SXLASRC) $(SCLAUX) $(ALLAUX)
+        $(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(SLASRC) $(DSLASRC) \
+
