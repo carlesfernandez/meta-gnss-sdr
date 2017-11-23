@@ -21,6 +21,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     armadillo \
     gtest \
     gnutls \
+    matio \
     python-mako \
     python-six \
     packagegroup-gnss-sdr-drivers \
@@ -38,4 +39,5 @@ DEPENDS_packagegroup-gnss-sdr-drivers = " \
     libbladerf \
     libbladerf-bin \
     gr-osmosdr \
+    gr-iio \
 "
