@@ -12,6 +12,7 @@ FILES_libgfortran-dev += "\
     /usr/lib/libgfortran*.so \
     /usr/lib/libgfortran.spec \
     /usr/lib/libgfortran.la \
+    /usr/lib/gcc/${TARGET_SYS}/${BINV}/libcaf_single.la \
     /usr/lib/gcc/${TARGET_SYS}/${BINV}/libgfortranbegin.* \
     /usr/lib/gcc/${TARGET_SYS}/${BINV}/finclude/ \
 "
