@@ -173,7 +173,7 @@ BB_DISKMON_DIRS = "\
 CONF_VERSION = "1"
 
 FORTRAN_forcevariable = ",fortran"
-RUNTIMETARGET_append_pn-gcc-runtime = " libbracktrace libgfortran libquadmath"
+RUNTIMETARGET_append_pn-gcc-runtime = " libbacktrace libgfortran libquadmath"
 
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
