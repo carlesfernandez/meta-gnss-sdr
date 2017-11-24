@@ -13,6 +13,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-filesystems \
   ##COREBASE##/../meta-oe/meta-python \
   ##COREBASE##/../meta-qt4 \
+  ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-swupdate \
   ##COREBASE##/../meta-ti \
   ##COREBASE##/../meta-sdr \
