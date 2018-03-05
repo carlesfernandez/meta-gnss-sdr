@@ -25,7 +25,12 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     matio \
     python-mako \
     python-six \
-    packagegroup-gnss-sdr-drivers \
+    uhd \
+    rtl-sdr \
+    libbladerf \
+    libbladerf-bin \
+    gr-osmosdr \
+    gr-iio \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
