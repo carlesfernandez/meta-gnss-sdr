@@ -14,7 +14,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=57e5351b17591e659eedae107265c606"
 inherit cmake
 
 SRC_URI = " \
-    https://support.hdfgroup.org/ftp/HDF5/current18/src/${PN}-${PV}.tar.bz2 \
+    https://support.hdfgroup.org/ftp/HDF5/prev-releases/hdf5-1.8/hdf5-1.8.19/src/${PN}-${PV}.tar.bz2 \
     file://configuration.patch \
     file://generation.patch \
     file://copy_generated.patch \
