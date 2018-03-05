@@ -14,7 +14,7 @@ S="${WORKDIR}/git"
 
 PV = "0.3"
 
-SRCREV = "7079c1a60206fba4b37beb239bf25438ec8d977"
+SRCREV = "7079c1a60206fba4b37beb239bf25438ec8d9778"
 
 SRC_URI = "git://github.com/analogdevicesinc/gr-iio"
 
