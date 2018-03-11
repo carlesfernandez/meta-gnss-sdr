@@ -22,6 +22,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gtest \
     gnutls \
     lapack \
+    log4cpp \
     matio \
     python-mako \
     python-six \
@@ -31,6 +32,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     libbladerf-bin \
     gr-osmosdr \
     gr-iio \
+    libiio \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
