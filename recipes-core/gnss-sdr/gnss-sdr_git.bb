@@ -1,6 +1,6 @@
 SUMMARY = "GNSS-SDR: An open source software defined GNSS receiver"
 AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
-HOMEPAGE = "http://gnss-sdr.org"
+HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3c34afdc3adf82d2448f12715a255122"
 
