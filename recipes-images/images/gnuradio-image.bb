@@ -13,17 +13,15 @@ LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
     packagegroup-sdr-base-extended \
-    packagegroup-sdr-base-debug \
     packagegroup-sdr-base-devel \
     packagegroup-sdr-base-python \
     packagegroup-sdr-python-extended \
     packagegroup-sdr-gnuradio-base \
-    packagegroup-core-eclipse-debug \
     uhd-examples \
     xauth \
     e2fsprogs-resize2fs \
     "
 
-#    zeroc-ice 
+#    zeroc-ice
 
 inherit core-image image-buildinfo

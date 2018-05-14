@@ -14,7 +14,7 @@
 #
 # Comment these two lines to remove GUI support:
 DISTRO_FEATURES_append = " opengl x11"
-PACKAGECONFIG_pn-gnuradio = "qtgui grc uhd"
+PACKAGECONFIG_pn-gnuradio = "qtgui5 grc uhd"
 # If you remove GUI support, please also uncomment the following two lines:
 #PACKAGECONFIG_pn-gnuradio = "uhd"
 #PACKAGECONFIG_pn-gr-ettus = ""
@@ -104,7 +104,7 @@ PACKAGE_CLASSES ?= "package_ipk"
 # There are other application targets that can be used here too, see
 # meta/classes/image.bbclass and meta/classes/core-image.bbclass for more details.
 # We default to enabling the debugging tweaks.
-EXTRA_IMAGE_FEATURES = "debug-tweaks tools-profile tools-sdk dev-pkgs dbg-pkgs"
+EXTRA_IMAGE_FEATURES = "debug-tweaks tools-profile tools-sdk dev-pkgs"
 EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
 
 IMAGE_FSTYPES = "tar.gz"
@@ -186,3 +186,10 @@ PREFERRED_VERSION_python-six = "1.10.0"
 PREFERRED_VERSION_glog = "0.3.5"
 PACKAGECONFIG_glog = "gflags"
 PREFERRED_VERSION_gflags = "2.2.1"
+PREFERRED_VERSION_libiio = "0.14"
+INHIBIT_PACKAGE_STRIP = "1"
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+DISTRO_FEATURES += " systemd ${DISTRO_FEATURES_LIBC}"
+
+BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
+PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
