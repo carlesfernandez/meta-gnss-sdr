@@ -9,6 +9,7 @@ IMAGE_INSTALL = " \
                  packagegroup-gnss-sdr-base \
                 "
 
+require core-image-container.bb
 require gnuradio-dev-image.bb
 
 RDEPENDS_packagegroup-sdr-base-python += " python-six"
