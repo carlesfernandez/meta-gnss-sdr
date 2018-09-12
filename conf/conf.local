@@ -14,13 +14,14 @@
 #
 # GUI support
 #
-# Comment these two lines to remove GUI support:
+# Comment these three lines to remove GUI support:
 DISTRO_FEATURES_append = " opengl x11"
 PACKAGECONFIG_pn-gnuradio = "qtgui grc uhd"
-# If you remove GUI support, please also uncomment the following two lines:
+PACKAGECONFIG_pn-gnuplot = "cairo"
+# If you remove GUI support, please also uncomment the following three lines:
 #PACKAGECONFIG_pn-gnuradio = "uhd"
 #PACKAGECONFIG_pn-gr-ettus = ""
-
+#PACKAGECONFIG_pn-gnuplot = ""
 
 #
 # Machine Selection

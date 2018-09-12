@@ -29,8 +29,10 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     rtl-sdr \
     libbladerf \
     libbladerf-bin \
+    libpcap \
     gr-osmosdr \
     gr-iio \
+    gnuplot \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
