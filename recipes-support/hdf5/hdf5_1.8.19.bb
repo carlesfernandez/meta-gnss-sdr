@@ -27,6 +27,7 @@ PACKAGES += "${PN}-extra"
 FILES_${PN} += "/usr/lib/libhdf5.settings"
 FILES_${PN}-extra = "/usr/share/hdf5_examples/"
 
+OECMAKE_GENERATOR = "Unix Makefiles"
 # EXTRA_OECONF = "--enable-production --enable-cxx --with-zlib=${STAGING_INCDIR},${STAGING_LIBDIR}"
 EXTRA_OECMAKE = " \
     -DHAVE_DEFAULT_SOURCE_RUN=0 \
