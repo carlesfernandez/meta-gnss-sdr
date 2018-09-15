@@ -2,10 +2,10 @@ SUMMARY = "GNSS-SDR: An open source software defined GNSS receiver"
 AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
-LIC_FILES_CHKSUM = "file://COPYING;md5=3c34afdc3adf82d2448f12715a255122"
+LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-DEPENDS = "volk uhd gnuradio armadillo gflags glog  \
-           gnutls python-mako python-mako-native python-six python-six-native"
+DEPENDS = "volk gnuradio armadillo gflags glog matio \
+           gnutls python3-mako python3-mako-native python3-six python3-six-native"
 
 PACKAGECONFIG ??= "osmosdr unittest"
 
@@ -16,12 +16,13 @@ PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
+EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 "
 PV = "0.0.9"
 
-SRCREV = "32e4d227af032365cfd7f9291d9f2c2fca57d99d"
+SRCREV = "d93e60caafb0520f47e53a001bc075a816ddf028"
 
 # Make it easy to test against branches
-GIT_BRANCH = "master"
+GIT_BRANCH = "next"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
 
