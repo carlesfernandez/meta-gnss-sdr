@@ -17,7 +17,6 @@ CORE_IMAGE_EXTRA_INSTALL = "\
     packagegroup-sdr-base-python \
     packagegroup-sdr-python-extended \
     packagegroup-sdr-gnuradio-base \
-    uhd-examples \
     xauth \
     e2fsprogs-resize2fs \
     "
