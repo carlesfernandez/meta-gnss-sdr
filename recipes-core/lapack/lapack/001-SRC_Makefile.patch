@@ -1,6 +1,6 @@
 --- a/SRC/Makefile
 +++ b/SRC/Makefile
-@@ -507,9 +507,8 @@
+@@ -507,9 +507,8 @@ endif
 
  all: ../$(LAPACKLIB)
 
@@ -11,5 +11,4 @@
 +	$(LOADER) $(LOADOPTS) -shared -Wl,-soname,liblapack.so -o $@ $(ALLOBJ) ../libblas.so
 
  single: $(SLASRC) $(DSLASRC) $(SXLASRC) $(SCLAUX) $(ALLAUX)
-        $(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(SLASRC) $(DSLASRC) \
-
+ 	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(SLASRC) $(DSLASRC) \
