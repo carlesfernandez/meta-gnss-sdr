@@ -33,6 +33,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gr-iio \
     gnuplot \
     gpstk \
+    pm-utils \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
