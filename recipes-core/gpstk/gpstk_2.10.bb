@@ -1,5 +1,5 @@
 DESCRIPTION = "Libraries and applications to facilitate working with GPS data for research and high accuracy uses."
-AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
+AUTHOR = "Applied Research Laboratories at The University of Texas at Austin (ARL:UT)."
 HOMEPAGE = "http://www.gpstk.org/"
 
 LICENSE = "GPLv3"
@@ -13,7 +13,5 @@ S="${WORKDIR}/GPSTk-${PV}"
 inherit cmake
 
 EXTRA_OECMAKE += " -DBUILD_EXT=OFF -DBUILD_PYTHON=OFF"
-
-PACKAGE = "gpstk"
 
 FILES_${PN} += " ${bindir}/* /usr/share/cmake/*"
