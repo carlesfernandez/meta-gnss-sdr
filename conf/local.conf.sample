@@ -14,12 +14,15 @@
 #
 # Comment these three lines to remove GUI support:
 DISTRO_FEATURES_append = " opengl x11"
-PACKAGECONFIG_pn-gnuradio = "qtgui5 grc uhd"
+PACKAGECONFIG_pn-gnuradio = "qtgui5 grc zeromq"
 PACKAGECONFIG_pn-gnuplot = "cairo qt5"
 # If you remove GUI support, please also uncomment the following two lines:
 #PACKAGECONFIG_pn-gnuradio = "uhd"
 #PACKAGECONFIG_pn-gr-ettus = ""
 
+
+INHERIT += "blacklist"
+PNBLACKLIST[uhd] = "BROKEN: Build fails with newer boost"
 
 #
 # Machine Selection
@@ -181,11 +184,10 @@ RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
-
-
-PREFERRED_VERSION_python-six = "1.10.0"
+PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 PREFERRED_VERSION_glog = "0.3.5"
 PACKAGECONFIG_glog = "gflags"
+PREFERRED_VERSION_lapack = "3.7.0"
 PREFERRED_VERSION_gflags = "2.2.1"
 PREFERRED_VERSION_libiio = "0.14"
 INHIBIT_PACKAGE_STRIP = "1"
