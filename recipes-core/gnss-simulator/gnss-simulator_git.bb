@@ -11,7 +11,7 @@ export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
 PV = "1.0"
 
-SRCREV = "1cac3d93cfaad6f8352e42931b3b9f77817d2f2c"
+SRCREV = "338948ecfb0d64b18420cff9cb83e9d749be84b4"
 
 # Make it easy to test against branches
 GIT_BRANCH = "master"
@@ -24,4 +24,6 @@ inherit distutils-base cmake pkgconfig
 
 PACKAGES = "gnss-simulator"
 
-FILES_${PN} = "${bindir}/gnss_sim"
+FILES_${PN} = "${bindir}/gnss_sim \
+  /usr/share/gnss-sim/* \
+"
