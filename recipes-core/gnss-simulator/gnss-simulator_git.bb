@@ -4,12 +4,9 @@ HOMEPAGE = "https://bitbucket.org/jarribas/gnss-simulator/"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-DEPENDS = "volk gnuradio armadillo gflags glog "
+DEPENDS = "volk boost armadillo gflags glog "
 
-export BUILD_SYS
-export HOST_SYS="${MULTIMACH_TARGET_SYS}"
-
-PV = "1.0"
+PV = "1.0.git"
 
 SRCREV = "338948ecfb0d64b18420cff9cb83e9d749be84b4"
 
@@ -20,7 +17,7 @@ SRC_URI = "git://bitbucket.org/jarribas/gnss-simulator.git;branch=${GIT_BRANCH};
 
 S="${WORKDIR}/git"
 
-inherit distutils-base cmake pkgconfig
+inherit cmake
 
 PACKAGES = "gnss-simulator"
 
