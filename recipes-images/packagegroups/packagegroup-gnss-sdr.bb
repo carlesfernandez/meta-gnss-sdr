@@ -37,6 +37,6 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
 RDEPENDS_packagegroup-gnss-sdr-bin = " \
-    packagegroup-gnss-sdr-base
+    packagegroup-gnss-sdr-base \
     gnss-sdr \
 "
