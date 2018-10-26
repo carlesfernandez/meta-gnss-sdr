@@ -54,6 +54,7 @@ FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/run_tests \
      ${bindir}/position_test \
      ${bindir}/ttff \
+     ${bindir}/rinex2assist \
      /usr/share/man/man1/volk_gnsssdr-config-info.1.gz \
      /usr/share/man/man1/gnss-sdr.1.gz \
      /usr/share/man/man1/front-end-cal.1.gz \
@@ -61,6 +62,7 @@ FILES_${PN} = "${bindir}/gnss-sdr \
      /usr/share/gnss-sdr/conf/* \
      /usr/share/doc/gnss-sdr/* \
      /usr/share/gnss-sdr/signal_samples/* \
+     /usr/share/gnss-sdr/data/* \
 "
 
 FILES_${PN}-dbg += " \
