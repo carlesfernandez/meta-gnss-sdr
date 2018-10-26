@@ -1,0 +1,28 @@
+--- hdf5-1.8.15-patch1/configure.ac.orig	2015-09-28 19:01:44.509683424 +0100
++++ hdf5-1.8.15-patch1/configure.ac	2015-09-28 19:02:10.060166948 +0100
+@@ -3003,23 +3003,8 @@
+ ## Finally the makefiles
+ test "$no_create" = yes || ${CONFIG_SHELL-/bin/sh} $CONFIG_STATUS || exit 1
+ 
+-## Are we compiling static libraries, shared libraries, or both?  This
+-## is only used for the libhdf5.settings file. We can't just look at
+-## $enable_static and $enable_shared because if they're yes the ltconfig
+-## might have decided that one or the other is simply not possible.
+-## Therefore we have to ask the generated `libtool' shell script
+-## which 'features' it has enabled.
+-if (./libtool --features | grep '^enable shared libraries' > /dev/null); then
+-  enable_shared=yes
+-else
+-  enable_shared=no
+-fi
+-
+-if (./libtool --features | grep '^enable static libraries' > /dev/null); then
+-  enable_static=yes
+-else
+-  enable_static=no
+-fi
++enable_shared=yes
++enable_static=no
+ 
+ if test "X$enable_static" = "Xyes" && test "X$enable_shared" = "Xyes"; then
+   STATIC_SHARED="static, shared"

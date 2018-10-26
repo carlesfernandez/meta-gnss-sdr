@@ -1,0 +1,33 @@
+--- hdf5-1.8.15-patch1/src/Makefile.am.orig	2015-09-30 23:20:08.683217290 +0100
++++ hdf5-1.8.15-patch1/src/Makefile.am	2015-09-30 23:20:29.470278123 +0100
+@@ -122,30 +122,6 @@
+ settingsdir=$(libdir)
+ settings_DATA=libhdf5.settings
+ 
+-# Number format detection
+-# The LD_LIBRARY_PATH setting is a kludge.
+-# Things should have been all set during H5detect making.
+-# Remove the generated .c file if errors occur unless HDF5_Make_Ignore
+-# is set to ignore the error.
+-H5Tinit.c: H5detect$(EXEEXT)
+-	LD_LIBRARY_PATH="$$LD_LIBRARY_PATH`echo $(LDFLAGS) |                  \
+-		sed -e 's/-L/:/g' -e 's/ //g'`"                               \
+-	$(RUNSERIAL) ./H5detect$(EXEEXT) > $@  ||                               \
+-	    (test $$HDF5_Make_Ignore && echo "*** Error ignored") ||          \
+-	    ($(RM) $@ ; exit 1)
+-
+-# Build configuration header file generation
+-# The LD_LIBRARY_PATH setting is a kludge.
+-# Things should have been all set during H5make_libsettings making.
+-# Remove the generated .c file if errors occur unless HDF5_Make_Ignore
+-# is set to ignore the error.
+-H5lib_settings.c: H5make_libsettings$(EXEEXT) libhdf5.settings
+-	LD_LIBRARY_PATH="$$LD_LIBRARY_PATH`echo $(LDFLAGS) |                  \
+-		sed -e 's/-L/:/g' -e 's/ //g'`"                               \
+-	$(RUNSERIAL) ./H5make_libsettings$(EXEEXT) > $@  ||                               \
+-	    (test $$HDF5_Make_Ignore && echo "*** Error ignored") ||          \
+-	    ($(RM) $@ ; exit 1)
+-
+ # Error header generation
+ #
+ # Actually, H5Einit.h, H5Eterm.h, H5Edefin.h and H5Epubgen.h all
