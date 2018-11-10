@@ -5,7 +5,7 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
-           gtest gnuplot gpstk git git-native \
+           gtest pugixml gnuplot gpstk git git-native \
            python3-mako python3-mako-native python3-six python3-six-native"
 
 RDEPENDS_${PN} = "gnss-simulator"
