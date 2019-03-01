@@ -26,8 +26,6 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     python3-six \
     pugixml \
     rtl-sdr \
-    libbladerf \
-    libbladerf-bin \
     libpcap \
     gr-osmosdr \
     gr-iio \

@@ -1,11 +1,11 @@
+DEPENDS += " python3-mako python3-mako-native python3-six python3-six-native bison "
 
+EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3
+OECMAKE_GENERATOR = "Unix Makefiles"
+TARGET_CFLAGS += " -mfpu=auto "
 
-DEPENDS += " python3-mako python3-mako-native python3-six python3-six-native "
+SRCREV = "0ab1a75a8181e2d89d82b499913d5e30b2bca018"
+GIT_BRANCH = "master"
 
-EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 "
-
-SRCREV = "0ac820cb4de25ef7791f1c0c540b5d5a748eb90a"
-GIT_BRANCH = "fix_fir_filter"
-
-SRC_URI = "git://github.com/carlesfernandez/gnuradio.git;branch=${GIT_BRANCH};protocol=https \
+SRC_URI = "gitsm://github.com/carlesfernandez/gnuradio.git;branch=${GIT_BRANCH};protocol=https \
           "

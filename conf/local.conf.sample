@@ -187,7 +187,7 @@ PREFERRED_VERSION_gflags = "2.2.1"
 PREFERRED_VERSION_libiio = "0.14"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
-DISTRO_FEATURES += " systemd ${DISTRO_FEATURES_LIBC}"
+# DISTRO_FEATURES += " systemd ${DISTRO_FEATURES_LIBC}"
 
 BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
