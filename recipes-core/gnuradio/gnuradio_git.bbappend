@@ -7,5 +7,5 @@ TARGET_CFLAGS += " -mfpu=auto "
 SRCREV = "0ab1a75a8181e2d89d82b499913d5e30b2bca018"
 GIT_BRANCH = "master"
 
-SRC_URI = "gitsm://github.com/carlesfernandez/gnuradio.git;branch=${GIT_BRANCH};protocol=https \
+SRC_URI = "gitsm://github.com/gnuradio/gnuradio.git;branch=${GIT_BRANCH};protocol=https \
           "
