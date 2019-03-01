@@ -10,10 +10,11 @@ DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls
 
 RDEPENDS_${PN} = "gnss-simulator"
 
-PACKAGECONFIG ??= "osmosdr"
+PACKAGECONFIG ??= "osmosdr,fpga"
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr libbladerf gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
+PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
 
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
@@ -31,12 +32,13 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_RAW_UDP=ON  \
  -DENABLE_INSTALL_TESTS=ON \
  -DENABLE_PACKAGING=ON \
+ -DENABLE_FPGA=ON \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.9.git"
+PV = "0.0.10.git"
 
-SRCREV = "e56d0cf0183e2698c29708981c8c43756dcfd43e"
+SRCREV = "df0a77ee0d002c6906a119ff34752f97f2389e9b"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
