@@ -1,6 +1,6 @@
 DEPENDS += " python3-mako python3-mako-native python3-six python3-six-native bison "
 
-EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3
+EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 "
 OECMAKE_GENERATOR = "Unix Makefiles"
 TARGET_CFLAGS += " -mfpu=auto "
 
