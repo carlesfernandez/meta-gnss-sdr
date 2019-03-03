@@ -29,6 +29,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     libpcap \
     gr-osmosdr \
     gr-iio \
+    gnuplot \
     gnuplot-x11 \
     gpstk \
     pm-utils \
