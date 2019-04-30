@@ -25,6 +25,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     python3-mako \
     python3-six \
     pugixml \
+    protobuf \
     rtl-sdr \
     libpcap \
     gr-osmosdr \

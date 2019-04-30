@@ -6,5 +6,5 @@ LICENSE = "MIT"
 
 EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
 
-require recipes-images/images/native-sdk.inc
+require native-sdk.inc
 require gnuradio-image.bb
