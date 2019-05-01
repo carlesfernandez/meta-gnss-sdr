@@ -13,11 +13,9 @@
 # GUI support
 #
 DISTRO_FEATURES_append = " opengl x11"
-PACKAGECONFIG_pn-gnuradio = "qtgui5 grc zeromq"
+PACKAGECONFIG_pn-gnuradio = "qtgui5 grc zeromq uhd"
 PACKAGECONFIG_pn-gnuplot = "cairo qt5"
 
-INHERIT += "blacklist"
-PNBLACKLIST[uhd] = "BROKEN: Build fails with newer boost"
 
 #
 # Machine Selection
@@ -180,10 +178,10 @@ RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
-PREFERRED_VERSION_glog = "0.3.5"
+PREFERRED_VERSION_glog = "0.4.0"
 PACKAGECONFIG_glog = "gflags"
 PREFERRED_VERSION_lapack = "3.7.0"
-PREFERRED_VERSION_gflags = "2.2.1"
+PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_libiio = "0.14"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"

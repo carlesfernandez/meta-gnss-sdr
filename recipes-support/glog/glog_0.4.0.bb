@@ -12,11 +12,13 @@ SRC_URI = " \
     git://github.com/google/glog.git \
 "
 
-SRCREV = "2063b387080c1e7adffd33ca07adff0eb346ff1a"
+SRCREV = "96a2f23dca4cc7180821ca5f32e526314395d26a"
 
 S = "${WORKDIR}/git"
 
 PACKAGECONFIG ??= "gflags"
 PACKAGECONFIG[gflags] = ",--without-gflags,gflags,"
+
+RDEPENDS_${PN} += "libunwind"
 
 inherit autotools pkgconfig
