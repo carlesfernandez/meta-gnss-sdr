@@ -7,6 +7,7 @@ inherit packagegroup
 
 PACKAGES = " \
     packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-base-extended \
     packagegroup-gnss-sdr-bin \
 "
 
@@ -40,4 +41,36 @@ SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
 RDEPENDS_packagegroup-gnss-sdr-bin = " \
     packagegroup-gnss-sdr-base \
     gnss-sdr \
+"
+
+
+SUMMARY_packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
+RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
+    alsa-utils \
+    i2c-tools \
+    screen \
+    vim \
+    vim-vimrc \
+    htop \
+    iw \
+    sshfs-fuse \
+    libudev \
+    nano \
+    nfs-utils-client \
+    cifs-utils \
+    openssh-sftp \
+    openssh-sftp-server \
+    procps \
+    protobuf \
+    ntp \
+    ntpdate \
+    ntp-utils \
+    linux-firmware \
+    libsodium \
+    sqlite3 \
+    tar \
+    wget \
+    zip \
+    unzip \
+    rsync \
 "

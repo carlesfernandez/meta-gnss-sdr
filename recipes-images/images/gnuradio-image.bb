@@ -12,7 +12,7 @@ EXTRA_IMAGE_FEATURES += "package-management"
 LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
-    packagegroup-sdr-base-extended \
+    packagegroup-gnss-sdr-base-extended \
     packagegroup-sdr-base-devel \
     packagegroup-sdr-base-python \
     packagegroup-sdr-python-extended \
