@@ -185,6 +185,9 @@ PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_libiio = "0.14"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+TOOLCHAIN_TARGET_TASK_append = " busybox"
+PREFERRED_RPROVIDER_bash = "busybox"
+VIRTUAL-RUNTIME_bash = "busybox"
 
 #
 # Use systemd for system initialization
