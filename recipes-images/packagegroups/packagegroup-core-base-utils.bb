@@ -40,6 +40,7 @@ RDEPENDS_${PN} = "\
     less \
     ncurses-tools \
     net-tools \
+    openssh \
     parted \
     patch \
     procps \

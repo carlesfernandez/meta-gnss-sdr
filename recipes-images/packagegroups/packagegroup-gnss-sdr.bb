@@ -53,6 +53,7 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     vim-vimrc \
     htop \
     iw \
+    git \
     sshfs-fuse \
     libudev \
     nano \
@@ -73,4 +74,26 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     zip \
     unzip \
     rsync \
+"
+
+SUMMARY_packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
+RDEPENDS_packagegroup-gnss-sdr-buildessential = "\
+    autoconf \
+    automake \
+    binutils \
+    binutils-symlinks \
+    cpp \
+    cpp-symlinks \
+    gcc \
+    gcc-symlinks \
+    g++ \
+    g++-symlinks \
+    gettext \
+    glib-2.0 \
+    make \
+    ninja \
+    libstdc++ \
+    libstdc++-dev \
+    libtool \
+    pkgconfig \
 "
