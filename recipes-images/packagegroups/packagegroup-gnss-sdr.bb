@@ -8,6 +8,7 @@ inherit packagegroup
 PACKAGES = " \
     packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-base-extended \
+    packagegroup-gnss-sdr-buildessential \
     packagegroup-gnss-sdr-bin \
 "
 
