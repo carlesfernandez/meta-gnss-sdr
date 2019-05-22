@@ -75,6 +75,8 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     zip \
     unzip \
     rsync \
+    gdb \
+    perf \
 "
 
 SUMMARY_packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
