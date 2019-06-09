@@ -5,7 +5,7 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
-           gtest pugixml gnuplot gpstk git git-native \
+           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
            python3-mako python3-mako-native python3-six python3-six-native"
 
 RDEPENDS_${PN} = "gnss-simulator"
@@ -34,9 +34,9 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.9.git"
+PV = "0.0.10.git"
 
-SRCREV = "e56d0cf0183e2698c29708981c8c43756dcfd43e"
+SRCREV = "ada51b315062dda2b0ff97c7a1067da31185a447"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
