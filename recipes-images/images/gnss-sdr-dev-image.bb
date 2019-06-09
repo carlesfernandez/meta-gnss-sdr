@@ -8,7 +8,8 @@ require gnuradio-dev-image.bb
 
 RDEPENDS_packagegroup-sdr-base-python += " python-six"
 
-SDK_EXTRA_TOOLS += "nativesdk-python-six"
+SDK_EXTRA_TOOLS += "nativesdk-python-six nativesdk-protobuf"
+TOOLCHAIN_HOST_TASK_append += "nativesdk-protobuf-compiler"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-gnss-sdr-base \
