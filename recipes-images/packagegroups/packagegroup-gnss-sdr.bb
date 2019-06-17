@@ -25,6 +25,8 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     matio \
     python3-mako \
     python3-six \
+    pugixml \
+    protobuf \
     rtl-sdr \
     libbladerf \
     libbladerf-bin \
