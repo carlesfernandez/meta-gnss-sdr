@@ -5,7 +5,7 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
 DEPENDS = "volk gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
-           gtest gnuplot gpstk git \
+           gtest gnuplot gpstk git git-native protobuf protobuf-native pugixml \
            python3-mako python3-mako-native python3-six python3-six-native"
 
 PACKAGECONFIG ??= "osmosdr"
@@ -26,9 +26,9 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_INSTALL_TESTS=ON \
 "
 
-PV = "0.0.9"
+PV = "0.0.10.git"
 
-SRCREV = "d93e60caafb0520f47e53a001bc075a816ddf028"
+SRCREV = "ada51b315062dda2b0ff97c7a1067da31185a447"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
