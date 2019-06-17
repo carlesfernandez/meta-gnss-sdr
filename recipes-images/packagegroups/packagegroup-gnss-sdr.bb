@@ -8,7 +8,6 @@ inherit packagegroup
 PACKAGES = " \
     packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-bin \
-    packagegroup-gnss-sdr-drivers \
 "
 
 PROVIDES = "${PACKAGES}"
@@ -39,16 +38,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
-DEPENDS_packagegroup-gnss-sdr-bin = " \
+RDEPENDS_packagegroup-gnss-sdr-bin = " \
+    packagegroup-gnss-sdr-base \
     gnss-sdr \
-"
-
-SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers."
-DEPENDS_packagegroup-gnss-sdr-drivers = " \
-    uhd \
-    rtl-sdr \
-    libbladerf \
-    libbladerf-bin \
-    gr-osmosdr \
-    gr-iio \
 "

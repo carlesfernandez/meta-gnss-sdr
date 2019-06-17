@@ -1,0 +1,12 @@
+diff -Nur hdf5-1.8.15-patch1.orig/acsite.m4 hdf5-1.8.15-patch1/acsite.m4
+--- hdf5-1.8.15-patch1.orig/acsite.m4	2015-05-28 17:02:03.000000000 +0100
++++ hdf5-1.8.15-patch1/acsite.m4	2015-09-26 20:32:11.858685001 +0100
+@@ -59,7 +59,7 @@
+ dnl	Check how F9X handles modules. This macro also checks which
+ dnl	command-line option to use to include the module once it's built.
+ dnl
+-AC_DEFUN(AC_F9X_MODS,
++AC_DEFUN([AC_F9X_MODS],
+ [AC_MSG_CHECKING(what $FC does with modules)
+ AC_LANG_PUSH(Fortran)
+ 
