@@ -5,14 +5,14 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
-           gtest pugixml gnuplot gpstk git git-native \
+           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
            python3-mako python3-mako-native python3-six python3-six-native"
 
-RDEPENDS_${PN} = "gnss-simulator"
+RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
 
 PACKAGECONFIG ??= "osmosdr"
 
-PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr libbladerf gr-osmosdr, "
+PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 
 export BUILD_SYS
@@ -31,6 +31,7 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_RAW_UDP=ON  \
  -DENABLE_INSTALL_TESTS=ON \
  -DENABLE_PACKAGING=ON \
+ -DENABLE_FPGA=ON \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
@@ -55,6 +56,7 @@ FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/position_test \
      ${bindir}/ttff \
      ${bindir}/rinex2assist \
+     ${bindir}/* \
      /usr/share/man/man1/volk_gnsssdr-config-info.1.gz \
      /usr/share/man/man1/gnss-sdr.1.gz \
      /usr/share/man/man1/front-end-cal.1.gz \
