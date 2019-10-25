@@ -14,7 +14,7 @@ DEPENDS = "volk boost armadillo gflags glog "
 
 PV = "1.0.git"
 
-SRCREV = "1365a0316781f9901de735eb06110125a147d477"
+SRCREV = "c62d196952c7ea6a6d2033a562bf5b9bec1d084d"
 
 # Make it easy to test against branches
 GIT_BRANCH = "master"
