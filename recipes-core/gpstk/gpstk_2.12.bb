@@ -6,8 +6,8 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 
 SRC_URI = "https://github.com/SGL-UT/GPSTk/archive/v${PV}.tar.gz"
-SRC_URI[md5sum] = "040d3f28a20abf3b6a409103f830e15d"
-SRC_URI[sha256sum] = "75aa04137b17b90a116700431b4170d0d423dca32374b4effbcfebe7b1c06017"
+SRC_URI[md5sum] = "5d4ccd7995b0fe472f7f26733b0394b4"
+SRC_URI[sha256sum] = "6977b136ff6639c7771c7eb2164bfaef101b7a706ddf281cc203f325ede3fc3c"
 S="${WORKDIR}/GPSTk-${PV}"
 
 inherit cmake
