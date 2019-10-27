@@ -4,13 +4,13 @@ HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
+DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
            python3-mako python3-mako-native python3-six python3-six-native"
 
 RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
 
-PACKAGECONFIG ??= "osmosdr"
+PACKAGECONFIG ??= ""
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
