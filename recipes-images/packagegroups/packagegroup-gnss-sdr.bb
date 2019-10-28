@@ -93,6 +93,8 @@ RDEPENDS_packagegroup-gnss-sdr-buildessential = "\
     glib-2.0 \
     make \
     ninja \
+    libgfortran \
+    libgfortran-dev \
     libstdc++ \
     libstdc++-dev \
     libtool \
