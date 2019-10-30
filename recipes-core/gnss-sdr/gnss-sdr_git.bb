@@ -4,8 +4,8 @@ HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls \
-           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
+DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio \
+           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
            python3-mako python3-mako-native python3-six python3-six-native"
 
 RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
@@ -37,12 +37,13 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 
 PV = "0.0.11.git"
 
-SRCREV = "e0ef72eb757a7da5825b9d8bee90de6c079083e7"
+SRCREV = "58af2dc2beb74e9b7dbbfb75e561ceab0febae4c"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
+GITHUB_USER = "gnss-sdr"
 
-SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/${GITHUB_USER}/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
 
 S="${WORKDIR}/git"
 
