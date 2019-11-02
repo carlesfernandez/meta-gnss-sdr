@@ -13,7 +13,9 @@ SDK_EXTRA_TOOLS += "nativesdk-python3-six"
 
 IMAGE_INSTALL = " \
                  packagegroup-core-container \
+                 packagegroup-gnss-sdr-buildessential \
                  packagegroup-gnss-sdr-base \
+                 packagegroup-gnss-sdr-base-extended \
                 "
 
 CORE_IMAGE_EXTRA_INSTALL += " \
