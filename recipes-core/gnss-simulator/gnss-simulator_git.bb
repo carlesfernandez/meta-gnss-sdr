@@ -4,12 +4,6 @@ HOMEPAGE = "https://bitbucket.org/jarribas/gnss-simulator/"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-SUMMARY = "A GNSS signal generator"
-AUTHOR = "Javier Arribas <jarribas@cttc.es>"
-HOMEPAGE = "https://bitbucket.org/jarribas/gnss-simulator/"
-LICENSE = "GPLv3"
-LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-
 DEPENDS = "volk boost armadillo gflags glog "
 
 PV = "1.0.git"
