@@ -32,6 +32,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     libpcap \
     libiio \
     libad9361-iio \
+    gnss-sdr-monitor \
     gnuplot \
     gnuplot-x11 \
     gpstk \
