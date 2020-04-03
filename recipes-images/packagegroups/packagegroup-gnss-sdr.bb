@@ -29,8 +29,6 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     pugixml \
     protobuf \
     rtl-sdr \
-    libbladerf \
-    libbladerf-bin \
     libpcap \
     gr-osmosdr \
     gr-iio \
@@ -48,8 +46,6 @@ SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers."
 DEPENDS_packagegroup-gnss-sdr-drivers = " \
     uhd \
     rtl-sdr \
-    libbladerf \
-    libbladerf-bin \
     gr-osmosdr \
     gr-iio \
 "
