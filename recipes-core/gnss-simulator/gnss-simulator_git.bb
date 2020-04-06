@@ -25,10 +25,15 @@ S="${WORKDIR}/git"
 
 inherit cmake
 
-PACKAGES = "gnss-simulator"
+PACKAGES = "gnss-simulator gnss-simulator-dbg"
 
 FILES_${PN} = "${bindir}/gnss_sim \
   /usr/share/gnss-sim/* \
+"
+
+FILES_${PN}-dbg = " \
+  /usr/bin/.debug/gnss_sim \
+  /usr/src/debug/gnss-simulator/* \
 "
 
 do_rm_work() {
