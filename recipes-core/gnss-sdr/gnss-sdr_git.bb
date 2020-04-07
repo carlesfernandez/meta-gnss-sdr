@@ -8,7 +8,7 @@ DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
            python3-mako python3-mako-native python3-six python3-six-native"
 
-RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
+RDEPENDS_${PN} = "gnss-simulator"
 
 PACKAGECONFIG ??= "osmosdr"
 
@@ -31,13 +31,12 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_RAW_UDP=ON  \
  -DENABLE_INSTALL_TESTS=ON \
  -DENABLE_PACKAGING=ON \
- -DENABLE_FPGA=ON \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.11.git"
+PV = "0.0.12.git"
 
-SRCREV = "75e735043bc9af44e39d376673f54feeacc9c985"
+SRCREV = "0bec24e593dac1fbc18680824524dee0ecdbef0b"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
@@ -56,7 +55,7 @@ FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/position_test \
      ${bindir}/ttff \
      ${bindir}/rinex2assist \
-     ${bindir}/* \
+     ${bindir}/obsdiff \
      /usr/share/man/man1/volk_gnsssdr-config-info.1.gz \
      /usr/share/man/man1/gnss-sdr.1.gz \
      /usr/share/man/man1/front-end-cal.1.gz \
