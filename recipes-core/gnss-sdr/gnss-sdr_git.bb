@@ -4,16 +4,17 @@ HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
+DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
            python3-mako python3-mako-native python3-six python3-six-native"
 
 RDEPENDS_${PN} = "gnss-simulator"
 
-PACKAGECONFIG ??= "osmosdr"
+PACKAGECONFIG ??= ""
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
+PACKAGECONFIG[gr-iio] = "-DENABLE_FMCOMMS2=ON,-DENABLE_FMCOMMS2=OFF,gr-iio, "
 
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
@@ -26,7 +27,6 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_UNIT_TESTING_EXTRA=ON  \
  -DENABLE_SYSTEM_TESTING_EXTRA=ON  \
  -DCMAKE_INSTALL_PREFIX=/usr  \
- -DENABLE_FMCOMMS2=ON  \
  -DENABLE_AD9361=ON  \
  -DENABLE_RAW_UDP=ON  \
  -DENABLE_INSTALL_TESTS=ON \
@@ -36,7 +36,7 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 
 PV = "0.0.12.git"
 
-SRCREV = "0bec24e593dac1fbc18680824524dee0ecdbef0b"
+SRCREV = "a49df87704a925fa48b64879a3ae9c84b58ccb84"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
