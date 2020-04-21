@@ -31,19 +31,17 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_RAW_UDP=ON  \
  -DENABLE_INSTALL_TESTS=ON \
  -DENABLE_PACKAGING=ON \
- -DENABLE_FPGA=ON \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.11.git"
+PV = "0.0.12.git"
 
-SRCREV = "b17e58ed5afddb6ef233918bf40c0f18cb313b6d"
+SRCREV = "a49df87704a925fa48b64879a3ae9c84b58ccb84"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
-GITHUB_USER = "gnss-sdr"
 
-SRC_URI = "git://github.com/${GITHUB_USER}/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
 
 S="${WORKDIR}/git"
 
@@ -57,7 +55,7 @@ FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/position_test \
      ${bindir}/ttff \
      ${bindir}/rinex2assist \
-     ${bindir}/* \
+     ${bindir}/obsdiff \
      /usr/share/man/man1/volk_gnsssdr-config-info.1.gz \
      /usr/share/man/man1/gnss-sdr.1.gz \
      /usr/share/man/man1/front-end-cal.1.gz \
