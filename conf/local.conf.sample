@@ -13,8 +13,8 @@
 # GUI support
 #
 DISTRO_FEATURES_append = " opengl x11"
-PACKAGECONFIG_pn-gnuradio = "qtgui5 grc zeromq"
-PACKAGECONFIG_pn-gnuplot = "cairo qt5"
+PACKAGECONFIG_pn-gnuradio += "qtgui5 grc zeromq"
+PACKAGECONFIG_pn-gnuplot += "cairo qt5"
 
 
 #

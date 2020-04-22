@@ -10,7 +10,7 @@ SRC_URI = "git://github.com/analogdevicesinc/libiio.git;protocol=https"
 
 S = "${WORKDIR}/git"
 
-inherit cmake pythonnative systemd
+inherit cmake python3native systemd
 
 DEPENDS = " \
     flex-native bison-native libaio \
@@ -36,7 +36,7 @@ PACKAGECONFIG[NETWORK_BACKEND] = "-DWITH_NETWORK_BACKEND=ON,-DWITH_NETWORK_BACKE
 
 PACKAGES =+ "${PN}-iiod ${PN}-tests ${PN}-python"
 
-RDEPENDS_${PN}-python = "${PN} python-ctypes python-stringold"
+RDEPENDS_${PN}-python = "${PN} python3-ctypes python3-stringold"
 
 FILES_${PN}-iiod = " \
     ${sbindir}/iiod \
