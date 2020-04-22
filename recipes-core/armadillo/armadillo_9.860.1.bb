@@ -2,10 +2,10 @@ SUMMARY = "C++ linear algebra library"
 HOMEPAGE = "http://arma.sourceforge.net/"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d273d63619c9aeaf15cdaf76422c4f87"
-SRC_URI = "http://sourceforge.net/projects/arma/files/armadillo-${PV}.tar.xz"
 
-SRC_URI[md5sum] = "4d1c474f3e86b79eb180c3472a9a0750"
-SRC_URI[sha256sum] = "ebcf57e031465848d2110d2d9f0b09a3bfd31d7e117327e6142935f2e783daee"
+SRC_URI = "git://gitlab.com/conradsnicta/armadillo-code"
+SRCREV = "7f198df15e86699d99e28cab5cba18906728cae3"
+S = "${WORKDIR}/git"
 
 EXTRA_OECMAKE += " -DBUILD_SHARED_LIBS=ON"
 DEPENDS += " lapack "
