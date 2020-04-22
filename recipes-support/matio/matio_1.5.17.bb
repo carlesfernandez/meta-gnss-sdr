@@ -5,11 +5,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=bf0b2b75650fd711c8cca1fa7cd70503"
 
 DEPENDS = "zlib hdf5"
 
-SRC_URI = "https://github.com/tbeu/matio/archive/v${PV}.tar.gz"
-SRC_URI[md5sum] = "1104009262b22a426f95c46859688f3b"
-SRC_URI[sha256sum] = "4b8e9d65545ec9caf54765c476f534970cdf668e40e7d17b33cd489328e0b02a"
-
-S = "${WORKDIR}/${PN}-${PV}"
+SRC_URI = "gitsm://github.com/tbeu/matio.git"
+SRCREV = "64f793668e09216029447990702c145403d14375"
+S = "${WORKDIR}/git"
 
 inherit autotools
 
