@@ -3,7 +3,8 @@ HOMEPAGE = "http://arma.sourceforge.net/"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d273d63619c9aeaf15cdaf76422c4f87"
 
-SRC_URI = "git://gitlab.com/conradsnicta/armadillo-code"
+GIT_BRANCH = "9.860.x"
+SRC_URI = "git://gitlab.com/conradsnicta/armadillo-code.git;branch=${GIT_BRANCH};protocol=https "
 SRCREV = "7f198df15e86699d99e28cab5cba18906728cae3"
 S = "${WORKDIR}/git"
 
