@@ -1,17 +1,19 @@
 DESCRIPTION = "Libraries and applications to facilitate working with GPS data for research and high accuracy uses."
-AUTHOR = "Applied Research Laboratories at The University of Texas at Austin (ARL:UT)."
-HOMEPAGE = "http://www.gpstk.org/"
+AUTHOR = "ARL:UT"
+HOMEPAGE = "https://github.com/SGL-UT/GPSTk/"
 
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 
 SRC_URI = "https://github.com/SGL-UT/GPSTk/archive/v${PV}.tar.gz"
-SRC_URI[md5sum] = "5d4ccd7995b0fe472f7f26733b0394b4"
-SRC_URI[sha256sum] = "6977b136ff6639c7771c7eb2164bfaef101b7a706ddf281cc203f325ede3fc3c"
+SRC_URI[md5sum] = "b085879c4b4197e4d01e90f83352e6cd"
+SRC_URI[sha256sum] = "fe45c79537d263eb145623c456a0d0bf79acd0ac8dd79136d6b5610aa26055e4"
 S="${WORKDIR}/GPSTk-${PV}"
 
 inherit cmake
 
-EXTRA_OECMAKE += " -DBUILD_EXT=OFF -DBUILD_PYTHON=OFF"
+EXTRA_OECMAKE += " -DCMAKE_SKIP_INSTALL_RPATH=ON -DCMAKE_SKIP_RPATH=ON -DBUILD_EXT=OFF -DBUILD_PYTHON=OFF"
+
+PACKAGE = "gpstk"
 
 FILES_${PN} += " ${bindir}/* /usr/share/cmake/*"
