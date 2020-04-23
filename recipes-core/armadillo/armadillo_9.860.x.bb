@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d273d63619c9aeaf15cdaf76422c4f87"
 
 GIT_BRANCH = "9.860.x"
 SRC_URI = "git://gitlab.com/conradsnicta/armadillo-code.git;branch=${GIT_BRANCH};protocol=https "
-SRCREV = "7f198df15e86699d99e28cab5cba18906728cae3"
+SRCREV = "529118967b5287bab411c7c27cbb9ecaab218c6d"
 S = "${WORKDIR}/git"
 
 EXTRA_OECMAKE += " -DBUILD_SHARED_LIBS=ON"
