@@ -36,7 +36,7 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 
 PV = "0.0.12.git"
 
-SRCREV = "2b257f87d75c76576545b946782ec341786f02bd"
+SRCREV = "029651cbe3f0161f269e51d8676cb4a8be537327"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
