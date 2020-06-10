@@ -35,9 +35,9 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.11.git"
+PV = "0.0.12.git"
 
-SRCREV = "75e735043bc9af44e39d376673f54feeacc9c985"
+SRCREV = "029651cbe3f0161f269e51d8676cb4a8be537327"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
