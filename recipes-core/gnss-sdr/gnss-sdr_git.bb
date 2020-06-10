@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
-           python3-mako python3-mako-native python3-six python3-six-native"
+           python3-mako python3-mako-native"
 
 RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
 
@@ -22,7 +22,7 @@ inherit cmake pkgconfig
 
 OECMAKE_FIND_ROOT_PATH_MODE_PROGRAM = "BOTH"
 
-EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+EXTRA_OECMAKE += " \
  -DENABLE_UNIT_TESTING_EXTRA=ON  \
  -DENABLE_SYSTEM_TESTING_EXTRA=ON  \
  -DCMAKE_INSTALL_PREFIX=/usr  \
@@ -36,7 +36,7 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 
 PV = "0.0.12.git"
 
-SRCREV = "2b257f87d75c76576545b946782ec341786f02bd"
+SRCREV = "029651cbe3f0161f269e51d8676cb4a8be537327"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
