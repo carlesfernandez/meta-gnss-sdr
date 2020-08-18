@@ -4,7 +4,7 @@ SECTION = "libs"
 LICENSE = "LGPLv2.1+"
 LIC_FILES_CHKSUM = "file://COPYING.txt;md5=7c13b3376cea0ce68d2d2da0a1b3a72c"
 
-SRCREV = "4e22517c60f3c5e691320871956edede15459ae3"
+SRCREV = "565bf68eccfdbbf22cf5cb6d792e23de564665c7"
 
 SRC_URI = "git://github.com/analogdevicesinc/libiio.git;protocol=https"
 
