@@ -10,7 +10,7 @@ DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio
 
 RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
 
-PACKAGECONFIG ??= ""
+PACKAGECONFIG ??= "osmosdr"
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
