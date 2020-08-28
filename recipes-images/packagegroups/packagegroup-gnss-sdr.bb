@@ -31,6 +31,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     libhackrf \
     iio-oscilloscope \
     ezdma \
+    gr-iio \
     gr-osmosdr \
     libpcap \
     libiio \
