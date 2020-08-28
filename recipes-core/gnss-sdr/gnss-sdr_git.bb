@@ -4,7 +4,7 @@ HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio \
+DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
            python3-mako python3-mako-native"
 
@@ -36,7 +36,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.13.git"
 
-SRCREV = "d997f7bf5658103a4c7d0b8f8b93c66e265a4ee2"
+SRCREV = "df2f84dfb0ae3d01dc170802524d3894237c4718"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
