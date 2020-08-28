@@ -29,6 +29,9 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     pugixml \
     protobuf \
     rtl-sdr \
+    libhackrf \
+    iio-oscilloscope \
+    gr-osmosdr \
     libpcap \
     libiio \
     libad9361-iio \
