@@ -20,6 +20,8 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gflags \
     glog \
     armadillo \
+    hdf5 \
+    devmem2 \
     gtest \
     gnutls \
     log4cpp \
@@ -82,6 +84,17 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     rsync \
     gdb \
     perf \
+    psmisc \
+    gqrx \
+    xinput-calibrator \
+    xserver-xorg \
+    directfb-examples \
+    wpa-supplicant \
+    hostapd \
+    dnsmasq \
+    lighttpd \
+    libuio \
+    lsuio \
 "
 
 SUMMARY_packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
