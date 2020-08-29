@@ -8,7 +8,7 @@ DEPENDS = "volk boost armadillo gflags glog "
 
 PV = "1.0.git"
 
-SRCREV = "c62d196952c7ea6a6d2033a562bf5b9bec1d084d"
+SRCREV = "86dafacb8b86ce51006b5ecf48e791f5c8a9ed38"
 
 # Make it easy to test against branches
 GIT_BRANCH = "master"
@@ -19,10 +19,15 @@ S="${WORKDIR}/git"
 
 inherit cmake
 
-PACKAGES = "gnss-simulator"
+PACKAGES = "gnss-simulator gnss-simulator-dbg"
 
 FILES_${PN} = "${bindir}/gnss_sim \
   /usr/share/gnss-sim/* \
+"
+
+FILES_${PN}-dbg = " \
+  /usr/bin/.debug/gnss_sim \
+  /usr/src/debug/gnss-simulator/* \
 "
 
 do_rm_work() {
