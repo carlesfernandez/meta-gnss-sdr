@@ -27,7 +27,6 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     log4cpp \
     matio \
     python3-mako \
-    python3-six \
     pugixml \
     protobuf \
     rtl-sdr \

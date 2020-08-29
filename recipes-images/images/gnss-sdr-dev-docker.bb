@@ -9,10 +9,6 @@ require gnuradio-dev-image.bb
 
 COMPATIBLE_MACHINE = "${MACHINE}"
 
-RDEPENDS_packagegroup-sdr-base-python += " python3-six"
-
-SDK_EXTRA_TOOLS += "nativesdk-python3-six"
-
 IMAGE_INSTALL = " \
                  packagegroup-core-container \
                  packagegroup-gnss-sdr-buildessential \
