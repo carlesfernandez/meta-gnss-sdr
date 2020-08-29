@@ -1,5 +1,3 @@
-diff --git a/Makefile.am b/Makefile.am
-index ac1c11f..8364a1a 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -3,7 +3,7 @@
@@ -10,3 +8,4 @@ index ac1c11f..8364a1a 100644
 +SUBDIRS = gtk glade
 
  EXTRA_DIST = depcomp scripts gtkdatabox.pc.in gtkdatabox.spec.in glade/gtkdatabox.xml api
+ 
