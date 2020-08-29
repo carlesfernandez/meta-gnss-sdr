@@ -6,7 +6,7 @@ SDK_EXTRA_TOOLS = " \
     nativesdk-python3-modules \
     nativesdk-orc nativesdk-swig nativesdk-python3-distutils \
     nativesdk-python3-xml nativesdk-python3-compile \
-    nativesdk-cmake nativesdk-python3-mako nativesdk-python3-six \
+    nativesdk-cmake nativesdk-python3-mako \
     nativesdk-protobuf \
 "
 
