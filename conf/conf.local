@@ -15,8 +15,8 @@
 # GUI support
 #
 DISTRO_FEATURES_append = " opengl x11"
-PACKAGECONFIG_pn-gnuradio = "qtgui5 grc zeromq"
-PACKAGECONFIG_pn-gnuplot = "cairo qt5"
+PACKAGECONFIG_pn-gnuradio += "qtgui5 grc zeromq"
+PACKAGECONFIG_pn-gnuplot += "cairo qt5"
 
 
 #
@@ -178,6 +178,7 @@ FORTRAN_forcevariable = ",fortran"
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+PREFERRED_PROVIDER_gtest = "gtest"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 PREFERRED_VERSION_glog = "0.4.0"
 PACKAGECONFIG_glog = "gflags"
