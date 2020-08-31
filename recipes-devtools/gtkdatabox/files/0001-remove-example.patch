@@ -1,7 +1,7 @@
-From 83ad897e626ed2f165246e38caca9d831e0f933f Mon Sep 17 00:00:00 2001
+From d6d1402eefe7708df781fdbd6edfde8b89411462 Mon Sep 17 00:00:00 2001
 From: Carles Fernandez <carles.fernandez@gmail.com>
-Date: Mon, 31 Aug 2020 16:50:34 +0200
-Subject: [PATCH] Remove examples
+Date: Mon, 31 Aug 2020 19:32:46 +0200
+Subject: [PATCH] remove-example
 
 ---
  Makefile.am | 2 +-
@@ -14,8 +14,9 @@ index ac1c11f..c7e1818 100644
 @@ -3,7 +3,7 @@
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = gtkdatabox.pc
-
--SUBDIRS = gtk glade examples
+ 
+-SUBDIRS = gtk glade examples 
 +SUBDIRS = gtk glade
-
+ 
  EXTRA_DIST = depcomp scripts gtkdatabox.pc.in gtkdatabox.spec.in glade/gtkdatabox.xml api
+ 
