@@ -8,7 +8,7 @@ DEPENDS = "boost protobuf protobuf-native qtbase qtdeclarative qtquickcontrols q
 
 PV = "1.0.git"
 
-SRCREV = "11c327e2a20181733cdcac91bcff293b625f7210"
+SRCREV = "4af0d8d3e385cde52a7c5146fb17c5b9daf1f963"
 
 inherit qmake5 cmake_qt5
 
