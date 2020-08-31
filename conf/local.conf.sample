@@ -13,8 +13,8 @@
 # GUI support
 #
 DISTRO_FEATURES_append = " opengl x11"
-PACKAGECONFIG_pn-gnuradio = "qtgui5 grc zeromq uhd"
-PACKAGECONFIG_pn-gnuplot = "cairo qt5"
+PACKAGECONFIG_pn-gnuradio += "qtgui5 grc zeromq"
+PACKAGECONFIG_pn-gnuplot += "cairo qt5"
 
 
 #
@@ -123,7 +123,7 @@ USER_CLASSES ?= "buildstats image-mklibs rm_work"
 
 RM_WORK_EXCLUDE = "base-dev-image uhd-dev-image gnuradio-dev-image \
                    gnuradio-demo-image gnuradio-video-demo-image gnss-sdr-dev-image \
-                   gnss-sdr-demo-image gnss-sdr-minimal-image"
+                   gnss-sdr-demo-image gnss-sdr-minimal-image gnuradio"
 
 
 
@@ -172,17 +172,18 @@ BB_DISKMON_DIRS = "\
 CONF_VERSION = "1"
 
 FORTRAN_forcevariable = ",fortran"
-RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+PREFERRED_PROVIDER_gtest = "gtest"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 PREFERRED_VERSION_glog = "0.4.0"
 PACKAGECONFIG_glog = "gflags"
 PREFERRED_VERSION_lapack = "3.7.0"
 PREFERRED_VERSION_gflags = "2.2.2"
-PREFERRED_VERSION_libiio = "0.14"
+PREFERRED_VERSION_gtest = "1.10.0"
+PREFERRED_VERSION_libiio = "0.21"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 

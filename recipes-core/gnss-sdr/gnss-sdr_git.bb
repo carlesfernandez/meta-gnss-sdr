@@ -4,9 +4,9 @@ HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
-           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
-           python3-mako python3-mako-native python3-six python3-six-native"
+DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
+           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
+           python3-mako python3-mako-native"
 
 RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
 
@@ -22,7 +22,7 @@ inherit cmake pkgconfig
 
 OECMAKE_FIND_ROOT_PATH_MODE_PROGRAM = "BOTH"
 
-EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+EXTRA_OECMAKE += " \
  -DENABLE_UNIT_TESTING_EXTRA=ON  \
  -DENABLE_SYSTEM_TESTING_EXTRA=ON  \
  -DCMAKE_INSTALL_PREFIX=/usr  \
@@ -31,13 +31,12 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_RAW_UDP=ON  \
  -DENABLE_INSTALL_TESTS=ON \
  -DENABLE_PACKAGING=ON \
- -DENABLE_FPGA=ON \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.11.git"
+PV = "0.0.13.git"
 
-SRCREV = "75e735043bc9af44e39d376673f54feeacc9c985"
+SRCREV = "df2f84dfb0ae3d01dc170802524d3894237c4718"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
@@ -48,6 +47,9 @@ S="${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
 
+INSANE_SKIP_gnss-sdr_append = "already-stripped"
+INSANE_SKIP_gnss-sdr-dev_append = "already-stripped"
+
 FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/volk_gnsssdr_profile \
      ${bindir}/volk_gnsssdr-config-info \
@@ -56,7 +58,7 @@ FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/position_test \
      ${bindir}/ttff \
      ${bindir}/rinex2assist \
-     ${bindir}/* \
+     ${bindir}/obsdiff \
      /usr/share/man/man1/volk_gnsssdr-config-info.1.gz \
      /usr/share/man/man1/gnss-sdr.1.gz \
      /usr/share/man/man1/front-end-cal.1.gz \

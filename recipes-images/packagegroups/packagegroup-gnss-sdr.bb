@@ -20,18 +20,25 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gflags \
     glog \
     armadillo \
+    hdf5 \
+    devmem2 \
     gtest \
     gnutls \
     log4cpp \
     matio \
     python3-mako \
-    python3-six \
     pugixml \
     protobuf \
     rtl-sdr \
-    libpcap \
-    gr-osmosdr \
+    libhackrf \
+    iio-oscilloscope \
+    ezdma \
     gr-iio \
+    gr-osmosdr \
+    libpcap \
+    libiio \
+    libad9361-iio \
+    gnss-sdr-monitor \
     gnuplot \
     gnuplot-x11 \
     gpstk \
@@ -77,6 +84,17 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     rsync \
     gdb \
     perf \
+    psmisc \
+    gqrx \
+    xinput-calibrator \
+    xserver-xorg \
+    directfb-examples \
+    wpa-supplicant \
+    hostapd \
+    dnsmasq \
+    lighttpd \
+    libuio \
+    lsuio \
 "
 
 SUMMARY_packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
@@ -95,6 +113,8 @@ RDEPENDS_packagegroup-gnss-sdr-buildessential = "\
     glib-2.0 \
     make \
     ninja \
+    libgfortran \
+    libgfortran-dev \
     libstdc++ \
     libstdc++-dev \
     libtool \

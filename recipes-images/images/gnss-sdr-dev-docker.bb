@@ -7,13 +7,13 @@ LICENSE = "MIT"
 require core-image-container.bb
 require gnuradio-dev-image.bb
 
-RDEPENDS_packagegroup-sdr-base-python += " python3-six"
-
-SDK_EXTRA_TOOLS += "nativesdk-python3-six"
+COMPATIBLE_MACHINE = "${MACHINE}"
 
 IMAGE_INSTALL = " \
                  packagegroup-core-container \
+                 packagegroup-gnss-sdr-buildessential \
                  packagegroup-gnss-sdr-base \
+                 packagegroup-gnss-sdr-base-extended \
                 "
 
 CORE_IMAGE_EXTRA_INSTALL += " \
