@@ -4,13 +4,13 @@ SECTION = "libs"
 LICENSE = "LGPLv2.1+"
 LIC_FILES_CHKSUM = "file://COPYING.txt;md5=7c13b3376cea0ce68d2d2da0a1b3a72c"
 
-SRCREV = "fa82974d8bd1fded78e630ab71a7ded1b11d0e33"
+SRCREV = "565bf68eccfdbbf22cf5cb6d792e23de564665c7"
 
 SRC_URI = "git://github.com/analogdevicesinc/libiio.git;protocol=https"
 
 S = "${WORKDIR}/git"
 
-inherit cmake pythonnative systemd
+inherit cmake python3native systemd
 
 DEPENDS = " \
     flex-native bison-native libaio \
@@ -36,7 +36,7 @@ PACKAGECONFIG[NETWORK_BACKEND] = "-DWITH_NETWORK_BACKEND=ON,-DWITH_NETWORK_BACKE
 
 PACKAGES =+ "${PN}-iiod ${PN}-tests ${PN}-python"
 
-RDEPENDS_${PN}-python = "${PN} python-ctypes python-stringold"
+RDEPENDS_${PN}-python = "${PN} python3-ctypes python3-stringold"
 
 FILES_${PN}-iiod = " \
     ${sbindir}/iiod \
