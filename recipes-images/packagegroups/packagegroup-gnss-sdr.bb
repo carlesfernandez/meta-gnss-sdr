@@ -86,6 +86,8 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     hostapd \
     dnsmasq \
     lighttpd \
+    libuio \
+    lsuio \
 "
 
 SUMMARY_packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
