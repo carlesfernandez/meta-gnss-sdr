@@ -78,6 +78,14 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     rsync \
     gdb \
     perf \
+    psmisc \
+    xinput-calibrator \
+    xserver-xorg \
+    directfb-examples \
+    wpa-supplicant \
+    hostapd \
+    dnsmasq \
+    lighttpd \
 "
 
 SUMMARY_packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
