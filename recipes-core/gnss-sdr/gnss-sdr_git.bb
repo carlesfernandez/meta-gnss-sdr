@@ -36,7 +36,7 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 
 PV = "0.0.13.git"
 
-SRCREV = "d997f7bf5658103a4c7d0b8f8b93c66e265a4ee2"
+SRCREV = "df2f84dfb0ae3d01dc170802524d3894237c4718"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
@@ -46,6 +46,9 @@ SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=
 S="${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
+
+INSANE_SKIP_gnss-sdr_append = "already-stripped"
+INSANE_SKIP_gnss-sdr-dev_append = "already-stripped"
 
 FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/volk_gnsssdr_profile \
