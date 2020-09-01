@@ -29,6 +29,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     pugixml \
     protobuf \
     rtl-sdr \
+    iio-oscilloscope \
     ezdma \
     libpcap \
     gnuplot \
