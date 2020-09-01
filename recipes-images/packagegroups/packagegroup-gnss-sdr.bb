@@ -20,6 +20,8 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gflags \
     glog \
     armadillo \
+    hdf5 \
+    devmem2 \
     gtest \
     gnutls \
     log4cpp \
@@ -29,6 +31,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     pugixml \
     protobuf \
     rtl-sdr \
+    libhackrf \
     iio-oscilloscope \
     ezdma \
     libpcap \
