@@ -1,4 +1,5 @@
-DESCRIPTION = "Google's framework for writing C++ tests"
+SUMMARY = "Google C++ Testing Framework"
+DESCRIPTION = "Google's framework for writing C++ tests. This recipe installs the source code in the target."
 HOMEPAGE = "https://github.com/google/googletest"
 SECTION = "libs"
 LICENSE = "BSD-3-Clause"
