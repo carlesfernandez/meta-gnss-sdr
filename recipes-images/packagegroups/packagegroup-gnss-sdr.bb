@@ -32,6 +32,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     iio-oscilloscope \
     ezdma \
     libpcap \
+    gnss-sdr-monitor \
     gnuplot \
     gnuplot-x11 \
     gpstk \
