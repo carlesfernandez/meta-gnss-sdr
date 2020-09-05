@@ -12,6 +12,7 @@ EXTRA_IMAGE_FEATURES += "package-management"
 LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
+    packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-base-extended \
     packagegroup-gnss-sdr-drivers \
     packagegroup-sdr-base-devel \
