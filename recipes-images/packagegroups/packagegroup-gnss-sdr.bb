@@ -22,6 +22,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gflags \
     glog \
     gnss-sdr-monitor \
+    gnss-simulator \
     gnuplot \
     gnuplot-x11 \
     gnuradio \
@@ -29,12 +30,14 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gpstk \
     gtest \
     hdf5 \
+    lapack \
     libpcap \
     log4cpp \
     matio \
     protobuf \
     pugixml \
     python3-mako \
+    volk \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
@@ -52,7 +55,6 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     rtl-sdr \
     uhd \
 "
-
 
 SUMMARY_packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
 RDEPENDS_packagegroup-gnss-sdr-base-extended = "\

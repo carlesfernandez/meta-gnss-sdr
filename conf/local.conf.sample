@@ -173,7 +173,7 @@ BB_DISKMON_DIRS = "\
 #
 
 # Uncomment these lines to use a local mirror:
-#SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/"
+#SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/thud/"
 #INHERIT += "own-mirrors"
 
 # Uncomment the line below to keep source files under build/download, build the

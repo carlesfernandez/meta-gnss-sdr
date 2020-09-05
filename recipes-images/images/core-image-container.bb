@@ -6,7 +6,7 @@ IMAGE_INSTALL = " \
 	         packagegroup-core-container \
 		"
 
-COMPATIBLE_MACHINE = "zedboard-zynq7"
+COMPATIBLE_MACHINE = "${MACHINE}"
 
 IMAGE_CLASSES += "image_type_docker"
 IMAGE_FSTYPES = "docker"

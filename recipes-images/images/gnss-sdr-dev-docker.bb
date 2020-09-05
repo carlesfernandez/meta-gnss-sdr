@@ -18,8 +18,10 @@ IMAGE_INSTALL = " \
                 "
 
 CORE_IMAGE_EXTRA_INSTALL += " \
+    packagegroup-gnss-sdr-buildessential \
     packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-drivers \
+    packagegroup-gnss-sdr-base-extended \
 "
 
 IMAGE_CLASSES += "image_type_docker"
