@@ -11,9 +11,10 @@ SDK_EXTRA_TOOLS += "nativesdk-python3-six"
 
 IMAGE_INSTALL += " \
                  packagegroup-gnss-sdr-base \
+                 packagegroup-gnss-sdr-drivers \
                  packagegroup-gnss-sdr-bin \
                 "
-                
+
 # set a meaningful name  and tag for the docker output image
 DOCKER_IMAGE_TAG = "latest"
 DOCKER_IMAGE_NAME_EXPORT = "gnsssdr-demo-arm32v7:${DOCKER_IMAGE_TAG}"

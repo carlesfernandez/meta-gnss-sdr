@@ -14,10 +14,12 @@ SDK_EXTRA_TOOLS += "nativesdk-python3-six"
 IMAGE_INSTALL = " \
                  packagegroup-core-container \
                  packagegroup-gnss-sdr-base \
+                 packagegroup-gnss-sdr-drivers \
                 "
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-drivers \
 "
 
 IMAGE_CLASSES += "image_type_docker"
@@ -25,6 +27,6 @@ IMAGE_FSTYPES = "docker"
 
 inherit core-image
 
-# set a meaningful name  and tag for the docker output image
+# set a meaningful name and tag for the docker output image
 DOCKER_IMAGE_TAG = "latest"
 DOCKER_IMAGE_NAME_EXPORT = "gnsssdr-dev-arm32v7:${DOCKER_IMAGE_TAG}"
