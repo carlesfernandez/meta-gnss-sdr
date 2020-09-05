@@ -15,6 +15,9 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     gnss-sdr \
     packagegroup-sdr-base-extended \
     packagegroup-sdr-hardware \
+    packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-drivers \
+    packagegroup-gnss-sdr-base-extended \
     xauth \
     e2fsprogs-resize2fs \
 "
