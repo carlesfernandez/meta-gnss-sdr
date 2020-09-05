@@ -13,6 +13,7 @@ LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
     packagegroup-gnss-sdr-base-extended \
+    packagegroup-gnss-sdr-drivers \
     packagegroup-sdr-base-devel \
     packagegroup-sdr-base-python \
     packagegroup-sdr-python-extended \
@@ -22,5 +23,7 @@ CORE_IMAGE_EXTRA_INSTALL = "\
     "
 
 #    zeroc-ice
+
+#SDK_NAME = "${BPN}-${MACHINE}"
 
 inherit core-image image-buildinfo

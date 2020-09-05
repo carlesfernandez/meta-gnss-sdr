@@ -7,6 +7,7 @@ require gnuradio-dev-image.bb
 
 IMAGE_INSTALL += " \
                  packagegroup-gnss-sdr-base \
+                 packagegroup-gnss-sdr-drivers \
                  packagegroup-gnss-sdr-bin \
                 "
 
