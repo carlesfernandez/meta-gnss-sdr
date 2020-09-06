@@ -63,6 +63,7 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     bash \
     bind \
     bzip2 \
+    ca-certificates \
     cifs-utils \
     coreutils \
     cpio \
