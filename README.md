@@ -13,8 +13,9 @@ The process described below is based on [OpenEmbedded](http://www.openembedded.o
 Ubuntu 16.04 64 bits in a Virtual Machine
 
 ```
-$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
-    build-essential chrpath libsdl1.2-dev xterm
+$ sudo apt-get install build-essential xz-utils python3 curl git automake \
+  libtool g++ gawk wget diffstat unzip texinfo gcc-multilib \
+  chrpath libsdl1.2-dev xterm
 ```
 
 Configure Git:
