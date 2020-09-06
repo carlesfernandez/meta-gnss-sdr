@@ -30,12 +30,14 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gpstk \
     gtest \
     hdf5 \
+    lapack \
     libpcap \
     log4cpp \
     matio \
     protobuf \
     pugixml \
     python3-mako \
+    volk \
 "
 
 SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
@@ -63,6 +65,7 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     bash \
     bind \
     bzip2 \
+    ca-certificates \
     cifs-utils \
     coreutils \
     cpio \
