@@ -4,7 +4,7 @@ environment suitable for building GNSS-SDR."
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 LICENSE = "MIT"
 
-require gnuradio-dev-image.bb
+require base-dev-image.bb
 
 RDEPENDS_packagegroup-sdr-base-python += " python3-six"
 
