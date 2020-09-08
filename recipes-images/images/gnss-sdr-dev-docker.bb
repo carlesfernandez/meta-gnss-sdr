@@ -4,22 +4,20 @@ for GNSS-SDR testing purposes."
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 LICENSE = "MIT"
 
-require core-image-container.bb
+require core-image-docker-container.bb
 require gnuradio-dev-image.bb
 
-COMPATIBLE_MACHINE = "${MACHINE}"
-
 IMAGE_INSTALL = " \
-                 packagegroup-core-container \
-                 packagegroup-gnss-sdr-buildessential \
-                 packagegroup-gnss-sdr-base \
-                 packagegroup-gnss-sdr-drivers \
-                 packagegroup-gnss-sdr-base-extended \
-                "
-
-CORE_IMAGE_EXTRA_INSTALL += " \
+    packagegroup-core-docker-container \
     packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-drivers \
+"
+
+CORE_IMAGE_EXTRA_INSTALL += " \
+    packagegroup-gnss-sdr-buildessential \
+    packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-drivers \
+    packagegroup-gnss-sdr-base-extended \
 "
 
 IMAGE_CLASSES += "image_type_docker"
