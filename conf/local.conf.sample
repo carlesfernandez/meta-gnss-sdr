@@ -121,8 +121,7 @@ IMAGE_FSTYPES = "tar.gz"
 # NOTE: mklibs also needs to be explicitly enabled for a given image, see local.conf.extended
 USER_CLASSES ?= "buildstats image-mklibs rm_work"
 
-RM_WORK_EXCLUDE = "base-dev-image gnuradio-dev-image \
-                   gnuradio-demo-image gnss-sdr-dev-image \
+RM_WORK_EXCLUDE = "base-dev-image gnss-sdr-dev-image \
                    gnss-sdr-demo-image gnss-sdr-minimal-image gnuradio"
 
 
