@@ -39,8 +39,16 @@ FILES_${PN}-iiod = " \
     ${sbindir}/iiod \
     ${systemd_system_unitdir}/iiod.service \
 "
-FILES_${PN}-tests = "${bindir}"
-FILES_${PN}-python = "${PYTHON_SITEPACKAGES_DIR}"
+
+FILES_${PN}-tests = " \
+    ${bindir}/iio_attr \
+    ${bindir}/iio_info \
+    ${bindir}/iio_reg \
+    ${bindir}/iio_readdev \
+    ${bindir}/ \
+"
+
+FILES_${PN}-${PYTHON_PN} = "${PYTHON_SITEPACKAGES_DIR}"
 
 SYSTEMD_PACKAGES = "${PN}-iiod"
 SYSTEMD_SERVICE_${PN}-iiod = "iiod.service"

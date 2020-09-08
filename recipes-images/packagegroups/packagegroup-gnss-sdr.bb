@@ -55,6 +55,8 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     libad9361-iio \
     libhackrf \
     libiio \
+    libiio-iiod \
+    libiio-tests \
     rtl-sdr \
 "
 
