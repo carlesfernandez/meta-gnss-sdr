@@ -188,12 +188,12 @@ CONF_VERSION = "1"
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
+PREFERRED_PROVIDER_gtest = "gtest"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
-PREFERRED_PROVIDER_gtest = "gtest"
 
-PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 PACKAGECONFIG_glog = "gflags"
+PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_glog = "0.4.0"
