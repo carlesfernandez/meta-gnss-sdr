@@ -1,22 +1,16 @@
-This layer depends on:
+# meta-gnss-sdr
 
-URI: git://github.com/openembedded/openembedded-core.git
-branch: master
-revision: HEAD
+This repo defines an OpenEmbedded layer for the execution of
+[gnss-sdr](https://gnss-sdr.org) on embedded devices.
 
-URI: git://github.com/openembedded/meta-openembedded.git
-branch: master
-revision: HEAD
+**PLEASE DO NOU USE THE MASTER BRANCH OF THIS REPOSITORY, IT IS ONLY FOR
+EXPERIMENTAL PURPOSES**
 
-URI: git://github.com/balister/meta-sdr.git
-branch: master
-revision: HEAD
+Check the branches of this repo to get the meta-gnss-sdr layer for different
+[Yocto Project](https://www.yoctoproject.org/) versions.
 
-From meta-openembedded, you need the following layers:
-meta-oe
-meta-filesystems
-meta-networking
-meta-python
+Instructions on how to use this layer:
+https://github.com/carlesfernandez/oe-gnss-sdr-manifest.git.
 
-
-Instructions on how to use this layer: https://github.com/carlesfernandez/oe-gnss-sdr-manifest.git
+More info:
+[Cross-compiling GNSS-SDR](https://gnss-sdr.org/docs/tutorials/cross-compiling/)
