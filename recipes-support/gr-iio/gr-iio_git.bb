@@ -3,14 +3,14 @@ HOMEPAGE = "https://github.com/analogdevicesinc/gr-iio"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
-DEPENDS ="gnuradio libiio libad9361-iio bison-native"
+DEPENDS = "gnuradio libiio libad9361-iio bison-native"
 
 inherit distutils3-base cmake pkgconfig
 
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
-S="${WORKDIR}/git"
+S = "${WORKDIR}/git"
 
 PV = "0.3"
 
