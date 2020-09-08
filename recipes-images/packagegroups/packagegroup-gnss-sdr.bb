@@ -20,6 +20,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     armadillo \
     boost \
     gflags \
+    gflags-bash-completion \
     glog \
     gnss-sdr-monitor \
     gnss-simulator \
