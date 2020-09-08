@@ -3,7 +3,7 @@ EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 LICENSE = "MIT"
 
 require core-image-docker-container.bb
-require gnuradio-dev-image.bb
+require base-dev-image.bb
 
 IMAGE_INSTALL += " \
     packagegroup-gnss-sdr-base \
