@@ -1,3 +1,3 @@
-COMPATIBLE_MACHINE = "raspberrypi3"
 FILESEXTRAPATHS_prepend := "${THISDIR}/:"
-SRC_URI += "file://fix-kprobes.patch"
+
+SRC_URI_append_raspberrypi3 = " file://fix-kprobes.patch"
