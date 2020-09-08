@@ -7,7 +7,7 @@ HOMEPAGE = "https://github.com/google/glog"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://COPYING;md5=dc9db360e0bbd4e46672f3fd91dd6c4b"
 
-DEPENDS = "libunwind"
+DEPENDS = "libunwind gflags"
 
 SRC_URI = " \
     git://github.com/google/glog.git;protocol=https \
