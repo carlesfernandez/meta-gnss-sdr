@@ -186,6 +186,14 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 
 CONF_VERSION = "1"
 
+# Use Analog Devices Linux kernel and tools for Vivado 2018.3
+PREFERRED_PROVIDER_virtual/kernel = "linux-adi"
+PREFERRED_VERSION_virtual/kernel = "2019_R1"
+
+PREFERRED_VERSION_iio-oscilloscope = "2019.R1"
+PREFERRED_VERSION_libad9361-iio = "2019.R1"
+PREFERRED_VERSION_libiio = "2019.R1"
+
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
@@ -200,7 +208,6 @@ PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_glog = "0.4.0"
 PREFERRED_VERSION_gtest = "1.10.0"
 PREFERRED_VERSION_lapack = "3.7.0"
-PREFERRED_VERSION_libiio = "0.21"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 

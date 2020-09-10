@@ -51,6 +51,7 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     ezdma \
     iio-oscilloscope \
     libad9361-iio \
+    libad9361-iio-dev \
     libhackrf \
     libiio \
     libiio-iiod \
