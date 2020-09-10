@@ -3,10 +3,11 @@ HOMEPAGE = "https://wiki.analog.com/resources/tools-software/linux-software/iio_
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://license.txt;md5=cfe3dd5eb030dee299c43cb6f0b93096"
 
-PV = "2019.1.R1"
+SRCREV = "ed0dccf8eb6e7624232ffc707db7d1fc02bc0457"
+
 GIT_BRANCH = "2019_R1"
 SRC_URI = "git://github.com/analogdevicesinc/iio-oscilloscope.git;branch=${GIT_BRANCH};protocol=https "
-SRCREV = "ed0dccf8eb6e7624232ffc707db7d1fc02bc0457"
+
 S = "${WORKDIR}/git"
 
 FILES_${PN} += "*"
