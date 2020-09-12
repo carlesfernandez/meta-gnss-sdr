@@ -200,7 +200,7 @@ PREFERRED_PROVIDER_gtest = "gtest"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 
-PACKAGECONFIG_glog = "gflags"
+PACKAGECONFIG_pn-glog = "gflags"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_VERSION_gflags = "2.2.2"
@@ -208,7 +208,7 @@ PREFERRED_VERSION_glog = "0.4.0"
 PREFERRED_VERSION_gtest = "1.10.0"
 PREFERRED_VERSION_lapack = "3.7.0"
 
-INSANE_SKIP_sip3_append = " already-stripped"
+INSANE_SKIP_sip3-native_append = "already-stripped"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
