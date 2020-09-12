@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=dc9db360e0bbd4e46672f3fd91dd6c4b"
 DEPENDS = "libunwind"
 
 SRC_URI = " \
-    git://github.com/google/glog.git \
+    git://github.com/google/glog.git;protocol=https \
 "
 
 SRCREV = "2063b387080c1e7adffd33ca07adff0eb346ff1a"

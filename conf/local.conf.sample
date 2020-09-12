@@ -173,18 +173,26 @@ BB_DISKMON_DIRS = "\
 
 CONF_VERSION = "1"
 
+# Use Analog Devices Linux kernel and tools for Vivado 2018.3
+PREFERRED_PROVIDER_virtual/kernel = "linux-adi"
+PREFERRED_VERSION_virtual/kernel = "2019-R1"
+
+PREFERRED_PROVIDER_virtual/kernel_raspberrypi3 = "linux-raspberrypi-rt"
+
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
-
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
-PREFERRED_VERSION_glog = "0.3.5"
-PACKAGECONFIG_glog = "gflags"
-PREFERRED_VERSION_lapack = "3.7.0"
+PACKAGECONFIG_pn_glog = "gflags"
+
 PREFERRED_VERSION_gflags = "2.2.1"
-PREFERRED_VERSION_libiio = "0.14"
+PREFERRED_VERSION_glog = "0.3.5"
+PREFERRED_VERSION_lapack = "3.7.0"
+PREFERRED_VERSION_libad9361-iio = "2019-R1"
+PREFERRED_VERSION_libiio = "2019-R1"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 DISTRO_FEATURES += " systemd ${DISTRO_FEATURES_LIBC}"
