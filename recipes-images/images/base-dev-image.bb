@@ -1,24 +1,36 @@
-SUMMARY = "A console-only image with a development/debug \
-environment suitable for building UHD installed."
+SUMMARY = "An image with a development/debug environment suitable \
+ for building GNSS-SDR."
 
 LICENSE = "MIT"
 
+require native-sdk.inc
 require version-image.inc
 
 IMAGE_FEATURES += "splash ssh-server-openssh tools-sdk \
                    tools-debug debug-tweaks \
                    dev-pkgs \
-                  "
+"
 
-EXTRA_IMAGE_FEATURES += "package-management"
+EXTRA_IMAGE_FEATURES += " \
+    package-management \
+    tools-debug \
+    tools-profile \
+    tools-sdk \
+    dev-pkgs \
+"
 
-require recipes-images/images/native-sdk.inc
+EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
-    packagegroup-sdr-base-extended \
-    packagegroup-sdr-base-debug \
+    packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-base-extended \
+    packagegroup-gnss-sdr-drivers \
     packagegroup-sdr-base-devel \
     packagegroup-sdr-base-python \
-    "
+    packagegroup-sdr-python-extended \
+    packagegroup-sdr-gnuradio-base \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xauth', '', d)} \
+    e2fsprogs-resize2fs \
+"
 
 inherit core-image image-buildinfo

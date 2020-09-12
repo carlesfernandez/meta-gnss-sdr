@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 inherit packagegroup
 
 RDEPENDS_${PN} = "\
-		busybox \
-		base-files \
-		base-passwd \
-		"
+    busybox \
+    base-files \
+    base-passwd \
+"

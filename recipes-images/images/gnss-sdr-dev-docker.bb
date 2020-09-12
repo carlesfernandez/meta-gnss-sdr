@@ -4,20 +4,24 @@ for GNSS-SDR testing purposes."
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 LICENSE = "MIT"
 
-require core-image-container.bb
-require gnuradio-dev-image.bb
+require core-image-docker-container.bb
+require base-dev-image.bb
 
 RDEPENDS_packagegroup-sdr-base-python += " python3-six"
 
 SDK_EXTRA_TOOLS += "nativesdk-python3-six"
 
 IMAGE_INSTALL = " \
-                 packagegroup-core-container \
-                 packagegroup-gnss-sdr-base \
-                "
+    packagegroup-core-docker-container \
+    packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-drivers \
+"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
+    packagegroup-gnss-sdr-buildessential \
     packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-drivers \
+    packagegroup-gnss-sdr-base-extended \
 "
 
 IMAGE_CLASSES += "image_type_docker"
@@ -25,6 +29,6 @@ IMAGE_FSTYPES = "docker"
 
 inherit core-image
 
-# set a meaningful name  and tag for the docker output image
+# set a meaningful name and tag for the docker output image
 DOCKER_IMAGE_TAG = "latest"
 DOCKER_IMAGE_NAME_EXPORT = "gnsssdr-dev-arm32v7:${DOCKER_IMAGE_TAG}"

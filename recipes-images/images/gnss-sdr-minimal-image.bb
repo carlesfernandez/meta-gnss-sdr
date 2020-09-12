@@ -15,7 +15,10 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     gnss-sdr \
     packagegroup-sdr-base-extended \
     packagegroup-sdr-hardware \
-    xauth \
+    packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-drivers \
+    packagegroup-gnss-sdr-base-extended \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xauth', '', d)} \
     e2fsprogs-resize2fs \
 "
 
