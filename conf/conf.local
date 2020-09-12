@@ -190,6 +190,8 @@ CONF_VERSION = "1"
 PREFERRED_PROVIDER_virtual/kernel = "linux-adi"
 PREFERRED_VERSION_virtual/kernel = "2019-R1"
 
+PREFERRED_PROVIDER_virtual/kernel_raspberrypi3 = "linux-raspberrypi-rt"
+
 PREFERRED_VERSION_iio-oscilloscope = "2019-R1"
 PREFERRED_VERSION_libad9361-iio = "2019-R1"
 PREFERRED_VERSION_libiio = "2019-R1"
