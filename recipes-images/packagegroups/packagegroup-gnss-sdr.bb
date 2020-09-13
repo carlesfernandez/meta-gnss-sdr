@@ -1,5 +1,5 @@
-# packagegroup definitions to help the GNSS-SDR community build images
-# they like.
+SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
+ images they like."
 
 LICENSE = "MIT"
 
