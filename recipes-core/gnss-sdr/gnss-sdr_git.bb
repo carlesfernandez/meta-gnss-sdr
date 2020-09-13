@@ -5,10 +5,13 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
-           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native \
+           gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
            python3-mako python3-mako-native python3-six python3-six-native"
 
 RDEPENDS_${PN} = "gnss-simulator"
+
+INSANE_SKIP_gnss-sdr_append = "already-stripped"
+INSANE_SKIP_gnss-sdr-dev_append = "already-stripped"
 
 PACKAGECONFIG ??= "osmosdr"
 
@@ -36,14 +39,14 @@ EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 
 PV = "0.0.13.git"
 
-SRCREV = "d997f7bf5658103a4c7d0b8f8b93c66e265a4ee2"
+SRCREV = "6fcae1a917c0ac96010f3a5ac85afd0b6ab31e44"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
 
-S="${WORKDIR}/git"
+S = "${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
 

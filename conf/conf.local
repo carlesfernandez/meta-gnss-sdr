@@ -184,12 +184,13 @@ RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 
+PACKAGECONFIG_pn_glog = "gflags"
 
 PREFERRED_VERSION_python-six = "1.10.0"
 PREFERRED_VERSION_glog = "0.3.5"
-PACKAGECONFIG_glog = "gflags"
 PREFERRED_VERSION_gflags = "2.2.1"
-PREFERRED_VERSION_libiio = "0.14"
+PREFERRED_VERSION_libiio = "2019-R1"
+
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 DISTRO_FEATURES += " systemd ${DISTRO_FEATURES_LIBC}"

@@ -1,0 +1,14 @@
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -3,7 +3,7 @@
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = gtkdatabox.pc
+ 
+-SUBDIRS = gtk glade examples 
++SUBDIRS = gtk glade
+ 
+ EXTRA_DIST = depcomp scripts gtkdatabox.pc.in gtkdatabox.spec.in glade/gtkdatabox.xml api
+ 
+
+
+

@@ -7,8 +7,8 @@ SRC_URI = "http://sourceforge.net/projects/arma/files/armadillo-${PV}.tar.xz"
 SRC_URI[md5sum] = "18853ae13ef0996a558847b5128a840a"
 SRC_URI[sha256sum] = "53d7ad6124d06fdede8d839c091c649c794dae204666f1be0d30d7931737d635"
 
-EXTRA_OECMAKE += " -DBUILD_SHARED_LIBS=ON"
-DEPENDS += " lapack "
+EXTRA_OECMAKE += " -DBUILD_SHARED_LIBS=ON -DDETECT_HDF5=false"
+DEPENDS += " lapack hdf5"
 inherit cmake
 
 FILES_${PN}-dev += " \
