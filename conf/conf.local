@@ -184,7 +184,7 @@ RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 
-PACKAGECONFIG_pn_glog = "gflags"
+PACKAGECONFIG_pn-glog = "gflags"
 
 PREFERRED_VERSION_python-six = "1.10.0"
 PREFERRED_VERSION_glog = "0.3.5"
