@@ -192,7 +192,7 @@ PREFERRED_PROVIDER_gtest = "gtest"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 
-PACKAGECONFIG_pn_glog = "gflags"
+PACKAGECONFIG_pn-glog = "gflags"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_VERSION_gflags = "2.2.2"
