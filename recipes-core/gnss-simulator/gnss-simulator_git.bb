@@ -15,7 +15,7 @@ GIT_BRANCH = "master"
 
 SRC_URI = "git://bitbucket.org/jarribas/gnss-simulator.git;branch=${GIT_BRANCH};protocol=https "
 
-S="${WORKDIR}/git"
+S = "${WORKDIR}/git"
 
 inherit cmake
 
