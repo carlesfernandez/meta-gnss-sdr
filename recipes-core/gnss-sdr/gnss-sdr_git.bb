@@ -19,9 +19,7 @@ PACKAGECONFIG[gr-iio] = "-DENABLE_FMCOMMS2=ON,-DENABLE_FMCOMMS2=OFF,gr-iio, "
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
-inherit cmake pkgconfig
-
-OECMAKE_FIND_ROOT_PATH_MODE_PROGRAM = "BOTH"
+inherit distutils3-base cmake pkgconfig python3native
 
 EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_UNIT_TESTING_EXTRA=ON  \
@@ -43,7 +41,7 @@ GIT_BRANCH = "next"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https "
 
-S="${WORKDIR}/git"
+S = "${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
 

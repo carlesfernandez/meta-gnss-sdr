@@ -16,8 +16,6 @@ SRCREV = "4af0d8d3e385cde52a7c5146fb17c5b9daf1f963"
 
 inherit qmake5 cmake_qt5
 
-OECMAKE_FIND_ROOT_PATH_MODE_PROGRAM = "BOTH"
-
 # Make it easy to test against branches
 GIT_BRANCH = "master"
 
