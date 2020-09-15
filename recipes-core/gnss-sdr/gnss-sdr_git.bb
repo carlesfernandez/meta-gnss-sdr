@@ -21,9 +21,7 @@ PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 export BUILD_SYS
 export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
-inherit cmake pkgconfig
-
-OECMAKE_FIND_ROOT_PATH_MODE_PROGRAM = "BOTH"
+inherit distutils3-base cmake pkgconfig python3native
 
 EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
  -DENABLE_UNIT_TESTING_EXTRA=ON  \
