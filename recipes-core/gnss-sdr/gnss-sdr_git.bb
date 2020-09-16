@@ -20,7 +20,7 @@ export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 
 inherit distutils3-base cmake pkgconfig python3native
 
-EXTRA_OECMAKE += " -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+EXTRA_OECMAKE += " \
  -DENABLE_UNIT_TESTING_EXTRA=ON  \
  -DENABLE_SYSTEM_TESTING_EXTRA=ON  \
  -DCMAKE_INSTALL_PREFIX=/usr  \
