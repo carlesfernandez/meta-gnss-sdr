@@ -127,9 +127,8 @@ IMAGE_FSTYPES = "tar.gz"
 # NOTE: mklibs also needs to be explicitly enabled for a given image, see local.conf.extended
 USER_CLASSES ?= "buildstats image-mklibs rm_work"
 
-RM_WORK_EXCLUDE = "base-dev-image uhd-dev-image gnuradio-dev-image \
-                   gnuradio-demo-image gnuradio-video-demo-image gnss-sdr-dev-image \
-                   gnss-sdr-demo-image gnss-sdr-minimal-image"
+RM_WORK_EXCLUDE = "base-dev-image gnss-sdr-dev-image \
+                   gnss-sdr-demo-image gnss-sdr-minimal-image gnuradio"
 
 
 
@@ -174,6 +173,20 @@ BB_DISKMON_DIRS = "\
 #file://.* http://someserver.tld/share/sstate/PATH;downloadfilename=PATH \n \
 #file://.* file:///some/local/dir/sstate/PATH"
 
+#
+# Local mirror
+#
+
+# Configure a local mirror:
+SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/rocko/"
+INHERIT += "own-mirrors"
+
+# Use the line below to keep source files under build/download, build the
+# image and then store those files under SOURCE_MIRROR_URL:
+BB_GENERATE_MIRROR_TARBALLS = "1"
+
+# Uncomment this line to test the local mirror:
+#BB_NO_NETWORK = "1"
 
 CONF_VERSION = "1"
 
@@ -189,6 +202,8 @@ PACKAGECONFIG_pn-glog = "gflags"
 PREFERRED_VERSION_python-six = "1.10.0"
 PREFERRED_VERSION_glog = "0.3.5"
 PREFERRED_VERSION_gflags = "2.2.1"
+PREFERRED_VERSION_iio-oscilloscope = "2019-R1"
+PREFERRED_VERSION_libad9361-iio = "2019-R1"
 PREFERRED_VERSION_libiio = "2019-R1"
 
 INHIBIT_PACKAGE_STRIP = "1"
