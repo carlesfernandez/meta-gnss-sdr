@@ -1,4 +1,4 @@
-DESCRIPTION = "list available userspace I/O (UIO) devices"
+DESCRIPTION = "Lists available userspace I/O (UIO) devices"
 SECTION = "tools"
 DEPENDS = ""
 LICENSE = "LGPLv2"
@@ -15,5 +15,3 @@ SRC_URI[sha256sum] = "c88b3850248b2d3419e025abd7b9b0991c8bd33a2d4983f9608408a299
 S = "${WORKDIR}/lsuio-${PV}"
 
 inherit autotools
-
-
