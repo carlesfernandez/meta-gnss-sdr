@@ -50,6 +50,7 @@ SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     gr-osmosdr \
     gr-iio \
+    iio-oscilloscope \
     libad9361-iio \
     libad9361-iio-dev \
     libbladerf \
