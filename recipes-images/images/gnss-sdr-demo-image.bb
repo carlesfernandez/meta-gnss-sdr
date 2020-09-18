@@ -7,6 +7,8 @@ require base-dev-image.bb
 
 SDK_EXTRA_TOOLS += "nativesdk-python3-six"
 
+IMAGES_INSTALL += "packagegroup-xfce-extended"
+
 CORE_IMAGE_EXTRA_INSTALL += "\
     gnss-sdr \
 "

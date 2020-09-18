@@ -12,6 +12,9 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-networking \
   ##COREBASE##/../meta-oe/meta-filesystems \
   ##COREBASE##/../meta-oe/meta-python \
+  ##COREBASE##/../meta-oe/meta-xfce \
+  ##COREBASE##/../meta-oe/meta-gnome \
+  ##COREBASE##/../meta-oe/meta-multimedia \
   ##COREBASE##/../meta-qt5 \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-swupdate \
