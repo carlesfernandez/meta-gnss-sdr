@@ -1,0 +1,22 @@
+From d6d1402eefe7708df781fdbd6edfde8b89411462 Mon Sep 17 00:00:00 2001
+From: Carles Fernandez <carles.fernandez@gmail.com>
+Date: Mon, 31 Aug 2020 19:32:46 +0200
+Subject: [PATCH] remove-example
+
+---
+ Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index ac1c11f..c7e1818 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -3,7 +3,7 @@
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = gtkdatabox.pc
+ 
+-SUBDIRS = gtk glade examples 
++SUBDIRS = gtk glade
+ 
+ EXTRA_DIST = depcomp scripts gtkdatabox.pc.in gtkdatabox.spec.in glade/gtkdatabox.xml api
+ 
