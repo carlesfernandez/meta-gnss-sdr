@@ -4,7 +4,7 @@ environment suitable for building GNSS-SDR."
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 LICENSE = "MIT"
 
-require base-dev-image.bb
+require base-gnss-sdr-dev-image.bb
 
 SDK_EXTRA_TOOLS += "nativesdk-protobuf"
 TOOLCHAIN_HOST_TASK_append = " nativesdk-protobuf-compiler"
