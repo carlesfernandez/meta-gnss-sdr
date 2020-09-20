@@ -15,7 +15,3 @@ SRC_URI[sha256sum] = "c88b3850248b2d3419e025abd7b9b0991c8bd33a2d4983f9608408a299
 S = "${WORKDIR}/lsuio-${PV}"
 
 inherit autotools
-<<<<<<< HEAD
-
-=======
->>>>>>> 9d5ccc3... Improve lsuio recipe description
