@@ -5,6 +5,8 @@ LICENSE = "MIT"
 
 require base-dev-image.bb
 
+IMAGES_INSTALL += "packagegroup-xfce-extended"
+
 CORE_IMAGE_EXTRA_INSTALL += "\
     gnss-sdr \
 "
