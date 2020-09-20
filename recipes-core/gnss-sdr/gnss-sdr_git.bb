@@ -16,9 +16,6 @@ PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-os
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
 
-export BUILD_SYS
-export HOST_SYS="${MULTIMACH_TARGET_SYS}"
-
 inherit distutils3-base cmake pkgconfig python3native
 
 EXTRA_OECMAKE += " \
@@ -45,6 +42,8 @@ SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=
 S = "${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
+
+INSANE_SKIP_gnss-sdr_append = "already-stripped"
 
 FILES_${PN} = "${bindir}/gnss-sdr \
      ${bindir}/volk_gnsssdr_profile \

@@ -7,16 +7,13 @@ DEPENDS ="gnuradio libiio libad9361-iio"
 
 inherit distutils-base cmake pkgconfig
 
-export BUILD_SYS
-export HOST_SYS="${MULTIMACH_TARGET_SYS}"
-
-S="${WORKDIR}/git"
+S = "${WORKDIR}/git"
 
 PV = "0.3"
 
 SRCREV = "109436481a2a1872ce20a01a1f6cf390c508d308"
 
-SRC_URI = "git://github.com/analogdevicesinc/gr-iio"
+SRC_URI = "git://github.com/analogdevicesinc/gr-iio.git;protocol=https "
 
 FILES_${PN} += " \
    /usr/share/gnuradio/grc/blocks/* \
