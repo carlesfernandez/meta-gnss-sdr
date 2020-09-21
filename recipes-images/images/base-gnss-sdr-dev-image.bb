@@ -33,4 +33,6 @@ CORE_IMAGE_EXTRA_INSTALL = "\
     e2fsprogs-resize2fs \
 "
 
+SDK_NAME = "${DISTRO}-${SDK_ARCH}-${IMAGE_BASENAME}-${MACHINE}"
+
 inherit core-image image-buildinfo
