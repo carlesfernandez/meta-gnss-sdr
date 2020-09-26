@@ -190,8 +190,8 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 CONF_VERSION = "1"
 
 # Use Analog Devices Linux kernel and tools for Vivado 2018.3
-PREFERRED_PROVIDER_virtual/kernel = "linux-adi"
-PREFERRED_VERSION_virtual/kernel = "2019-R1"
+PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-adi"
+PREFERRED_VERSION_virtual/kernel_zedboard-zynq7 = "2019-R1"
 
 PREFERRED_PROVIDER_virtual/kernel_raspberrypi3 = "linux-raspberrypi"
 
