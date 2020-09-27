@@ -2,6 +2,7 @@ SUMMARY = "Linear Algebra PACKage"
 URL = "http://www.netlib.org/lapack"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=e21002112b171eb76a5d54efdff481a9"
+PR = "r0"
 
 DEPENDS = "gcc-runtime"
 
