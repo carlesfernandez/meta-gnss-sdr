@@ -2,6 +2,7 @@ SUMMARY = "Minimal docker image"
 DESCRIPTION = "This image is not meant to be booted. It is intended to be \
  loaded by docker via the docker load command."
 LICENSE = "MIT"
+PR = "r0"
 
 IMAGE_INSTALL = " \
     packagegroup-core-docker-container \

@@ -2,13 +2,11 @@ SUMMARY = "IIO blocks for GNU Radio"
 HOMEPAGE = "https://github.com/analogdevicesinc/gr-iio"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
+PR = "r1"
 
 DEPENDS = "gnuradio libiio libad9361-iio bison-native"
 
-inherit distutils3-base cmake pkgconfig
-
-export BUILD_SYS
-export HOST_SYS="${MULTIMACH_TARGET_SYS}"
+inherit distutils3-base cmake pkgconfig python3native
 
 S = "${WORKDIR}/git"
 
