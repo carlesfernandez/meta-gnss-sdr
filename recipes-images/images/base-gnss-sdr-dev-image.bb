@@ -2,6 +2,7 @@ SUMMARY = "An image with a development/debug environment suitable \
  for building GNSS-SDR."
 
 LICENSE = "MIT"
+PR = "r0"
 
 require native-sdk.inc
 require version-image.inc

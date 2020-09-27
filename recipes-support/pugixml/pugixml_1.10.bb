@@ -1,8 +1,8 @@
 SUMMARY = "Light-weight C++ XML Processing Library"
 HOMEPAGE = "https://pugixml.org"
 LICENSE = "MIT"
-
 LIC_FILES_CHKSUM = "file://readme.txt;md5=60de230cb0033dcc89dd409e289a827d"
+PR = "r0"
 
 SRC_URI = "https://github.com/zeux/pugixml/releases/download/v${PV}/pugixml-${PV}.tar.gz"
 SRC_URI[md5sum] = "f97237e9908201c6d8536210747b66af"
