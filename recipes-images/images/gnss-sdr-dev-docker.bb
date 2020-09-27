@@ -1,5 +1,6 @@
 SUMMARY = "An image that builds a Docker image of the environment \
 for GNSS-SDR testing purposes."
+PR = "r0"
 
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 LICENSE = "MIT"

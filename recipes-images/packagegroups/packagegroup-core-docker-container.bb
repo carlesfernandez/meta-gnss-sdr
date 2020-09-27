@@ -1,5 +1,6 @@
-SUMMARY = "This packagegroup provides the minimun needed for an docker container"
+SUMMARY = "This packagegroup provides the minimun needed for a docker container"
 LICENSE = "MIT"
+PR = "r1"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 

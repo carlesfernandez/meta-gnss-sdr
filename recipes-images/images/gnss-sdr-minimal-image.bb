@@ -1,5 +1,6 @@
 SUMMARY = "A spartan image with the GNSS-SDR binary \
 and required environment"
+PR = "r0"
 
 LICENSE = "MIT"
 

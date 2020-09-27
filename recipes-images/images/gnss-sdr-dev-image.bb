@@ -1,5 +1,6 @@
 SUMMARY = "An image with a development/debug \
 environment suitable for building GNSS-SDR."
+PR = "r0"
 
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 LICENSE = "MIT"
