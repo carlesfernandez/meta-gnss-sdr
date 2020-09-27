@@ -10,6 +10,7 @@ LIC_FILES_CHKSUM = " \
     file://legal/licenses/LICENSE.GPLv2;md5=b234ee4d69f5fce4486a80fdaf4a4263 \
     file://legal/licenses/LICENSE.LGPLv2.1;md5=4b54a1fd55a448865a0b32d41598759d \
     "
+PR = "r0"
 
 DEPENDS = "libusb1 libtecla"
 

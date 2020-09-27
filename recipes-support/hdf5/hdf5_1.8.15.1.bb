@@ -1,5 +1,7 @@
+SUMMARY = "High-performance data management and storage suite."
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f1883baf3a14753e47d9152b3b994ada"
+PR = "r0"
 
 BBCLASSEXTEND = "native"
 

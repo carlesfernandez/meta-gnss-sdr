@@ -2,6 +2,7 @@ SUMMARY = "MATLAB MAT File I/O Library"
 HOMEPAGE = "http://matio.sf.net"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://COPYING;md5=02cdf1821aecbae99f76cff331b71285"
+PR = "r0"
 
 DEPENDS = "zlib hdf5"
 
