@@ -2,6 +2,7 @@ SUMMARY = "A spartan image with the GNSS-SDR binary \
 and required environment"
 
 LICENSE = "MIT"
+PR = "r0"
 
 require version-image.inc
 
