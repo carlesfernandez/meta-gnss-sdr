@@ -4,6 +4,7 @@ AUTHOR = "Analog Devices, Inc."
 HOMEPAGE = "https://github.com/analogdevicesinc/libad9361-iio"
 LICENSE = "LGPL-2.1"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=40d2542b8c43a3ec2b7f5da31a697b88"
+PR = "r0"
 
 DEPENDS = "libiio"
 

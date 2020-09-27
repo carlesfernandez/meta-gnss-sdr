@@ -3,6 +3,7 @@ HOMEPAGE = "https://wiki.analog.com/resources/tools-software/linux-software/libi
 SECTION = "libs"
 LICENSE = "LGPLv2.1+"
 LIC_FILES_CHKSUM = "file://COPYING.txt;md5=7c13b3376cea0ce68d2d2da0a1b3a72c"
+PR = "r0"
 
 SRCREV = "8d6ad2926e84c39868907fdd846e55a0c7e8f5a4"
 GIT_BRANCH = "2019_R1"

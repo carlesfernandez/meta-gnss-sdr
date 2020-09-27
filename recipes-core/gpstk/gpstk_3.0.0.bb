@@ -2,6 +2,7 @@ SUMMARY = "The GPS Toolkit"
 DESCRIPTION = "Libraries and applications to facilitate working with GPS data for research and high accuracy uses."
 AUTHOR = "ARL:UT"
 HOMEPAGE = "https://github.com/SGL-UT/GPSTk/"
+PR = "r0"
 
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
