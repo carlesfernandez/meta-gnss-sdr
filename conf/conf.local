@@ -18,6 +18,8 @@ DISTRO ??= "geniux"
 # GUI support
 #
 DISTRO_FEATURES_append = " opengl x11"
+DISTRO_FEATURES_remove = "ptest"
+PACKAGECONFIG_remove_pn-qtbase = "tests"
 PACKAGECONFIG_pn-gnuradio += "qtgui5 grc zeromq uhd"
 PACKAGECONFIG_pn-gnuplot += "cairo qt5"
 
