@@ -2,7 +2,7 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
  images they like."
 
 LICENSE = "MIT"
-PR = "r1"
+PR = "r2"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
@@ -28,6 +28,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gnss-simulator \
     gnuplot \
     gnuradio \
+    gnuradio-x11 \
     gnutls \
     gpstk \
     gtest \
@@ -91,6 +92,7 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     htop \
     i2c-tools \
     inetutils \
+    iperf3 \
     iproute2 \
     iw \
     kmod \
