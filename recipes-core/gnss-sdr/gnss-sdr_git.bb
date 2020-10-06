@@ -11,9 +11,6 @@ DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls
 
 RDEPENDS_${PN} = "gnss-simulator"
 
-INSANE_SKIP_gnss-sdr_append = "already-stripped"
-INSANE_SKIP_gnss-sdr-dev_append = "already-stripped"
-
 PACKAGECONFIG ??= "osmosdr"
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
