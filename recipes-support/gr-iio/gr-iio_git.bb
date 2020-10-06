@@ -8,10 +8,7 @@ DEPENDS ="gnuradio libiio libad9361-iio"
 
 inherit distutils-base cmake pkgconfig
 
-export BUILD_SYS
-export HOST_SYS="${MULTIMACH_TARGET_SYS}"
-
-S="${WORKDIR}/git"
+S = "${WORKDIR}/git"
 
 PV = "0.3"
 
