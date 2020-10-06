@@ -27,8 +27,8 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     glog \
     gnss-simulator \
     gnuplot \
+    gnuplot-x11 \
     gnuradio \
-    gnuradio-x11 \
     gnutls \
     gpstk \
     gtest \
