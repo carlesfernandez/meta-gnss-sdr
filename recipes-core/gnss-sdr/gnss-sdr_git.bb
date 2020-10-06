@@ -50,6 +50,8 @@ S = "${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
 
+INSANE_SKIP_gnss-sdr_append = "already-stripped"
+
 FILES_${PN} = "${bindir}/ \
      ${bindir}/gnss-sdr \
      ${bindir}/volk_gnsssdr_profile \
