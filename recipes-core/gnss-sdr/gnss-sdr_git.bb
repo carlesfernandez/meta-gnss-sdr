@@ -3,7 +3,7 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r1"
+PR = "r2"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
@@ -33,7 +33,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.13.git"
 
-SRCREV = "1ce0b893e19943b16af1c9f6b4e413bfdd9e6e0d"
+SRCREV = "9af02a3bbd9534729756bd8b3a1271d686dc567a"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
@@ -46,7 +46,8 @@ PACKAGES = "gnss-sdr-dbg gnss-sdr"
 
 INSANE_SKIP_gnss-sdr_append = "already-stripped"
 
-FILES_${PN} = "${bindir}/gnss-sdr \
+FILES_${PN} = "${bindir}/ \
+     ${bindir}/gnss-sdr
      ${bindir}/volk_gnsssdr_profile \
      ${bindir}/volk_gnsssdr-config-info \
      ${bindir}/front-end-cal \
