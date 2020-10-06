@@ -17,9 +17,6 @@ PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-os
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
 
-export BUILD_SYS
-export HOST_SYS="${MULTIMACH_TARGET_SYS}"
-
 inherit distutils3-base cmake pkgconfig python3native
 
 EXTRA_OECMAKE += " \
