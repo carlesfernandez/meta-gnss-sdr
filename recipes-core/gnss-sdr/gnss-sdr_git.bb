@@ -47,7 +47,7 @@ PACKAGES = "gnss-sdr-dbg gnss-sdr"
 INSANE_SKIP_gnss-sdr_append = "already-stripped"
 
 FILES_${PN} = "${bindir}/ \
-     ${bindir}/gnss-sdr
+     ${bindir}/gnss-sdr \
      ${bindir}/volk_gnsssdr_profile \
      ${bindir}/volk_gnsssdr-config-info \
      ${bindir}/front-end-cal \
