@@ -20,7 +20,6 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-qt5-extra \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-swupdate \
-  ##COREBASE##/../meta-docker \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
   "
