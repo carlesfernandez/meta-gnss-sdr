@@ -1,6 +1,5 @@
 SUMMARY = "A GNSS-SDR monitor based on Qt5"
-DESCRIPTION = "A graphical user interface developed with Qt5 for monitoring \
- the status of GNSS-SDR in real time."
+DESCRIPTION = "A graphical user interface developed with Qt5 for monitoring the status of GNSS-SDR in real time."
 AUTHOR = "Alvaro Cebrian Juan <acebrianjuan@gmail.com>"
 HOMEPAGE = "https://github.com/acebrianjuan/gnss-sdr-monitor"
 LICENSE = "GPLv3"
