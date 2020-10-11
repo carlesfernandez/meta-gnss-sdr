@@ -1,11 +1,10 @@
-SUMMARY = "An image with a development/debug \
-environment suitable for building GNSS-SDR."
+require base-gnss-sdr-dev-image.bb
 
-EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
+SUMMARY = "An image with a development/debug environment suitable for building GNSS-SDR."
 LICENSE = "MIT"
 PR = "r0"
 
-require base-gnss-sdr-dev-image.bb
+EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 
 SDK_EXTRA_TOOLS += "nativesdk-protobuf"
 TOOLCHAIN_HOST_TASK_append = " nativesdk-protobuf-compiler"
