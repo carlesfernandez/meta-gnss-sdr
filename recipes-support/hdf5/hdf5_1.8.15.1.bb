@@ -1,6 +1,9 @@
+SUMMARY = "High-performance data management and storage suite"
+DESCRIPTION = "HDF5 is a data model, library, and file format for storing and managing data."
+HOMEPAGE = "https://portal.hdfgroup.org/display/HDF5/HDF5"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f1883baf3a14753e47d9152b3b994ada"
-PR = "r0"
+PR = "r1"
 
 BBCLASSEXTEND = "native"
 
