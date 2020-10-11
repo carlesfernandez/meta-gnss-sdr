@@ -1,10 +1,10 @@
+require base-gnss-sdr-dev-image.bb
+
 SUMMARY = "An image with the GNSS-SDR binary and required environment"
+LICENSE = "MIT"
+PR = "r1"
 
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs dbg-pkgs"
-LICENSE = "MIT"
-PR = "r0"
-
-require base-gnss-sdr-dev-image.bb
 
 IMAGES_INSTALL += "packagegroup-xfce-extended"
 
