@@ -1,11 +1,10 @@
-SUMMARY = "An image with a development/debug \
-environment suitable for building GNSS-SDR."
+require base-gnss-sdr-dev-image.bb
+
+SUMMARY = "An image with a development/debug environment suitable for building GNSS-SDR."
+LICENSE = "MIT"
+PR = "r1"
 
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
-LICENSE = "MIT"
-PR = "r0"
-
-require base-gnss-sdr-dev-image.bb
 
 RDEPENDS_packagegroup-sdr-base-python += " python3-six"
 

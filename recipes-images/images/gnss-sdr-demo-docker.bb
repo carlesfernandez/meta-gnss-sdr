@@ -1,12 +1,12 @@
+require core-image-docker-container.bb
+require base-gnss-sdr-dev-image.bb
+
 SUMMARY = "An image that builds a Docker image file containing GNSS-SDR."
 DESCRIPTION = "An image that builds a Docker image file containing GNSS-SDR for testing purposes."
 LICENSE = "MIT"
-PR = "r0"
+PR = "r1"
 
 EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
-
-require core-image-docker-container.bb
-require base-gnss-sdr-dev-image.bb
 
 RDEPENDS_packagegroup-sdr-base-python += " python3-six"
 
