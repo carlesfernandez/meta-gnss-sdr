@@ -1,7 +1,9 @@
-SUMMARY = "An image that builds a Docker image containing GNSS-SDR."
-EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
+SUMMARY = "An image that builds a Docker image file containing GNSS-SDR."
+DESCRIPTION = "An image that builds a Docker image file containing GNSS-SDR for testing purposes."
 LICENSE = "MIT"
 PR = "r0"
+
+EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
 
 require core-image-docker-container.bb
 require base-gnss-sdr-dev-image.bb
