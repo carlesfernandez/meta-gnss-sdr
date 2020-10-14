@@ -2,9 +2,7 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
  images they like."
 
 LICENSE = "MIT"
-PR = "r2"
-
-PACKAGE_ARCH = "${MACHINE_ARCH}"
+PR = "r3"
 
 inherit packagegroup
 
