@@ -85,6 +85,7 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     gawk \
     gdb \
     git \
+    git-perltools \
     gpsd \
     grep \
     gzip \
@@ -121,12 +122,15 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     psmisc \
     python3 \
     python3-distutils \
+    python3-numpy \
     python3-pip \
     python3-pyyaml \
+    resolvconf \
     rsync \
     screen \
     sed \
     shadow \
+    swig \
     sqlite3 \
     sshfs-fuse \
     tar \
