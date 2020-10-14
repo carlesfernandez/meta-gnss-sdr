@@ -8,7 +8,7 @@ PR = "r0"
 
 SRC_URI = "git://github.com/gflags/gflags.git;protocol=https"
 SRCREV = "46f73f88b18aee341538c0dfc22b1710a6abedef"
-S = "${WORKDIR}/git/"
+S = "${WORKDIR}/git"
 
 FILES_${PN}-dev += "${libdir}/cmake"
 
