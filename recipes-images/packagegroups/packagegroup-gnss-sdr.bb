@@ -123,6 +123,7 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     python3 \
     python3-cython \
     python3-distutils \
+    python3-matplotlib \
     python3-modules \
     python3-numpy \
     python3-pip \
