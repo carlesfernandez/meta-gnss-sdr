@@ -124,7 +124,6 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     python3-numpy \
     python3-pip \
     python3-pyyaml \
-    resolvconf \
     rsync \
     screen \
     sed \
