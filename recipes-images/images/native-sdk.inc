@@ -6,7 +6,7 @@ SDK_EXTRA_TOOLS = " \
     nativesdk-python3-xml nativesdk-python3-compile \
     nativesdk-cmake nativesdk-python3-mako nativesdk-python3-six \
     nativesdk-protobuf nativesdk-protobuf-compiler \
-    nativesdk-make nativesdk-ninja nativesdk-g++ \
+    nativesdk-make nativesdk-ninja nativesdk-g++ nativesdk-gcc \
 "
 
 SDK_EXTRA_TOOLS_task-populate-sdk-ext = ""
