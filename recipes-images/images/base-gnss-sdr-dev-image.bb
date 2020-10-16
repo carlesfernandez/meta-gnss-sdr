@@ -1,8 +1,7 @@
-SUMMARY = "An image with a development/debug environment suitable \
- for building GNSS-SDR."
+SUMMARY = "An image with a development/debug environment suitable for building GNSS-SDR."
 
 LICENSE = "MIT"
-PR = "r1"
+PR = "r2"
 
 require native-sdk.inc
 require version-image.inc
@@ -14,10 +13,7 @@ IMAGE_FEATURES += "splash ssh-server-openssh tools-sdk \
 
 EXTRA_IMAGE_FEATURES += " \
     package-management \
-    tools-debug \
     tools-profile \
-    tools-sdk \
-    dev-pkgs \
 "
 
 EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
