@@ -2,9 +2,7 @@ require base-gnss-sdr-dev-image.bb
 
 SUMMARY = "An image with a development/debug environment suitable for building GNSS-SDR."
 LICENSE = "MIT"
-PR = "r2"
-
-EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
+PR = "r3"
 
 TOOLCHAIN_TARGET_TASK += " \
     packagegroup-core-boot \
@@ -14,12 +12,8 @@ TOOLCHAIN_TARGET_TASK += " \
     packagegroup-gnss-sdr-drivers \
 "
 
-IMAGE_INSTALL_append = " packagegroup-gnss-sdr-base-extended"
-SDK_INCLUDE_TOOLCHAIN = "1"
-
-CORE_IMAGE_EXTRA_INSTALL += " \
-    packagegroup-core-boot \
-    packagegroup-gnss-sdr-base \
-    packagegroup-gnss-sdr-base-extended \
-    packagegroup-gnss-sdr-drivers \
+IMAGE_INSTALL += "\
+    packagegroup-gnss-sdr-buildessential \
 "
+
+SDK_INCLUDE_TOOLCHAIN = "1"
