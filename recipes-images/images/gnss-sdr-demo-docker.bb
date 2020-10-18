@@ -4,14 +4,9 @@ require base-gnss-sdr-dev-image.bb
 SUMMARY = "An image that builds a Docker image file containing GNSS-SDR."
 DESCRIPTION = "An image that builds a Docker image file containing GNSS-SDR for testing purposes."
 LICENSE = "MIT"
-PR = "r2"
-
-EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs"
+PR = "r3"
 
 IMAGE_INSTALL += " \
-    packagegroup-gnss-sdr-base \
-    packagegroup-gnss-sdr-base-extended \
-    packagegroup-gnss-sdr-drivers \
     packagegroup-gnss-sdr-bin \
 "
 
