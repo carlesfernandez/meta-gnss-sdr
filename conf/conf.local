@@ -21,7 +21,7 @@ DISTRO ??= "geniux"
 DISTRO_FEATURES_append = " opengl x11"
 DISTRO_FEATURES_remove = "ptest"
 PACKAGECONFIG_remove_pn-qtbase = "tests"
-PACKAGECONFIG_pn-gnuradio += "grc uhd"
+PACKAGECONFIG_pn-gnuradio += "qtgui4 grc uhd"
 PACKAGECONFIG_pn-gnuplot += "cairo"
 # If you remove GUI support, please also uncomment the following three lines:
 #PACKAGECONFIG_pn-gnuradio += "uhd"
@@ -210,6 +210,8 @@ PREFERRED_VERSION_gflags = "2.2.1"
 PREFERRED_VERSION_iio-oscilloscope = "2019-R1"
 PREFERRED_VERSION_libad9361-iio = "2019-R1"
 PREFERRED_VERSION_libiio = "2019-R1"
+
+INSANE_SKIP_sip-native_append = "already-stripped"
 
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
