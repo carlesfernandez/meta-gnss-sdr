@@ -15,7 +15,6 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-xfce \
   ##COREBASE##/../meta-oe/meta-gnome \
   ##COREBASE##/../meta-oe/meta-multimedia \
-  ##COREBASE##/../meta-qt4 \
   ##COREBASE##/../meta-qt5 \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-swupdate \
