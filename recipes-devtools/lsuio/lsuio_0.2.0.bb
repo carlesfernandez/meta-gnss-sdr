@@ -3,10 +3,10 @@ SECTION = "tools"
 DEPENDS = ""
 LICENSE = "LGPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
-PR = "r1"
+PR = "r2"
 
-HOMEPAGE="http://www.osadl.org/UIO.uio.0.html"
-SRC_URI="http://www.osadl.org/projects/downloads/UIO/user/lsuio-${PV}.tar.gz"
+HOMEPAGE="https://www.osadl.org/UIO-Archives.uio-archives.0.html"
+SRC_URI="https://www.osadl.org/uploads/media/lsuio-${PV}.tar.gz"
 SRC_URI[md5sum] = "8da82b681c24e6c5b3518c99e7f961d7"
 SRC_URI[sha256sum] = "c88b3850248b2d3419e025abd7b9b0991c8bd33a2d4983f9608408a29900bfb5"
 
