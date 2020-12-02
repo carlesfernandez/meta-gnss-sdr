@@ -30,6 +30,7 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gnuradio \
     gnutls \
     gpstk \
+    gpstk-dev \
     gtest \
     hdf5 \
     lapack \
