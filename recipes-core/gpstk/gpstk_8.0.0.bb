@@ -2,7 +2,7 @@ SUMMARY = "The GPS Toolkit"
 DESCRIPTION = "Libraries and applications to facilitate working with GPS data for research and high accuracy uses."
 AUTHOR = "ARL:UT"
 HOMEPAGE = "https://github.com/SGL-UT/GPSTk/"
-PR = "r0"
+PR = "r1"
 
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
@@ -16,6 +16,7 @@ inherit cmake
 
 EXTRA_OECMAKE += " -DCMAKE_SKIP_INSTALL_RPATH=ON -DCMAKE_SKIP_RPATH=ON -DBUILD_EXT=ON -DBUILD_PYTHON=OFF"
 
-PACKAGE = "gpstk"
+PACKAGES = "gpstk gpstk-dev"
 
-FILES_${PN} += " ${bindir}/* /usr/share/cmake/*"
+FILES_${PN} += " ${bindir}/* "
+FILES_${PN}-dev += " ${includedir}/* ${libdir}/* /usr/share/cmake/*"
