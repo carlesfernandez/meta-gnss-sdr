@@ -16,7 +16,10 @@ IMAGE_FEATURES += " \
     tools-sdk \
 "
 
-IMAGE_INSTALL += " \
+EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
+EXTRA_IMAGE_FEATURES_remove_zedboard-zynq7 = "tools-profile"
+
+CORE_IMAGE_EXTRA_INSTALL = "\
     packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-base-extended \
     packagegroup-gnss-sdr-drivers \
