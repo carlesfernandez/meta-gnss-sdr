@@ -1,7 +1,7 @@
 SUMMARY = "An image with a development/debug environment suitable for building GNSS-SDR."
 
 LICENSE = "MIT"
-PR = "r2"
+PR = "r3"
 
 require native-sdk.inc
 require version-image.inc
@@ -17,6 +17,7 @@ EXTRA_IMAGE_FEATURES += " \
 "
 
 EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
+EXTRA_IMAGE_FEATURES_remove_zedboard-zynq7 = "tools-profile"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
     packagegroup-gnss-sdr-base \
