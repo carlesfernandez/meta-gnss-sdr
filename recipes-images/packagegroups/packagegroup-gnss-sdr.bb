@@ -76,7 +76,6 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     coreutils \
     cpio \
     devmem2 \
-    dhcp-client \
     diffutils \
     directfb-examples \
     dnsmasq \
