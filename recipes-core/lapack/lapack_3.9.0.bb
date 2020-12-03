@@ -6,9 +6,9 @@ PR = "r0"
 
 DEPENDS = "gcc-runtime libgfortran"
 
-PV = "3.7.0"
+PV = "3.9.0"
 
-SRC_URI = "http://www.netlib.org/lapack/lapack-${PV}.tgz"
+SRC_URI = "https://github.com/Reference-LAPACK/lapack/archive/v${PV}.tar.gz"
 SRC_URI[md5sum] = "697bb8d67c7d336a0f339cc9dd0fa72f"
 SRC_URI[sha256sum] = "ed967e4307e986474ab02eb810eed1d1adc73f5e1e3bc78fb009f6fe766db3be"
 
