@@ -117,7 +117,6 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     openssh-sftp-server \
     parted \
     patch \
-    perf \
     pm-utils \
     procps \
     psmisc \
