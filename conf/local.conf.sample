@@ -197,6 +197,8 @@ PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
+PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
+PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 
 PACKAGECONFIG_pn-glog = "gflags"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
