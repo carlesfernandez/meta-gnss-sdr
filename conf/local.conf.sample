@@ -195,7 +195,7 @@ PREFERRED_PROVIDER_gtest = "gtest"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
-PREFERRED_PROVIDER_nativesdk_qemu = "nativesdk-qemu"
+PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 
 PACKAGECONFIG_pn-glog = "gflags"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
