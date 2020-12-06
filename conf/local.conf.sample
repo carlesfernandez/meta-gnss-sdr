@@ -186,6 +186,7 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 
 # Uncomment this line to test the local mirror:
 #BB_NO_NETWORK = "1"
+CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
 CONF_VERSION = "1"
 
