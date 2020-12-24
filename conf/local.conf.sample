@@ -196,6 +196,9 @@ CONF_VERSION = "1"
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
+# Workaround for zcu102-zynqmp machine
+EXTRA_IMAGEDEPENDS_remove_zcu102-zynqmp = "qemu-helper-native qemu-xilinx-native"
+IMAGE_FSTYPES_remove_zcu102-zynqmp = "wic.qemu-sd"
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
