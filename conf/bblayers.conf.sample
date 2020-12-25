@@ -8,6 +8,7 @@ BBFILES ?= ""
 BBLAYERS ?= " \
   ##COREBASE##/meta \
   ##COREBASE##/../meta-xilinx/meta-xilinx-bsp \
+  ##COREBASE##/../meta-xilinx/meta-xilinx-contrib \
   ##COREBASE##/../meta-adi/meta-adi-bsp \
   ##COREBASE##/../meta-oe/meta-oe \
   ##COREBASE##/../meta-oe/meta-networking \

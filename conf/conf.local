@@ -199,6 +199,7 @@ PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-adi"
 PREFERRED_VERSION_virtual/kernel_zedboard-zynq7 = "2019-R1"
 
 PREFERRED_PROVIDER_virtual/kernel_raspberrypi3 = "linux-raspberrypi"
+IMAGE_FSTYPES_remove_zcu102-zynqmp = "wic.qemu-sd"
 
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
