@@ -130,3 +130,10 @@ $ git config --global user.email your.name@example.com
 Instructions on how to use this layer:
 https://github.com/carlesfernandez/oe-gnss-sdr-manifest.git and
 https://gnss-sdr.org/docs/tutorials/cross-compiling/
+
+## Copyright and License
+
+Copyright: &copy; 2016-2021 Carles Fern&aacute;ndez-Prades. All rights reserved.
+
+The content of this repository is released under the [MIT](./COPYING.MIT)
+license.
