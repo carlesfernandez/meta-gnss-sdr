@@ -18,6 +18,10 @@ support the Yocto Project, see the
 section in the Yocto Project Reference Manual, and check out the
 [list of required packages for each host operating system](https://www.yoctoproject.org/docs/latest/ref-manual/ref-manual.html#required-packages-for-the-build-host).
 
+If you are interested in building images or the SDK defined by this layer on a
+virtualized environment, please check
+https://github.com/carlesfernandez/yocto-geniux
+
 ### Tested Environment
 
 Ubuntu 16.04 64 bits in a Virtual Machine
