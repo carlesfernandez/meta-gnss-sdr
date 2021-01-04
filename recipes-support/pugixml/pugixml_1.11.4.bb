@@ -5,8 +5,8 @@ LIC_FILES_CHKSUM = "file://readme.txt;md5=a631ae00f08e5904238e3a2653d66404"
 PR = "r0"
 
 SRC_URI = "https://github.com/zeux/pugixml/releases/download/v${PV}/pugixml-${PV}.tar.gz"
-SRC_URI[md5sum] = "2d0be30b843eb9d1893c1ba9ad334946"
-SRC_URI[sha256sum] = "599eabdf8976aad86ac092a198920d8c127623d1376842bc6d683b12a37fb74f"
+SRC_URI[md5sum] = "2d2730d3412b08d3e70c795bc17003df"
+SRC_URI[sha256sum] = "8ddf57b65fb860416979a3f0640c2ad45ddddbbafa82508ef0a0af3ce7061716"
 
 DEPENDS = "cmake"
 
