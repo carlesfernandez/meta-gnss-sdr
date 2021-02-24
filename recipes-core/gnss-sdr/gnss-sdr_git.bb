@@ -3,7 +3,7 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r10"
+PR = "r12"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
@@ -11,7 +11,7 @@ DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio
 
 RDEPENDS_${PN} = "gnss-simulator gnuplot-x11"
 
-PACKAGECONFIG ??= "osmosdr"
+PACKAGECONFIG ??= "osmosdr fpga"
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
@@ -33,7 +33,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.14.git"
 
-SRCREV = "cc66a27740f1df546da3d2177731a1cde5825c93"
+SRCREV = "d6fd2c244fbf8c6e734e3596fd8f1d1ced6d63f8"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
