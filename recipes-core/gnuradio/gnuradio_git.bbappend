@@ -3,7 +3,6 @@
 SRC_URI = "git://github.com/${GITHUB_USER}/gnuradio.git;branch=${GIT_BRANCH};protocol=https \
            file://0001-Use-python-relative-path-for-swig-so-we-can-find-mod.patch \
            file://0001-For-crossompiling-assume-we-are-using-python3.patch \
-           file://0003-msg_handler-Use-lambdas-in-gr-qtgui.patch \
            file://0001-When-cross-compiling-gnuradio-change-how-the-test-fi.patch \
            file://run-ptest \
 "
