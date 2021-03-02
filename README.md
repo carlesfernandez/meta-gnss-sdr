@@ -2,6 +2,9 @@
 
 A layer for [gnss-sdr](https://gnss-sdr.org) on embedded devices.
 
+This layer is included in the
+[OpenEmbedded Layer Index](https://layers.openembedded.org/layerindex/branch/thud/layer/meta-gnss-sdr/).
+
 ## How to build this layer
 
 The process described below is based on
