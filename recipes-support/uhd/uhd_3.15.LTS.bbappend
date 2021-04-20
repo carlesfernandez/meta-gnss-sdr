@@ -16,3 +16,5 @@ INSANE_SKIP_${PN} += " file-rdeps shebang-size"
 FILES_${PN} += " \
     ${PYTHON_SITEPACKAGES_DIR}/uhd/* \
 "
+
+RDEPENDS_${PN} = "uhd-firmware python3-core python3-requests"
