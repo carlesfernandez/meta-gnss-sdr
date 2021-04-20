@@ -34,8 +34,8 @@ PACKAGECONFIG_pn-gnuplot += "cairo qt5"
 #MACHINE ?= "qemux86"
 #MACHINE ?= "qemux86-64"
 #
-# This sets the default machine to be zedboard-zynq if no other machine is selected:
-MACHINE ??= "zedboard-zynq7"
+# This sets the default machine to be raspberrypi4 if no other machine is selected:
+MACHINE ??= "raspberrypi4"
 
 DEFAULTTUNE_ettus-e3xx-sg1 = "armv7ahf-neon"
 DEFAULTTUNE_ettus-e3xx-sg3 = "armv7ahf-neon"
