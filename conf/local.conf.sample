@@ -177,7 +177,7 @@ BB_DISKMON_DIRS = "\
 #
 
 # Configure a local mirror:
-SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/gatesgarth/"
+SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/hardknott/"
 INHERIT += "own-mirrors"
 
 # Use the line below to keep source files under build/download, build the
