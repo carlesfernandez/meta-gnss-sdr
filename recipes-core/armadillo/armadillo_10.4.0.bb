@@ -6,8 +6,8 @@ PR = "r0"
 
 SRC_URI = "http://sourceforge.net/projects/arma/files/armadillo-${PV}.tar.xz"
 
-SRC_URI[md5sum] = "18853ae13ef0996a558847b5128a840a"
-SRC_URI[sha256sum] = "53d7ad6124d06fdede8d839c091c649c794dae204666f1be0d30d7931737d635"
+SRC_URI[md5sum] = "9479b5ec68c0cc6b56abb0fbbd590faa"
+SRC_URI[sha256sum] = "a2540f1f8ee1991ba1b14941daa3986fb774484fc678978d4d00bba87360102e"
 
 EXTRA_OECMAKE += " -DBUILD_SHARED_LIBS=ON"
 DEPENDS += " lapack "
