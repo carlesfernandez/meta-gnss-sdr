@@ -3,13 +3,13 @@ DESCRIPTION = "Google's framework for writing C++ tests. This recipe installs th
 HOMEPAGE = "https://github.com/google/googletest"
 SECTION = "libs"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://googlemock/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a \
-                    file://googletest/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
+PR = "r1"
 
 PROVIDES += "gmock gtest"
 
 S = "${WORKDIR}/git"
-SRCREV = "703bd9caab50b139428cea1aaff9974ebee5742e"
+SRCREV = "23ef29555ef4789f555f1ba8c51b4c52975f0907"
 SRC_URI = "git://github.com/google/googletest.git;protocol=https "
 
 inherit cmake
