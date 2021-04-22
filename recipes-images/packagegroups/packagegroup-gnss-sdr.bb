@@ -172,6 +172,8 @@ RDEPENDS_packagegroup-gnss-sdr-buildessential = "\
     cmake \
     make \
     ninja \
+    libgfortran \
+    libgfortran-dev \
     libstdc++ \
     libstdc++-dev \
     libtool \
