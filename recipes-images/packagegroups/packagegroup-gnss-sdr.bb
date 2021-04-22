@@ -2,7 +2,7 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
  images they like."
 
 LICENSE = "MIT"
-PR = "r4"
+PR = "r5"
 
 inherit packagegroup
 
@@ -171,6 +171,8 @@ RDEPENDS_packagegroup-gnss-sdr-buildessential = "\
     cmake \
     make \
     ninja \
+    libgfortran \
+    libgfortran-dev \
     libstdc++ \
     libstdc++-dev \
     libtool \

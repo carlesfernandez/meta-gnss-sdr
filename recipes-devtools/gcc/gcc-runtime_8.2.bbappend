@@ -6,17 +6,17 @@ PACKAGES += "\
     libgfortran-staticdev \
 "
 
-FILES_libgfortran += "/usr/lib/libgfortran.so.*"
+FILES_libgfortran += "${libdir}/libgfortran.so.*"
 
 FILES_libgfortran-dev += "\
-    /usr/lib/libgfortran*.so \
-    /usr/lib/libgfortran.spec \
-    /usr/lib/libgfortran.la \
-    /usr/lib/gcc/${TARGET_SYS}/${BINV}/libgfortranbegin.* \
-    /usr/lib/gcc/${TARGET_SYS}/${BINV}/finclude/ \
+    ${libdir}/libgfortran*.so \
+    ${libdir}/libgfortran.spec \
+    ${libdir}/libgfortran.la \
+    ${libdir}/gcc/${TARGET_SYS}/${BINV}/libgfortranbegin.* \
+    ${libdir}/gcc/${TARGET_SYS}/${BINV}/finclude/ \
 "
 
 FILES_libgfortran-staticdev += "\
-    /usr/lib/libgfortran.a \
-    /usr/lib/gcc/${TARGET_SYS}/${BINV}/libcaf_single.a \
+    ${libdir}/libgfortran.a \
+    ${libdir}/gcc/${TARGET_SYS}/${BINV}/libcaf_single.a \
 "
