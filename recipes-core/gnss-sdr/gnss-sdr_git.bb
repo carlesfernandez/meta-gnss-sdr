@@ -3,15 +3,15 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r16"
+PR = "r17"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio gr-iio libpcap gnutls \
+DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
-           python3-mako python3-mako-native python3-six python3-six-native"
+           python3-mako python3-mako-native"
 
 RDEPENDS_${PN} = "gnss-simulator"
 
-PACKAGECONFIG ??= "osmosdr"
+PACKAGECONFIG ??= "osmosdr fpga"
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
@@ -56,18 +56,18 @@ FILES_${PN} = "${bindir}/ \
      ${bindir}/ttff \
      ${bindir}/rinex2assist \
      ${bindir}/obsdiff \
-     /usr/share/man/man1/volk_gnsssdr-config-info.1.gz \
-     /usr/share/man/man1/gnss-sdr.1.gz \
-     /usr/share/man/man1/front-end-cal.1.gz \
-     /usr/share/man/man1/volk_gnsssdr_profile.1.gz \
-     /usr/share/gnss-sdr/conf/* \
-     /usr/share/doc/gnss-sdr/* \
-     /usr/share/gnss-sdr/signal_samples/* \
-     /usr/share/gnss-sdr/data/* \
+     ${datadir}/man/man1/volk_gnsssdr-config-info.1.gz \
+     ${datadir}/man/man1/gnss-sdr.1.gz \
+     ${datadir}/man/man1/front-end-cal.1.gz \
+     ${datadir}/man/man1/volk_gnsssdr_profile.1.gz \
+     ${datadir}/gnss-sdr/conf/* \
+     ${datadir}/doc/gnss-sdr/* \
+     ${datadir}/gnss-sdr/signal_samples/* \
+     ${datadir}/gnss-sdr/data/* \
 "
 
 FILES_${PN}-dbg += " \
-     /usr/src/debug/gnss-sdr/* \
+     ${prefix}/src/debug/gnss-sdr/* \
      ${bindir}/.debug/volk_gnsssdr-config-info \
      ${bindir}/.debug/gnss-sdr \
      ${bindir}/.debug/volk_gnsssdr_profile \
