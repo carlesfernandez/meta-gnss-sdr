@@ -1,0 +1,3 @@
+DEPENDS += " gflags"
+
+PACKAGECONFIG[gflags] = "-DWITH_GFLAGS=ON,-DWITH_GFLAGS=OFF,gflags, "
