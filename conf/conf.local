@@ -198,6 +198,9 @@ CONF_VERSION = "1"
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 
+# Fine tuning for zedboard-zynq7
+KERNEL_DTB_append_zedboard-zynq7 = " zynq-zc706-adv7511-ad9361-fmcomms5"
+
 # Fixes for zcu102-zynqmp machine
 EXTRA_IMAGEDEPENDS_remove_zcu102-zynqmp = "qemu-helper-native qemu-xilinx-native"
 IMAGE_FSTYPES_remove_zcu102-zynqmp = "wic.qemu-sd"
