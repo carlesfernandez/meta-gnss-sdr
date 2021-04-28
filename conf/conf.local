@@ -191,17 +191,18 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 
 CONF_VERSION = "1"
 
-# Use Analog Devices Linux kernel and tools for Vivado 2018.3
-PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-adi"
-PREFERRED_VERSION_virtual/kernel_zedboard-zynq7 = "2019-R1"
+# Use Analog Devices Linux kernel and tools for Vivado 2019.2
+PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-xlnx"
+PREFERRED_VERSION_virtual/kernel_zedboard-zynq7 = "2019-R2"
+
+KERNEL_DTB_zedboard-zynq7 = "zynq-zc706-adv7511-ad9361-fmcomms5"
 
 PREFERRED_PROVIDER_virtual/kernel_raspberrypi3 = "linux-raspberrypi-rt"
 
 LICENSE_FLAGS_WHITELIST += "xilinx"
 
-PREFERRED_VERSION_iio-oscilloscope = "2019-R1"
-PREFERRED_VERSION_libad9361-iio = "2019-R1"
-PREFERRED_VERSION_libiio = "2019-R1"
+PREFERRED_VERSION_iio-oscilloscope = "2019-R2"
+PREFERRED_VERSION_libad9361-iio = "2019-R2"
 
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
