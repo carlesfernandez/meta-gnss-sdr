@@ -190,15 +190,7 @@ CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
 CONF_VERSION = "1"
 
-# Use Analog Devices Linux kernel and tools for Vivado 2018.3
-PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-adi"
-PREFERRED_VERSION_virtual/kernel_zedboard-zynq7 = "2019-R1"
-
 PREFERRED_PROVIDER_virtual/kernel_raspberrypi3 = "linux-raspberrypi-rt"
-
-PREFERRED_VERSION_iio-oscilloscope = "2019-R1"
-PREFERRED_VERSION_libad9361-iio = "2019-R1"
-PREFERRED_VERSION_libiio = "2019-R1"
 
 FORTRAN_forcevariable = ",fortran"
 
