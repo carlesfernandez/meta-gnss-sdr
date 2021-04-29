@@ -2,7 +2,7 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
  images they like."
 
 LICENSE = "MIT"
-PR = "r4"
+PR = "r5"
 
 inherit packagegroup
 
@@ -105,6 +105,9 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     lighttpd \
     linux-firmware \
     lsuio \
+    lttng-modules \
+    lttng-tools \
+    lttng-ust \
     nano \
     ncurses \
     net-tools \
