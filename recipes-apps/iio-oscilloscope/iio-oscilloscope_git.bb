@@ -4,9 +4,10 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://license.txt;md5=cfe3dd5eb030dee299c43cb6f0b93096"
 PR = "r0"
 
-SRCREV = "ed0dccf8eb6e7624232ffc707db7d1fc02bc0457"
+SRCREV = "02dcb357c2e2c092c91c5cba2dc0cab83cad1e99"
 
-GIT_BRANCH = "2019_R1"
+PV = "0.14"
+GIT_BRANCH = "master"
 SRC_URI = "git://github.com/analogdevicesinc/iio-oscilloscope.git;branch=${GIT_BRANCH};protocol=https "
 
 S = "${WORKDIR}/git"
