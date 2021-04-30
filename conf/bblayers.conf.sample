@@ -16,6 +16,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-multimedia \
   ##COREBASE##/../meta-qt5 \
   ##COREBASE##/../meta-raspberrypi \
+  ##COREBASE##/../meta-intel \
   ##COREBASE##/../meta-swupdate \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
