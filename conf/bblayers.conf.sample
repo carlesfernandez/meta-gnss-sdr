@@ -8,6 +8,7 @@ BBFILES ?= ""
 BBLAYERS ?= " \
   ##COREBASE##/meta \
   ##COREBASE##/../meta-xilinx/meta-xilinx-bsp \
+  ##COREBASE##/../meta-xilinx/meta-xilinx-contrib \
   ##COREBASE##/../meta-oe/meta-oe \
   ##COREBASE##/../meta-oe/meta-networking \
   ##COREBASE##/../meta-oe/meta-filesystems \
@@ -17,6 +18,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-multimedia \
   ##COREBASE##/../meta-qt5 \
   ##COREBASE##/../meta-raspberrypi \
+  ##COREBASE##/../meta-intel \
   ##COREBASE##/../meta-swupdate \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
