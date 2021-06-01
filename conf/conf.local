@@ -221,7 +221,7 @@ PREFERRED_VERSION_lapack = "3.7.0"
 
 INSANE_SKIP_sip3-native_append = "already-stripped"
 
-INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+BBMASK += "/meta-sdr/recipes-support/bladerf/libtecla.*"
 
 #
 # Use systemd for system initialization
