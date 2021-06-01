@@ -4,7 +4,7 @@ AUTHOR = "Alvaro Cebrian Juan <acebrianjuan@gmail.com>"
 HOMEPAGE = "https://github.com/acebrianjuan/gnss-sdr-monitor"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
-PR = "r1"
+PR = "r2"
 
 DEPENDS = "boost protobuf protobuf-native qtbase qtdeclarative \
     qtquickcontrols qtquickcontrols2 qtlocation qtcharts \
@@ -23,6 +23,10 @@ SRC_URI = "git://github.com/acebrianjuan/gnss-sdr-monitor.git;branch=${GIT_BRANC
 
 S = "${WORKDIR}/git"
 
-PACKAGES = "gnss-sdr-monitor"
+PACKAGES = "gnss-sdr-monitor gnss-sdr-monitor-dbg"
 
 FILES_${PN} += " ${bindir}/gnss-sdr-monitor"
+
+FILES_${PN}-dbg += " \
+     ${bindir}/.debug/* \
+"
