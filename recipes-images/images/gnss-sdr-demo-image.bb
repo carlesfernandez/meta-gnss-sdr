@@ -1,13 +1,35 @@
-require base-gnss-sdr-dev-image.bb
+require version-image.inc
 
-SUMMARY = "An image with the GNSS-SDR binary and required environment"
+SUMMARY = "An image with the GNSS-SDR binary and the Xfce desktop environment"
 LICENSE = "MIT"
-PR = "r2"
+PR = "r4"
 
-EXTRA_IMAGE_FEATURES += "tools-debug tools-profile tools-sdk dev-pkgs dbg-pkgs"
+inherit core-image image-buildinfo
 
-IMAGES_INSTALL += "packagegroup-xfce-extended"
-
-CORE_IMAGE_EXTRA_INSTALL += "\
-    gnss-sdr \
+IMAGE_FEATURES += " \
+    debug-tweaks \
+    ssh-server-openssh \
+    splash \
 "
+
+EXTRA_IMAGE_FEATURES += " \
+    package-management \
+    tools-profile \
+"
+
+IMAGE_INSTALL_append = " kernel-modules"
+
+CORE_IMAGE_EXTRA_INSTALL += " \
+    packagegroup-core-boot \
+    packagegroup-gnss-sdr-bin \
+    packagegroup-gnss-sdr-base \
+    packagegroup-gnss-sdr-base-extended \
+    packagegroup-gnss-sdr-drivers \
+    packagegroup-xfce-extended \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xauth', '', d)} \
+    e2fsprogs-resize2fs \
+"
+
+IMAGE_FSTYPES_append = " wic.xz wic.bmap"
+
+WKS_FILE = "${TOPDIR}/../meta-gnss-sdr/wic/sdimage-geniux.wks"
