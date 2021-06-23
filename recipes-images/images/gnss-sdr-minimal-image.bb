@@ -1,18 +1,24 @@
-SUMMARY = "A spartan image with the GNSS-SDR binary and required environment"
-
-LICENSE = "MIT"
-PR = "r1"
-
 require version-image.inc
 
-IMAGE_FEATURES += "splash ssh-server-openssh \
-                   debug-tweaks \
-                  "
+SUMMARY = "A spartan image with the GNSS-SDR binary and required environment"
+LICENSE = "MIT"
+PR = "r3"
 
-EXTRA_IMAGE_FEATURES += "package-management"
+inherit core-image image-buildinfo
+
+IMAGE_FEATURES += " \
+    debug-tweaks \
+    ssh-server-openssh \
+    splash \
+"
+
+EXTRA_IMAGE_FEATURES += " package-management"
+
+IMAGE_INSTALL_append = " kernel-modules"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
-    gnss-sdr \
+    packagegroup-core-boot \
+    packagegroup-gnss-sdr-bin \
     packagegroup-gnss-sdr-base \
     packagegroup-gnss-sdr-base-extended \
     packagegroup-gnss-sdr-drivers \
@@ -20,4 +26,6 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     e2fsprogs-resize2fs \
 "
 
-inherit core-image image-buildinfo
+IMAGE_FSTYPES_append = " wic.xz wic.bmap"
+
+WKS_FILE = "${TOPDIR}/../meta-gnss-sdr/wic/sdimage-geniux.wks"
