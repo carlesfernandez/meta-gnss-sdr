@@ -28,4 +28,4 @@ CORE_IMAGE_EXTRA_INSTALL += " \
 
 IMAGE_FSTYPES_append = " wic.xz wic.bmap"
 
-WKS_FILE = "${TOPDIR}/../meta-gnss-sdr/wic/sdimage-geniux.wks"
+WKS_FILE ??= "${TOPDIR}/../meta-gnss-sdr/wic/sdimage-geniux.wks"
