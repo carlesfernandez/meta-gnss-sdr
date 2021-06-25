@@ -14,6 +14,6 @@ SRCREV = "e877aecac861042b4da5bf209dc9178583d7d2f7"
 
 S = "${WORKDIR}/git"
 
-DEPENDS += " pkgconfig gtk+ gtk-doc pango cairo"
+DEPENDS += " pkgconfig gtk+ gtk-doc pango cairo glib-2.0"
 
 inherit autotools pkgconfig
