@@ -211,6 +211,8 @@ INSANE_SKIP_sip3-native_append = "already-stripped"
 
 BBMASK += "/meta-sdr/recipes-support/bladerf/libtecla.*"
 
+WKS_FILE ??= "${TOPDIR}/../meta-gnss-sdr/wic/sdimage-geniux.wks"
+
 #
 # Use systemd for system initialization
 #
