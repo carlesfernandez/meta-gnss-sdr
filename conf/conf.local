@@ -202,6 +202,7 @@ RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
 KERNEL_DTB_append_zedboard-zynq7 = " zynq-zc706-adv7511-ad9361-fmcomms5"
 
 # Fixes for zcu102-zynqmp machine
+KERNEL_DTB_zcu102-zynqmp = "zynqmp-zcu102-rev10-ad9361-fmcomms5"
 EXTRA_IMAGEDEPENDS_remove_zcu102-zynqmp = "qemu-helper-native qemu-xilinx-native"
 IMAGE_FSTYPES_remove_zcu102-zynqmp = "wic.qemu-sd"
 
