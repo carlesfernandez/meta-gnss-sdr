@@ -198,7 +198,7 @@ KERNEL_DTB_zedboard-zynq7 = "zynq-zc706-adv7511-ad9361-fmcomms5"
 
 PREFERRED_PROVIDER_virtual/boot-bin_zcu102-zynqmp = "xilinx-bootbin"
 KERNEL_DTB_zcu102-zynqmp = "zynqmp-zcu102-rev10-ad9361-fmcomms5"
-PACKAGECONFIG_remove_pn-xserver-xorg_zcu102-zynqmp  = "glamor"
+PACKAGECONFIG_remove_pn-xserver-xorg_zcu102-zynqmp = "glamor"
 PREFERRED_PROVIDER_virtual/libgl_zcu102-zynqmp = "mesa-gl"
 DISTRO_FEATURES_append_zcu102-zynqmp = " fbdev"
 IMAGE_FSTYPES_remove = "wic.qemu-sd"
