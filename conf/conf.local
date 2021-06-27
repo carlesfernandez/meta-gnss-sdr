@@ -220,8 +220,6 @@ PREFERRED_VERSION_libiio = "2019-R1"
 
 INSANE_SKIP_sip3-native_append = "already-stripped"
 
-BBMASK += "/meta-sdr/recipes-support/bladerf/libtecla.*"
-
 #
 # Use systemd for system initialization
 #
