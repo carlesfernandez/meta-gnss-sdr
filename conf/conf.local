@@ -194,8 +194,14 @@ CONF_VERSION = "1"
 # Use Analog Devices Linux kernel and tools for Vivado 2019.2
 PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-xlnx"
 PREFERRED_VERSION_virtual/kernel_zedboard-zynq7 = "2019-R2"
-
 KERNEL_DTB_zedboard-zynq7 = "zynq-zc706-adv7511-ad9361-fmcomms5"
+
+PREFERRED_PROVIDER_virtual/boot-bin_zcu102-zynqmp = "xilinx-bootbin"
+KERNEL_DTB_zcu102-zynqmp = "zynqmp-zcu102-rev10-ad9361-fmcomms5"
+PACKAGECONFIG_remove_pn-xserver-xorg_zcu102-zynqmp  = "glamor"
+PREFERRED_PROVIDER_virtual/libgl_zcu102-zynqmp = "mesa-gl"
+DISTRO_FEATURES_append_zcu102-zynqmp = " fbdev"
+IMAGE_FSTYPES_remove = "wic.qemu-sd"
 
 PREFERRED_PROVIDER_virtual/kernel_raspberrypi3 = "linux-raspberrypi-rt"
 
