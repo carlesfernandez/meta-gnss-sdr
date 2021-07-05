@@ -192,8 +192,6 @@ CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
 CONF_VERSION = "1"
 
-PREFERRED_PROVIDER_virtual/boot-bin_zcu102-zynqmp = "xilinx-bootbin"
-
 FORTRAN_forcevariable = ",fortran"
 
 PREFERRED_PROVIDER_gtest = "gtest"
@@ -203,8 +201,6 @@ PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
 PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
-PREFERRED_PROVIDER_qemu-native_zcu102-zynqmp = "qemu-native-xilinx" "qemu-xilinx-native"
-PREFERRED_PROVIDER_nativesdk-qemu_zcu102-zynqmp = "nativesdk-qemu-xilinx"
 
 PACKAGECONFIG_pn-glog = "shared unwind gflags"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
