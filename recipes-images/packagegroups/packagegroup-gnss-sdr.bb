@@ -80,6 +80,10 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     directfb-examples \
     dnsmasq \
     e2fsprogs \
+    fftw-wisdom \
+    fftw-wisdom-to-conf \
+    fftwf-wisdom \
+    fftwl-wisdom \
     file \
     findutils \
     gawk \
@@ -117,6 +121,7 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     ntpdate \
     openssh-sftp \
     openssh-sftp-server \
+    openssh-sshd \
     parted \
     patch \
     pm-utils \
