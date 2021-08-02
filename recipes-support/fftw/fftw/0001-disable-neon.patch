@@ -3,9 +3,9 @@ index 196959ca..394c874f 100644
 --- a/simd-support/neon.c
 +++ b/simd-support/neon.c
 @@ -23,54 +23,9 @@
-
+ 
  #if HAVE_NEON
-
+ 
 -/* check for an environment where signals are known to work */
 -#if defined(unix) || defined(linux)
 -  # include <signal.h>
@@ -24,15 +24,15 @@ index 196959ca..394c874f 100644
 -       void (*oldsig)(int);
 -       oldsig = signal(SIGILL, sighandler);
 -       if (setjmp(jb)) {
--           signal(SIGILL, oldsig);
--           return 0;
+-	    signal(SIGILL, oldsig);
+-	    return 0;
 -       } else {
--           /* paranoia: encode the instruction in binary because the
--              assembler may not recognize it without -mfpu=neon */
--           /*asm volatile ("vand q0, q0, q0");*/
--           asm volatile (".long 0xf2000150");
--           signal(SIGILL, oldsig);
--           return 1;
+-	    /* paranoia: encode the instruction in binary because the
+-	       assembler may not recognize it without -mfpu=neon */
+-	    /*asm volatile ("vand q0, q0, q0");*/
+-	    asm volatile (".long 0xf2000150");
+-	    signal(SIGILL, oldsig);
+-	    return 1;
 -       }
 -  }
 -
@@ -41,13 +41,13 @@ index 196959ca..394c874f 100644
 -       static int init = 0, res;
 -
 -       if (!init) {
--           res = really_have_neon();
--           init = 1;
+-	    res = really_have_neon();
+-	    init = 1;
 -       }
 -       return res;
 +       return 0;
    }
-
+ 
 -
 -#else
 -/* don't know how to autodetect NEON; assume it is present */
