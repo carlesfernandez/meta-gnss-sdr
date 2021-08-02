@@ -3,13 +3,11 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r23"
+PR = "r24"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
-           python3-mako python3-mako-native"
-
-RDEPENDS_${PN} = "gnss-simulator"
+           gnss-simulator python3-mako python3-mako-native"
 
 PACKAGECONFIG ??= "fpga"
 
@@ -33,7 +31,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.14.git"
 
-SRCREV = "4004169f6d3dc6b1c4ebab3c81074907fa05dcc3"
+SRCREV = "b4b9c311820542154981347634e04e6465871875"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
