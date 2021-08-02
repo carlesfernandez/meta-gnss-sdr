@@ -203,6 +203,7 @@ PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 PACKAGECONFIG_pn-glog = "shared unwind gflags"
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 
+PREFERRED_VERSION_fftw = "3.3.9"
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_glog = "0.4.0"
 PREFERRED_VERSION_gtest = "1.11.0"
