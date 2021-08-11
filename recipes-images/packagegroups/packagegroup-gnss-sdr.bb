@@ -174,21 +174,21 @@ RDEPENDS_packagegroup-gnss-sdr-buildessential = "\
     automake \
     binutils \
     binutils-symlinks \
+    cmake \
     cpp \
     cpp-symlinks \
-    gcc \
-    gcc-symlinks \
     g++ \
     g++-symlinks \
+    gcc \
+    gcc-symlinks \
     gettext \
     glib-2.0 \
-    cmake \
-    make \
-    ninja \
     libgfortran \
     libgfortran-dev \
     libstdc++ \
     libstdc++-dev \
     libtool \
+    make \
+    ninja \
     pkgconfig \
 "
