@@ -2,9 +2,9 @@ SUMMARY = "Analog Devices IIO Oscilloscope app"
 HOMEPAGE = "https://wiki.analog.com/resources/tools-software/linux-software/iio_oscilloscope"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://license.txt;md5=cfe3dd5eb030dee299c43cb6f0b93096"
-PR = "r1"
+PR = "r2"
 
-SRCREV = "f500bb83df91def8b1528e6ce5581724aa2eccd7"
+SRCREV = "f8e1a4c0b1585ce3fbdc82a757842f3d53cbf8ad"
 
 PV = "0.14"
 GIT_BRANCH = "master"
