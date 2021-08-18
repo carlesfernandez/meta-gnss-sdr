@@ -22,11 +22,11 @@ inherit cmake
 
 PACKAGES = "gnss-simulator gnss-simulator-dbg"
 
-FILES_${PN} = "${bindir}/gnss_sim \
+FILES:${PN} = "${bindir}/gnss_sim \
      ${datadir}/gnss-sim/* \
 "
 
-FILES_${PN}-dbg += " \
+FILES:${PN}-dbg += " \
      ${prefix}/src/debug/gnss-simulator/* \
      ${bindir}/.debug/gnss_sim \
 "

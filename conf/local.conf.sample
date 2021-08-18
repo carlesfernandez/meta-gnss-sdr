@@ -15,11 +15,11 @@ DISTRO ??= "geniux"
 #
 # GUI support
 #
-DISTRO_FEATURES_append = " opengl x11"
-DISTRO_FEATURES_remove = "ptest"
-PACKAGECONFIG_remove_pn-qtbase = "tests"
-PACKAGECONFIG_pn-gnuradio += "qtgui5 grc zeromq"
-PACKAGECONFIG_pn-gnuplot += "cairo qt5"
+DISTRO_FEATURES:append = " opengl x11"
+DISTRO_FEATURES:remove = "ptest"
+PACKAGECONFIG:remove:pn-qtbase = "tests"
+PACKAGECONFIG:pn-gnuradio += "qtgui5 grc zeromq"
+PACKAGECONFIG:pn-gnuplot += "cairo qt5"
 
 
 #
@@ -107,7 +107,7 @@ PACKAGE_CLASSES ?= "package_ipk"
 # meta/classes/image.bbclass and meta/classes/core-image.bbclass for more details.
 # We default to enabling the debugging tweaks.
 EXTRA_IMAGE_FEATURES = "debug-tweaks tools-profile tools-sdk dev-pkgs"
-EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
+EXTRA_IMAGE_FEATURES:remove_ettus-e1xx = "tools-profile"
 
 IMAGE_FSTYPES = "tar.gz"
 
@@ -190,7 +190,7 @@ CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
 CONF_VERSION = "1"
 
-FORTRAN_forcevariable = ",fortran"
+FORTRAN:forcevariable = ",fortran"
 
 PREFERRED_PROVIDER_gtest = "gtest"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
@@ -200,21 +200,21 @@ PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
 PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 
-PACKAGECONFIG_pn-glog = "shared unwind gflags"
-PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
+PACKAGECONFIG:pn-glog = "shared unwind gflags"
+PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_glog = "0.4.0"
 PREFERRED_VERSION_gtest = "1.11.0"
 
-INSANE_SKIP_sip3-native_append = "already-stripped"
+INSANE_SKIP:sip3-native:append = "already-stripped"
 
 BBMASK += "/meta-sdr/recipes-support/bladerf/libtecla.*"
 
 #
 # Use systemd for system initialization
 #
-DISTRO_FEATURES_append = " systemd"
+DISTRO_FEATURES:append = " systemd"
 DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
 VIRTUAL-RUNTIME_login_manager = "shadow-base"
 VIRTUAL-RUNTIME_init_manager = "systemd"

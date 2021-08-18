@@ -18,9 +18,9 @@ EXTRA_OECMAKE += " -DCMAKE_SKIP_INSTALL_RPATH=ON -DCMAKE_SKIP_RPATH=ON -DUSE_RPA
 
 PACKAGES = "gpstk gpstk-dev gpstk-dbg"
 
-FILES_${PN} += " ${bindir}/* "
-FILES_${PN}-dev += " ${includedir}/* ${libdir}/* /usr/share/cmake/*"
-FILES_${PN}-dbg += " \
+FILES:${PN} += " ${bindir}/* "
+FILES:${PN}-dev += " ${includedir}/* ${libdir}/* /usr/share/cmake/*"
+FILES:${PN}-dbg += " \
      ${prefix}/src/debug/gpstk/* \
      ${bindir}/.debug/* \
 "

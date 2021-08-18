@@ -16,12 +16,12 @@ inherit autotools
 
 PACKAGES = "lsuio lsuio-dbg2"
 
-FILES_${PN}-dbg2 += " \
+FILES:${PN}-dbg2 += " \
     ${prefix}/share/* \
     ${bindir}/.debug/* \
     ${prefix}/src/debug/* \
 "
 
-do_install_append() {
+do_install:append() {
     rm -f ${bindir}/.debug/lsuio
 }

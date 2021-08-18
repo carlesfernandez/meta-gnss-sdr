@@ -16,8 +16,8 @@ IMAGE_FEATURES += " \
     tools-sdk \
 "
 
-EXTRA_IMAGE_FEATURES_remove_ettus-e1xx = "tools-profile"
-EXTRA_IMAGE_FEATURES_remove_zedboard-zynq7 = "tools-profile"
+EXTRA_IMAGE_FEATURES:remove_ettus-e1xx = "tools-profile"
+EXTRA_IMAGE_FEATURES:remove_zedboard-zynq7 = "tools-profile"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
     packagegroup-gnss-sdr-base \

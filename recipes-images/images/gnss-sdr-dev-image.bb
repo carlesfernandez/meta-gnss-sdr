@@ -14,7 +14,7 @@ TOOLCHAIN_TARGET_TASK += " \
     packagegroup-gnss-sdr-drivers \
 "
 
-IMAGE_INSTALL_append = " packagegroup-gnss-sdr-base-extended"
+IMAGE_INSTALL:append = " packagegroup-gnss-sdr-base-extended"
 SDK_INCLUDE_TOOLCHAIN = "1"
 
 CORE_IMAGE_EXTRA_INSTALL += " \

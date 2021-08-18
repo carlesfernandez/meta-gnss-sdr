@@ -13,7 +13,7 @@ EXTRA_OECMAKE += " -DBUILD_SHARED_LIBS=ON -DDETECT_HDF5=OFF"
 DEPENDS = "lapack"
 inherit cmake
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
   ${datadir}/Armadillo/CMake/ArmadilloLibraryDepends-noconfig.cmake \
   ${datadir}/Armadillo/CMake/ArmadilloLibraryDepends.cmake \
   ${datadir}/Armadillo/CMake/ArmadilloConfig.cmake \

@@ -14,11 +14,11 @@ SRC_URI = "git://github.com/google/googletest.git;protocol=https "
 
 inherit cmake
 
-ALLOW_EMPTY_${PN} = "1"
-ALLOW_EMPTY_${PN}-dbg = "1"
+ALLOW_EMPTY:${PN} = "1"
+ALLOW_EMPTY:${PN}-dbg = "1"
 
 BCLASSEXTEND = "native nativesdk"
-RDEPENDS_${PN}-dev = ""
+RDEPENDS:${PN}-dev = ""
 EXTRA_OECMAKE += "-DBUILD_GTEST=ON"
 
 # GTest developers recommend to use source code instead of linking
@@ -42,8 +42,8 @@ do_install() {
     install -v -m 0644 ${S}/googletest/cmake/* ${D}${_srcdir}/cmake
 }
 
-sysroot_stage_all_append() {
+sysroot_stage_all:append() {
     sysroot_stage_dir ${D}${prefix}/src ${SYSROOT_DESTDIR}${prefix}/src
 }
 
-FILES_${PN}-dev += "${prefix}/src"
+FILES:${PN}-dev += "${prefix}/src"

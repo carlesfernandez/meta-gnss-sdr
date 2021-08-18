@@ -16,8 +16,8 @@ PACKAGES = " \
 
 PROVIDES = "${PACKAGES}"
 
-SUMMARY_packagegroup-gnss-sdr-base = "Required packages."
-RDEPENDS_packagegroup-gnss-sdr-base = " \
+SUMMARY:packagegroup-gnss-sdr-base = "Required packages."
+RDEPENDS:packagegroup-gnss-sdr-base = " \
     armadillo \
     boost \
     gflags \
@@ -43,13 +43,13 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     volk \
 "
 
-SUMMARY_packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
-RDEPENDS_packagegroup-gnss-sdr-bin = " \
+SUMMARY:packagegroup-gnss-sdr-bin = "GNSS-SDR binary."
+RDEPENDS:packagegroup-gnss-sdr-bin = " \
     gnss-sdr \
 "
 
-SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
-RDEPENDS_packagegroup-gnss-sdr-drivers = " \
+SUMMARY:packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
+RDEPENDS:packagegroup-gnss-sdr-drivers = " \
     ezdma \
     gqrx \
     gr-osmosdr \
@@ -64,8 +64,8 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     rtl-sdr \
 "
 
-SUMMARY_packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
-RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
+SUMMARY:packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
+RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     alsa-utils \
     base-passwd \
     bash \
@@ -165,8 +165,8 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     ${@bb.utils.contains("MACHINE_FEATURES", "keyboard", "kbd", "", d)} \
 "
 
-SUMMARY_packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
-RDEPENDS_packagegroup-gnss-sdr-buildessential = "\
+SUMMARY:packagegroup-gnss-sdr-buildessential = "Essential build dependencies"
+RDEPENDS:packagegroup-gnss-sdr-buildessential = "\
     autoconf \
     automake \
     binutils \

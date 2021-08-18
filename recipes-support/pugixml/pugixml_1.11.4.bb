@@ -15,7 +15,7 @@ EXTRA_OECMAKE += "-DBUILD_PKGCONFIG=ON \
                   -DCMAKE_BUILD_TYPE=Release \
                   "
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
 	${libdir}/cmake \
 "
 

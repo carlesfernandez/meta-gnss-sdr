@@ -17,7 +17,7 @@ EXTRA_IMAGE_FEATURES += " \
     tools-profile \
 "
 
-IMAGE_INSTALL_append = " kernel-modules"
+IMAGE_INSTALL:append = " kernel-modules"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-boot \
@@ -30,5 +30,5 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     e2fsprogs-resize2fs \
 "
 
-IMAGE_FSTYPES_append = " wic.xz wic.bmap"
+IMAGE_FSTYPES:append = " wic.xz wic.bmap"
 WKS_FILE ??= "${TOPDIR}/../meta-gnss-sdr/wic/sdimage-geniux.wks"

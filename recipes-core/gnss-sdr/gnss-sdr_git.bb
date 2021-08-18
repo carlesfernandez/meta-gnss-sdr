@@ -9,7 +9,7 @@ DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
            gnss-simulator python3-mako python3-mako-native"
 
-RDEPENDS_${PN} = "gnuplot-x11"
+RDEPENDS:${PN} = "gnuplot-x11"
 
 PACKAGECONFIG ??= "osmosdr fpga"
 
@@ -44,9 +44,9 @@ S = "${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
 
-INSANE_SKIP_gnss-sdr_append = "already-stripped"
+INSANE_SKIP:gnss-sdr:append = "already-stripped"
 
-FILES_${PN} = "${bindir}/ \
+FILES:${PN} = "${bindir}/ \
      ${bindir}/gnss-sdr \
      ${bindir}/volk_gnsssdr_profile \
      ${bindir}/volk_gnsssdr-config-info \
@@ -66,7 +66,7 @@ FILES_${PN} = "${bindir}/ \
      ${datadir}/gnss-sdr/data/* \
 "
 
-FILES_${PN}-dbg += " \
+FILES:${PN}-dbg += " \
      ${prefix}/src/debug/gnss-sdr/* \
      ${bindir}/.debug/volk_gnsssdr-config-info \
      ${bindir}/.debug/gnss-sdr \

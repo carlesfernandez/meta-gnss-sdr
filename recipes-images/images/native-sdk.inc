@@ -9,6 +9,6 @@ SDK_EXTRA_TOOLS = " \
     nativesdk-make nativesdk-ninja nativesdk-g++ nativesdk-gcc \
 "
 
-SDK_EXTRA_TOOLS_task-populate-sdk-ext = ""
+SDK_EXTRA_TOOLS:task-populate-sdk-ext = ""
 
-TOOLCHAIN_HOST_TASK_append = "${SDK_EXTRA_TOOLS}"
+TOOLCHAIN_HOST_TASK:append = "${SDK_EXTRA_TOOLS}"

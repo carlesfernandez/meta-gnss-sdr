@@ -18,11 +18,11 @@ S = "${WORKDIR}/git"
 
 inherit distutils3-base cmake pkgconfig
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
   ${libdir}/pkgconfig/libad9361.pc \
 "
 
-FILES_{PN}-dbg += " \
+FILES:{PN}-dbg += " \
   /usr/src/debug/* \
   /usr/lib/.debug/* \
 "

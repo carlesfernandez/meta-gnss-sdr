@@ -25,8 +25,8 @@ S = "${WORKDIR}/git"
 
 PACKAGES = "gnss-sdr-monitor gnss-sdr-monitor-dbg"
 
-FILES_${PN} += " ${bindir}/gnss-sdr-monitor"
+FILES:${PN} += " ${bindir}/gnss-sdr-monitor"
 
-FILES_${PN}-dbg += " \
+FILES:${PN}-dbg += " \
      ${bindir}/.debug/* \
 "

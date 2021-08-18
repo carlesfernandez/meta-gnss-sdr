@@ -14,14 +14,14 @@ SRC_URI = "git://github.com/gflags/gflags.git;protocol=https"
 SRCREV = "827c769e5fc98e0f2a34c47cef953cc6328abced"
 S = "${WORKDIR}/git"
 
-FILES_${PN}-dev += "${libdir}/cmake"
+FILES:${PN}-dev += "${libdir}/cmake"
 
 inherit cmake
 
 EXTRA_OECMAKE = "-DBUILD_SHARED_LIBS=ON -DREGISTER_INSTALL_PREFIX=OFF -DLIB_INSTALL_DIR=${baselib}"
 
 PACKAGES =+ "${PN}-bash-completion"
-FILES_${PN}-bash-completion += "${bindir}/gflags_completions.sh"
-RDEPENDS_${PN}-bash-completion = "bash-completion bash"
+FILES:${PN}-bash-completion += "${bindir}/gflags_completions.sh"
+RDEPENDS:${PN}-bash-completion = "bash-completion bash"
 
 BBCLASSEXTEND = "native nativesdk"

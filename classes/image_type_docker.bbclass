@@ -19,7 +19,7 @@ DOCKER_IMAGE_NAME_EXPORT ??= "${IMAGE_NAME}${IMAGE_NAME_SUFFIX}-export.docker:${
 # command to fetch the container id
 DOCKER_CONTAINER_ID = "$(${IMAGE_CMD_DOCKER} ps -aqf 'ancestor=${DOCKER_IMAGE_NAME}')"
 
-IMAGE_CMD_docker (){
+IMAGE_CMD:docker (){
 	# create a tar archive that we import to docker
 	${IMAGE_CMD_TAR} -cvf - -C ${IMAGE_ROOTFS} . 2>&- | ${IMAGE_CMD_DOCKER} import - ${DOCKER_IMAGE_NAME}
 
