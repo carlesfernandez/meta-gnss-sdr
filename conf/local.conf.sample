@@ -16,7 +16,7 @@ DISTRO ??= "geniux"
 # GUI support
 #
 DISTRO_FEATURES:append = " opengl x11"
-DISTRO_FEATURES:remove = "ptest"
+DISTRO_FEATURES:remove = "ptest wayland"
 PACKAGECONFIG:remove:pn-qtbase = "tests"
 PACKAGECONFIG:pn-gnuradio += "qtgui5 grc zeromq"
 PACKAGECONFIG:pn-gnuplot += "cairo qt5"
@@ -124,7 +124,7 @@ IMAGE_FSTYPES = "tar.gz"
 #   - 'image-swab' to perform host system intrusion detection
 # NOTE: if listing mklibs & prelink both, then make sure mklibs is before prelink
 # NOTE: mklibs also needs to be explicitly enabled for a given image, see local.conf.extended
-USER_CLASSES ?= "buildstats image-mklibs rm_work"
+USER_CLASSES ?= "buildstats rm_work"
 
 RM_WORK_EXCLUDE = "base-gnss-sdr-dev-image gnss-sdr-dev-image \
                    gnss-sdr-demo-image gnss-sdr-minimal-image gnuradio"
@@ -188,7 +188,8 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 #BB_NO_NETWORK = "1"
 CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
-CONF_VERSION = "1"
+CONF_VERSION = "2"
+GENIUX_CONF_VERSION = "1"
 
 FORTRAN:forcevariable = ",fortran"
 
@@ -200,11 +201,9 @@ PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
 PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 
-PACKAGECONFIG:pn-glog = "shared unwind gflags"
 PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_VERSION_gflags = "2.2.2"
-PREFERRED_VERSION_glog = "0.4.0"
 PREFERRED_VERSION_gtest = "1.11.0"
 
 INSANE_SKIP:sip3-native:append = "already-stripped"
