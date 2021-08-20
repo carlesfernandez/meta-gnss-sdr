@@ -189,6 +189,7 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
 CONF_VERSION = "1"
+GENIUX_CONF_VERSION = "1"
 
 PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-xlnx"
 KERNEL_DTB_zedboard-zynq7 = "zynq-zc706-adv7511-ad9361-fmcomms5"
