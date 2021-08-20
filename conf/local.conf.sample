@@ -188,6 +188,7 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 #BB_NO_NETWORK = "1"
 
 CONF_VERSION = "1"
+GENIUX_CONF_VERSION = "1"
 
 # Use Analog Devices Linux kernel and tools for Vivado 2019.2
 PREFERRED_PROVIDER_virtual/kernel_zedboard-zynq7 = "linux-xlnx"
