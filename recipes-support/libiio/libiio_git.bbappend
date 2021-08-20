@@ -1,2 +1,3 @@
-PV = "0.21+git${SRCPV}"
-SRCREV = "ec059cc926a875e830393ae88360c70b1c4f886a"
+SRC_URI = "git://github.com/analogdevicesinc/libiio.git;protocol=https"
+PV = "0.23+git${SRCPV}"
+SRCREV = "92d6a35f3d8d721cda7d6fe664b435311dd368b4"
