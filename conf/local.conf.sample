@@ -192,6 +192,7 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 #BB_NO_NETWORK = "1"
 
 CONF_VERSION = "1"
+GENIUX_CONF_VERSION = "1"
 
 FORTRAN_forcevariable = ",fortran"
 RUNTIMETARGET_append_pn-gcc-runtime = " libquadmath libbacktrace libgfortran"
