@@ -3,13 +3,13 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r26"
+PR = "r27"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
            gtest pugixml gnuplot gpstk git git-native protobuf protobuf-native pkgconfig \
-           gnss-simulator python3-mako python3-mako-native"
+           python3-mako python3-mako-native"
 
-RDEPENDS:${PN} = "gnuplot-x11"
+RDEPENDS:${PN} = "gnss-simulator gnuplot-x11"
 
 PACKAGECONFIG ??= "osmosdr fpga"
 
@@ -31,9 +31,9 @@ EXTRA_OECMAKE += " \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.14.git"
+PV = "0.0.15.git"
 
-SRCREV = "13115e2c7e8ad585c89ed3c2db0c526db239718e"
+SRCREV = "0fc18f13f98c72e4e4808f044490253b71bd9e0d"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
