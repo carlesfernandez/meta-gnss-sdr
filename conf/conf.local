@@ -15,14 +15,20 @@
 DISTRO ??= "geniux"
 
 #
-# GUI support
+# Distro features
 #
 DISTRO_FEATURES:append = " opengl x11"
-DISTRO_FEATURES:remove = "ptest wayland"
-PACKAGECONFIG:remove:pn-qtbase = "tests"
-PACKAGECONFIG:pn-gnuradio += "qtgui5 grc zeromq"
-PACKAGECONFIG:pn-gnuplot += "cairo qt5"
+DISTRO_FEATURES:remove = "ptest"
 
+#
+# Use systemd for system initialization
+#
+DISTRO_FEATURES:append = " systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED:append = " sysvinit"
+VIRTUAL-RUNTIME_login_manager = "shadow-base"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+VIRTUAL-RUNTIME_dev_manager = "systemd"
 
 #
 # Machine Selection
@@ -31,12 +37,14 @@ PACKAGECONFIG:pn-gnuplot += "cairo qt5"
 # of emulated machines available which can boot and run in the QEMU emulator:
 #
 #MACHINE ?= "qemuarm"
+#MACHINE ?= "qemuarm64"
 #MACHINE ?= "qemumips"
+#MACHINE ?= "qemumips64"
 #MACHINE ?= "qemuppc"
 #MACHINE ?= "qemux86"
 #MACHINE ?= "qemux86-64"
 #
-# This sets the default machine to be zedboard-zynq if no other machine is selected:
+# This sets the default machine to be zedboard-zynq7 if no other machine is selected:
 MACHINE ??= "zedboard-zynq7"
 
 DEFAULTTUNE_ettus-e3xx-sg1 = "armv7ahf-neon"
@@ -77,12 +85,12 @@ PACKAGE_CLASSES ?= "package_ipk"
 
 
 #
-# SDK/ADT target architecture
+# SDK target architecture
 #
-# This variable specified the architecture to build SDK/ADT items for and means
+# This variable specifies the architecture to build SDK items for and means
 # you can build the SDK packages for architectures other than the machine you are
-# running the build on (i.e. building i686 packages on an x86_64 host._
-# Supported values are i686 and x86_64
+# running the build on (i.e. building i686 packages on an x86_64 host).
+# Supported values are i686, x86_64, aarch64
 #SDKMACHINE ?= "i686"
 
 
@@ -94,6 +102,8 @@ PACKAGE_CLASSES ?= "package_ipk"
 # variable can contain the following options:
 #  "dbg-pkgs"       - add -dbg packages for all installed packages
 #                     (adds symbol information for debugging/profiling)
+#  "src-pkgs"       - add -src packages for all installed packages
+#                     (adds source code for debugging)
 #  "dev-pkgs"       - add -dev packages for all installed packages
 #                     (useful if you want to develop against libs in the image)
 #  "ptest-pkgs"     - add -ptest packages for all ptest-enabled packages
@@ -101,7 +111,7 @@ PACKAGE_CLASSES ?= "package_ipk"
 #  "tools-sdk"      - add development tools (gcc, make, pkgconfig etc.)
 #  "tools-debug"    - add debugging tools (gdb, strace)
 #  "eclipse-debug"  - add Eclipse remote debugging support
-#  "tools-profile"  - add profiling tools (oprofile, exmap, lttng, valgrind)
+#  "tools-profile"  - add profiling tools (oprofile, lttng, valgrind)
 #  "tools-testapps" - add useful testing tools (ts_print, aplay, arecord etc.)
 #  "debug-tweaks"   - make an image suitable for development
 #                     e.g. ssh root access has a blank password
@@ -121,12 +131,17 @@ IMAGE_FSTYPES = "tar.gz"
 # enable extra features. Some available options which can be included in this variable
 # are:
 #   - 'buildstats' collect build statistics
-#   - 'image-mklibs' to reduce shared library files size for an image
-#   - 'image-prelink' in order to prelink the filesystem image
-#   - 'image-swab' to perform host system intrusion detection
-# NOTE: if listing mklibs & prelink both, then make sure mklibs is before prelink
-# NOTE: mklibs also needs to be explicitly enabled for a given image, see local.conf.extended
 USER_CLASSES ?= "buildstats rm_work"
+
+#
+# Runtime testing of images
+#
+# The build system can test booting virtual machine images under qemu (an emulator)
+# after any root filesystems are created and run tests against those images. It can also
+# run tests against any SDK that are built. To enable this uncomment these lines.
+# See classes/test{image,sdk}.bbclass for further details.
+#IMAGE_CLASSES += "testimage testsdk"
+#TESTIMAGE_AUTO_qemuall = "1"
 
 RM_WORK_EXCLUDE = "base-gnss-sdr-dev-image gnss-sdr-dev-image \
                    gnss-sdr-demo-image gnss-sdr-minimal-image gnuradio"
@@ -159,20 +174,35 @@ PATCHRESOLVE = "noop"
 #
 # Monitor the disk space during the build. If there is less that 1GB of space or less
 # than 100K inodes in any key build location (TMPDIR, DL_DIR, SSTATE_DIR), gracefully
-# shutdown the build. If there is less that 100MB or 1K inodes, perform a hard abort
+# shutdown the build. If there is less than 100MB or 1K inodes, perform a hard abort
 # of the build. The reason for this is that running completely out of space can corrupt
 # files and damages the build in ways which may not be easily recoverable.
-BB_DISKMON_DIRS = "\
+# It's necessary to monitor /tmp, if there is no space left the build will fail
+# with very exotic errors.
+BB_DISKMON_DIRS ??= "\
     STOPTASKS,${TMPDIR},1G,100K \
     STOPTASKS,${DL_DIR},1G,100K \
     STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
     ABORT,${TMPDIR},100M,1K \
     ABORT,${DL_DIR},100M,1K \
-    ABORT,${SSTATE_DIR},100M,1K"
+    ABORT,${SSTATE_DIR},100M,1K \
+    ABORT,/tmp,10M,1K"
 
 #SSTATE_MIRRORS ?= "\
 #file://.* http://someserver.tld/share/sstate/PATH;downloadfilename=PATH \n \
 #file://.* file:///some/local/dir/sstate/PATH"
+
+#
+# Qemu configuration
+#
+# By default qemu will build with a builtin VNC server where graphical output can be
+# seen. The two lines below enable the SDL backend too. By default libsdl2-native will
+# be built, if you want to use your host's libSDL instead of the minimal libsdl built
+# by libsdl2-native then uncomment the ASSUME_PROVIDED line below.
+PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
+PACKAGECONFIG:append:pn-nativesdk-qemu = " sdl"
+#ASSUME_PROVIDED += "libsdl2-native"
 
 #
 # Local mirror
@@ -190,10 +220,18 @@ BB_GENERATE_MIRROR_TARBALLS = "1"
 #BB_NO_NETWORK = "1"
 CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
+# Do not touch this line
 CONF_VERSION = "2"
+
+# Modify as required
 GENIUX_CONF_VERSION = "1"
 
 FORTRAN:forcevariable = ",fortran"
+
+PACKAGECONFIG:remove:pn-qtbase = "tests"
+PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
+PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq"
+PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_PROVIDER_gtest = "gtest"
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
@@ -203,23 +241,12 @@ PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
 PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 
-PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
-
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_gtest = "1.11.0"
 
 INSANE_SKIP:sip3-native:append = "already-stripped"
 
 BBMASK += "/meta-sdr/recipes-support/bladerf/libtecla.*"
-
-#
-# Use systemd for system initialization
-#
-DISTRO_FEATURES:append = " systemd"
-DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-VIRTUAL-RUNTIME_login_manager = "shadow-base"
-VIRTUAL-RUNTIME_init_manager = "systemd"
-VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 
 BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
