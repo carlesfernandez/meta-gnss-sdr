@@ -2,7 +2,7 @@ require version-image.inc
 
 SUMMARY = "An image with the GNSS-SDR binary and the Xfce desktop environment"
 LICENSE = "MIT"
-PR = "r4"
+PR = "r5"
 
 inherit core-image image-buildinfo
 
@@ -17,7 +17,7 @@ EXTRA_IMAGE_FEATURES += " \
     tools-profile \
 "
 
-IMAGE_INSTALL:append = " kernel-modules"
+IMAGE_INSTALL:append = " kernel-modules resize-rootfs"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-boot \

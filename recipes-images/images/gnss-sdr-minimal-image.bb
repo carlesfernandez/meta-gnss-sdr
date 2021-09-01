@@ -2,7 +2,7 @@ require version-image.inc
 
 SUMMARY = "A spartan image with the GNSS-SDR binary and required environment"
 LICENSE = "MIT"
-PR = "r3"
+PR = "r4"
 
 inherit core-image image-buildinfo
 
@@ -14,7 +14,7 @@ IMAGE_FEATURES += " \
 
 EXTRA_IMAGE_FEATURES += " package-management"
 
-IMAGE_INSTALL:append = " kernel-modules"
+IMAGE_INSTALL:append = " kernel-modules resize-rootfs"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-boot \
