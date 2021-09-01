@@ -2,12 +2,13 @@ require version-image.inc
 
 SUMMARY = "An image with the GNSS-SDR binary and the Xfce desktop environment"
 LICENSE = "MIT"
-PR = "r5"
+PR = "r6"
 
 inherit core-image image-buildinfo
 
+require recipes-images/images/geniux-users.inc
+
 IMAGE_FEATURES += " \
-    debug-tweaks \
     ssh-server-openssh \
     splash \
 "
