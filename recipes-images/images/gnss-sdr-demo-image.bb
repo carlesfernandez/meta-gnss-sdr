@@ -4,7 +4,7 @@ SUMMARY = "An image with the GNSS-SDR binary and the Xfce desktop environment"
 LICENSE = "MIT"
 PR = "r5"
 
-inherit core-image image-buildinforecipe
+inherit core-image image-buildinfo
 
 require recipes-images/images/geniux-users.inc
 
