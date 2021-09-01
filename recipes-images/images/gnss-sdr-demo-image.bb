@@ -2,12 +2,13 @@ require version-image.inc
 
 SUMMARY = "An image with the GNSS-SDR binary and the Xfce desktop environment"
 LICENSE = "MIT"
-PR = "r4"
+PR = "r5"
 
-inherit core-image image-buildinfo
+inherit core-image image-buildinforecipe
+
+require recipes-images/images/geniux-users.inc
 
 IMAGE_FEATURES += " \
-    debug-tweaks \
     ssh-server-openssh \
     splash \
 "
@@ -17,7 +18,7 @@ EXTRA_IMAGE_FEATURES += " \
     tools-profile \
 "
 
-IMAGE_INSTALL_append = " kernel-modules"
+IMAGE_INSTALL_append = " kernel-modules resize-rootfs"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-boot \
