@@ -52,8 +52,8 @@ SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     ezdma \
     gqrx \
-    gr-osmosdr \
     gr-iio \
+    gr-osmosdr \
     iio-oscilloscope \
     libad9361-iio \
     libad9361-iio-dev \
