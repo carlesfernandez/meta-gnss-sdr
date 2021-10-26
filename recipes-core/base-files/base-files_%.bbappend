@@ -1,6 +1,6 @@
 # Add welcome message on login
 
-do_install_append () {
+do_install:append () {
     echo -e "Hello there! \n" > ${D}${sysconfdir}/motd
     echo -e "This is Geniux, an Operating System for developing and running GNSS-SDR" >> ${D}${sysconfdir}/motd
     echo -e "on embedded devices.\n" >> ${D}${sysconfdir}/motd
