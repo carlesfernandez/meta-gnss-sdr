@@ -6,7 +6,7 @@ PR = "r1"
 
 DEPENDS = "zlib hdf5"
 
-SRC_URI = "gitsm://github.com/tbeu/matio.git"
+SRC_URI = "gitsm://github.com/tbeu/matio.git;branch=master;protocol=https"
 SRCREV = "8e18058117fcf177d236e68d453d04e20f937598"
 S = "${WORKDIR}/git"
 
