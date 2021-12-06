@@ -8,7 +8,7 @@ HOMEPAGE = "https://github.com/gflags/gflags"
 
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://COPYING.txt;md5=c80d1a3b623f72bb85a4c75b556551df"
-PR = "r1"
+PR = "r2"
 
 SRC_URI = "git://github.com/gflags/gflags.git;protocol=https;branch=master"
 SRCREV = "827c769e5fc98e0f2a34c47cef953cc6328abced"
