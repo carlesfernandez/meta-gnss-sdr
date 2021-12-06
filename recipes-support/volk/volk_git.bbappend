@@ -11,7 +11,7 @@ export HOST_SYS="${MULTIMACH_TARGET_SYS}"
 export STAGING_LIBDIR
 
 PV = "2.2.1"
-SRC_URI = "git://github.com/gnuradio/volk.git;branch=master \
+SRC_URI = "git://github.com/gnuradio/volk.git;branch=main;protocol=https \
            file://0001-Check-for-lib64-verus-lib-and-set-LIB_SUFFIX-accordi.patch \
           "
 SRC_URI_append_ettus-e300 = "file://volk_config"
