@@ -4,7 +4,7 @@ HOMEPAGE = "https://github.com/google/googletest"
 SECTION = "libs"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
-PR = "r2"
+PR = "r3"
 
 PROVIDES += "gmock gtest"
 
