@@ -14,7 +14,7 @@ PV = "0.3"
 
 SRCREV = "407865f89b92daa89fec5c2b3c0e44bb422ef9d3"
 
-SRC_URI = "git://github.com/analogdevicesinc/gr-iio.git;protocol=https "
+SRC_URI = "git://github.com/analogdevicesinc/gr-iio.git;protocol=https;branch=master"
 
 FILES_${PN} += " \
    /usr/share/gnuradio/grc/blocks/* \

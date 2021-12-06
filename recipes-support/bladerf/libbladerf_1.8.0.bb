@@ -14,7 +14,7 @@ PR = "r0"
 
 DEPENDS = "libusb1 libtecla"
 
-SRC_URI = "git://github.com/Nuand/bladeRF.git;protocol=git;branch=master"
+SRC_URI = "git://github.com/Nuand/bladeRF.git;protocol=https;branch=master"
 SRCREV = "037e2886f2bfee42af99d77581d3cf9a23c64227"
 
 S = "${WORKDIR}/git"
