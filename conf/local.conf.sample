@@ -23,7 +23,7 @@ DISTRO_FEATURES:remove = "ptest"
 #
 # Use systemd for system initialization
 #
-DISTRO_FEATURES:append = " systemd"
+DISTRO_FEATURES:append = " systemd virtualization"
 DISTRO_FEATURES_BACKFILL_CONSIDERED:append = " sysvinit"
 VIRTUAL-RUNTIME_login_manager = "shadow-base"
 VIRTUAL-RUNTIME_init_manager = "systemd"
