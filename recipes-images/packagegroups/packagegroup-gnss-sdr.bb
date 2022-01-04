@@ -20,6 +20,7 @@ SUMMARY:packagegroup-gnss-sdr-base = "Required packages."
 RDEPENDS:packagegroup-gnss-sdr-base = " \
     armadillo \
     boost \
+    fmt \
     gflags \
     gflags-bash-completion \
     glog \
@@ -35,11 +36,11 @@ RDEPENDS:packagegroup-gnss-sdr-base = " \
     hdf5 \
     lapack \
     libpcap \
-    log4cpp \
     matio \
     protobuf \
     pugixml \
     python3-mako \
+    spdlog \
     volk \
 "
 
