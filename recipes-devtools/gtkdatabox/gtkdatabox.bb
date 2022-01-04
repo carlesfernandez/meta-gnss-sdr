@@ -13,6 +13,6 @@ SRC_URI += "file://remove_examples.patch;md5=6b0db4cc368edad1a53fdcaaf2a8f845"
 
 S = "${WORKDIR}/git"
 
-DEPENDS += " pkgconfig gtk+ gtk-doc pango cairo libglade glib-2.0"
+DEPENDS = "pkgconfig gtk+ gtk-doc pango cairo libglade glib-2.0"
 
 inherit autotools pkgconfig
