@@ -15,7 +15,7 @@ PV = "0.3"
 SRCREV = "b3bd9edfaa03e8c63631f9166e1997870cc6b9ba"
 
 GIT_BRANCH = "upgrade-3.8"
-SRC_URI = "git://github.com/analogdevicesinc/gr-iio.git;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/analogdevicesinc/gr-iio.git;branch=${GIT_BRANCH};protocol=https"
 
 FILES_${PN} += " \
    /usr/share/gnuradio/grc/blocks/* \
