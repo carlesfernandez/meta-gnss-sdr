@@ -6,7 +6,7 @@ PR = "r0"
 
 PV = "0.9.3.1.GTK2"
 GIT_BRANCH = "GTK2"
-SRC_URI = "git://git.code.sf.net/p/gtkdatabox/git;branch=${GIT_BRANCH} "
+SRC_URI = "git://git.code.sf.net/p/gtkdatabox/git;branch=${GIT_BRANCH};protocol=https"
 SRCREV = "e877aecac861042b4da5bf209dc9178583d7d2f7"
 
 SRC_URI += "file://remove_examples.patch;md5=6b0db4cc368edad1a53fdcaaf2a8f845"
