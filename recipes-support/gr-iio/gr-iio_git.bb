@@ -15,7 +15,7 @@ PV = "0.3"
 SRCREV = "f1815389212cae0c1641b9d66e4921351ba21da2"
 
 GIT_BRANCH = "gr3.9"
-SRC_URI = "git://github.com/dl1ksv/gr-iio.git;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/dl1ksv/gr-iio.git;branch=${GIT_BRANCH};protocol=https"
 
 FILES:${PN} += " \
    /usr/share/gnuradio/grc/blocks/* \
