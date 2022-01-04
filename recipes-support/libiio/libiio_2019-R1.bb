@@ -8,7 +8,7 @@ PR = "r0"
 SRCREV = "8d6ad2926e84c39868907fdd846e55a0c7e8f5a4"
 GIT_BRANCH = "2019_R1"
 
-SRC_URI = "git://github.com/analogdevicesinc/libiio.git;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/analogdevicesinc/libiio.git;branch=${GIT_BRANCH};protocol=https"
 
 S = "${WORKDIR}/git"
 
