@@ -8,7 +8,7 @@ LICENSE = "LGPLv3"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 
 GIT_BRANCH = "main"
-SRC_URI = "git://github.com/SGL-UT/GPSTk.git;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/SGL-UT/GPSTk.git;branch=${GIT_BRANCH};protocol=https"
 SRCREV = "7f4c840d21c7bac40c5d554bdaab386ba2ee59ef"
 S = "${WORKDIR}/git"
 

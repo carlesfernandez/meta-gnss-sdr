@@ -15,7 +15,7 @@ PV = "0.3"
 SRCREV = "f1bb949a1e616687c42f4ff08b943e2b1d598151"
 
 GIT_BRANCH = "update-boost173"
-SRC_URI = "git://github.com/analogdevicesinc/gr-iio.git;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/analogdevicesinc/gr-iio.git;branch=${GIT_BRANCH};protocol=https"
 
 FILES_${PN} += " \
    /usr/share/gnuradio/grc/blocks/* \
