@@ -13,5 +13,5 @@ S = "${WORKDIR}/git"
 
 FILES_${PN} += "*"
 
-DEPENDS += " glib-2.0 gtk+ gtkdatabox fftw libxml2 curl jansson matio libad9361-iio"
+DEPENDS = "glib-2.0 gtk+ gtkdatabox fftw libxml2 curl jansson matio libad9361-iio"
 inherit autotools cmake
