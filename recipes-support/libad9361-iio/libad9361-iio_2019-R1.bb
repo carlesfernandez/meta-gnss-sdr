@@ -11,7 +11,7 @@ DEPENDS = "libiio"
 SRCREV = "11293f8fa201ab1ceae80f351b71d53ac4be8198"
 
 GIT_BRANCH = "2019_R1"
-SRC_URI = "git://github.com/analogdevicesinc/libad9361-iio;;branch=${GIT_BRANCH};protocol=https "
+SRC_URI = "git://github.com/analogdevicesinc/libad9361-iio;branch=${GIT_BRANCH};protocol=https"
 
 S = "${WORKDIR}/git"
 
