@@ -17,6 +17,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-qt5 \
   ##COREBASE##/../meta-virtualization \
   ##COREBASE##/../meta-xilinx/meta-xilinx-bsp \
+  ##COREBASE##/../meta-xilinx/meta-xilinx-core \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-intel \
   ##COREBASE##/../meta-swupdate \
