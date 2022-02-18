@@ -228,6 +228,8 @@ GENIUX_CONF_VERSION = "1"
 
 FORTRAN:forcevariable = ",fortran"
 
+LICENSE_FLAGS_WHITELIST += "xilinx"
+
 PACKAGECONFIG:remove:pn-qtbase = "tests"
 PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
 PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq"
