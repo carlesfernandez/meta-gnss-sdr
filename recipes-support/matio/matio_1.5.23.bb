@@ -7,9 +7,9 @@ PR = "r1"
 DEPENDS = "zlib hdf5"
 
 SRC_URI = "gitsm://github.com/tbeu/matio.git;branch=master;protocol=https"
-SRCREV = "57a999e4443387c12807aa1b5908bf4a3a4acfb3"
+SRCREV = "e9e063e08ef2a27fcc22b1e526258fea5a5de329"
 S = "${WORKDIR}/git"
 
-inherit autotools
+inherit autotools pkgconfig
 
 EXTRA_OECONF += "--enable-mat73=yes --with-default-file-ver=7.3"
