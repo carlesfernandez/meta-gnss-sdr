@@ -18,6 +18,9 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-qt5 \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-intel \
+  ##COREBASE##/../meta-ti \
+  ##COREBASE##/../meta-arm/meta-arm \
+  ##COREBASE##/../meta-arm/meta-arm-toolchain \
   ##COREBASE##/../meta-swupdate \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
