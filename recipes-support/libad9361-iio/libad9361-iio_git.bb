@@ -16,7 +16,7 @@ SRC_URI = "git://github.com/analogdevicesinc/libad9361-iio;branch=${GIT_BRANCH};
 
 S = "${WORKDIR}/git"
 
-inherit distutils3-base cmake pkgconfig
+inherit setuptools3-base cmake pkgconfig
 
 FILES:${PN}-dev += " \
   ${libdir}/pkgconfig/libad9361.pc \
