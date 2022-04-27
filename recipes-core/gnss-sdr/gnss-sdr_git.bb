@@ -20,11 +20,12 @@ PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
 inherit setuptools3-base cmake pkgconfig
 
 EXTRA_OECMAKE += " \
- -DENABLE_SYSTEM_TESTING_EXTRA=ON  \
- -DCMAKE_INSTALL_PREFIX=/usr  \
- -DENABLE_FMCOMMS2=ON  \
- -DENABLE_AD9361=ON  \
- -DENABLE_RAW_UDP=ON  \
+ -DENABLE_UNIT_TESTING_EXTRA=ON \
+ -DENABLE_SYSTEM_TESTING_EXTRA=ON \
+ -DCMAKE_INSTALL_PREFIX=/usr \
+ -DENABLE_FMCOMMS2=ON \
+ -DENABLE_AD9361=ON \
+ -DENABLE_RAW_UDP=ON \
  -DENABLE_INSTALL_TESTS=ON \
  -DENABLE_PACKAGING=ON \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
@@ -72,3 +73,5 @@ FILES:${PN}-dbg += " \
      ${bindir}/.debug/volk_gnsssdr_profile \
      ${bindir}/.debug/front-end-cal \
 "
+
+do_configure[network] = "1"
