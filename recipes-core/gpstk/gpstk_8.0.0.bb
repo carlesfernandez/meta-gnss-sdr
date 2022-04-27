@@ -4,7 +4,7 @@ AUTHOR = "ARL:UT"
 HOMEPAGE = "https://github.com/SGL-UT/GPSTk/"
 PR = "r2"
 
-LICENSE = "LGPLv3"
+LICENSE = "LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 
 GIT_BRANCH = "main"

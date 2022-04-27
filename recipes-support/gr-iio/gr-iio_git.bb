@@ -1,6 +1,6 @@
 SUMMARY = "IIO blocks for GNU Radio"
 HOMEPAGE = "https://github.com/analogdevicesinc/gr-iio"
-LICENSE = "GPLv3"
+LICENSE = "GPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 PR = "r3"
 

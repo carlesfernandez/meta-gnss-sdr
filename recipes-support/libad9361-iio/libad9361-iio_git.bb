@@ -2,7 +2,7 @@ SUMMARY = "Device specific library for AD936X transceivers"
 DESCRIPTION = "This is a simple library used for userspace, which manages multi-chip sync, on platforms (FMCOMMS5) where multiple AD9361 devices are used."
 AUTHOR = "Analog Devices, Inc."
 HOMEPAGE = "https://github.com/analogdevicesinc/libad9361-iio"
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=40d2542b8c43a3ec2b7f5da31a697b88"
 PR = "r1"
 
