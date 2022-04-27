@@ -3,7 +3,7 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPL-3.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r0"
+PR = "r1"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
            gtest pugixml gpstk git git-native protobuf protobuf-native pkgconfig \
@@ -17,10 +17,9 @@ PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-os
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
 
-inherit setuptools3-base cmake pkgconfig python3native
+inherit setuptools3-base cmake pkgconfig
 
 EXTRA_OECMAKE += " \
- -DENABLE_UNIT_TESTING_EXTRA=ON  \
  -DENABLE_SYSTEM_TESTING_EXTRA=ON  \
  -DCMAKE_INSTALL_PREFIX=/usr  \
  -DENABLE_FMCOMMS2=ON  \
