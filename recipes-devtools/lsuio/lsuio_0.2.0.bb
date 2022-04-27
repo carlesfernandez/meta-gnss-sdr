@@ -1,7 +1,7 @@
 DESCRIPTION = "Lists available userspace I/O (UIO) devices"
 HOMEPAGE = "https://www.osadl.org/UIO-Archives.uio-archives.0.html"
 SECTION = "tools"
-LICENSE = "LGPLv2"
+LICENSE = "LGPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
 PR = "r3"
 
