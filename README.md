@@ -3,7 +3,7 @@
 A layer for [gnss-sdr](https://gnss-sdr.org) on embedded devices.
 
 This layer is included in the
-[OpenEmbedded Layer Index](https://layers.openembedded.org/layerindex/branch/honister/layer/meta-gnss-sdr/).
+[OpenEmbedded Layer Index](https://layers.openembedded.org/layerindex/branch/kirkstone/layer/meta-gnss-sdr/).
 
 ## How to build this layer
 
@@ -67,7 +67,7 @@ $ git config --global user.email your.name@example.com
 
     Tell Repo where to find the manifest
 
-        $ repo init -u https://github.com/carlesfernandez/oe-gnss-sdr-manifest.git -b honister
+        $ repo init -u https://github.com/carlesfernandez/oe-gnss-sdr-manifest.git -b kirkstone
 
     A successful initialization will end with a message stating that Repo is
     initialized in your working directory. Your client directory should now

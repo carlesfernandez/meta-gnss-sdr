@@ -6,7 +6,7 @@ PR = "r3"
 
 DEPENDS = "gnuradio libiio libad9361-iio bison-native python3-pybind11-native"
 
-inherit distutils3-base cmake pkgconfig python3native
+inherit setuptools3-base cmake pkgconfig python3native
 
 S = "${WORKDIR}/git"
 
