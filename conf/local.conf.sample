@@ -142,7 +142,7 @@ USER_CLASSES ?= "buildstats rm_work"
 # run tests against any SDK that are built. To enable this uncomment these lines.
 # See classes/test{image,sdk}.bbclass for further details.
 #IMAGE_CLASSES += "testimage testsdk"
-#TESTIMAGE_AUTO_qemuall = "1"
+#TESTIMAGE_AUTO:qemuall = "1"
 
 RM_WORK_EXCLUDE = "base-gnss-sdr-dev-image gnss-sdr-dev-image \
                    gnss-sdr-demo-image gnss-sdr-minimal-image gnuradio"
