@@ -4,6 +4,8 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
 LICENSE = "MIT"
 PR = "r7"
 
+PACKAGE_ARCH = "${TUNE_PKGARCH}"
+
 inherit packagegroup
 
 PACKAGES = " \
