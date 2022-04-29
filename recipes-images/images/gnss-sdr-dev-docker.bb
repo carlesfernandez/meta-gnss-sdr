@@ -17,4 +17,4 @@ inherit core-image
 
 # set a meaningful name and tag for the docker output image
 DOCKER_IMAGE_TAG = "latest"
-DOCKER_IMAGE_NAME_EXPORT = "gnsssdr-dev-arm32v7:${DOCKER_IMAGE_TAG}"
+DOCKER_IMAGE_NAME_EXPORT = "gnsssdr-dev-${MACHINE_ARCH}:${DOCKER_IMAGE_TAG}"
