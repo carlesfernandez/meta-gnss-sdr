@@ -235,6 +235,7 @@ PACKAGECONFIG:remove:pn-qtbase = "tests"
 PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
 PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq"
 PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
+
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glamor"
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glx"
 PACKAGECONFIG:remove:pn-qtbase:zcu102-zynqmp = "tests gl"
@@ -245,8 +246,7 @@ PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
-PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
-PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
+
 PREFERRED_PROVIDER_virtual/libgl:zcu102-zynqmp = "mesa-gl"
 
 PREFERRED_VERSION_gflags = "2.2.2"
