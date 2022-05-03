@@ -2,7 +2,7 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
  images they like."
 
 LICENSE = "MIT"
-PR = "r6"
+PR = "r7"
 
 inherit packagegroup
 
@@ -50,7 +50,6 @@ RDEPENDS_packagegroup-gnss-sdr-bin = " \
 
 SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS_packagegroup-gnss-sdr-drivers = " \
-    ezdma \
     gqrx \
     gr-iio \
     gr-osmosdr \
@@ -63,6 +62,10 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     libiio-tests \
     rtl-sdr \
     uhd \
+    ${@base_contains("MACHINE", "zedboard_zynq7", "ezdma", "", d)} \
+    ${@base_contains("MACHINE", "plnx-zynq", "ezdma", "", d)} \
+    ${@base_contains("MACHINE", "zcu102_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
+    ${@base_contains("MACHINE", "plnx-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
 "
 
 SUMMARY_packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
