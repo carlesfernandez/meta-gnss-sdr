@@ -1,4 +1,4 @@
-SUMMARY = "Recipe for  build an external ezdma Linux kernel module"
+SUMMARY = "Recipe for building an external ezdma Linux kernel module"
 SECTION = "PETALINUX/modules"
 HOMEPAGE = "https://github.com/jeremytrimble/ezdma"
 LICENSE = "GPLv2"
