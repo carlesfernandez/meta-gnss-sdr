@@ -66,6 +66,7 @@ RDEPENDS:packagegroup-gnss-sdr-drivers = " \
     ${@base_contains("MACHINE", "zedboard_zynq7", "ezdma", "", d)} \
     ${@base_contains("MACHINE", "plnx-zynq", "ezdma", "", d)} \
     ${@base_contains("MACHINE", "zcu102_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
+    ${@base_contains("MACHINE", "zcu208_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
     ${@base_contains("MACHINE", "plnx-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
 "
 
