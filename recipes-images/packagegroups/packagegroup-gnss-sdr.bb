@@ -2,7 +2,7 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
  images they like."
 
 LICENSE = "MIT"
-PR = "r6"
+PR = "r7"
 
 inherit packagegroup
 
