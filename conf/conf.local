@@ -17,7 +17,7 @@ DISTRO ??= "geniux"
 #
 # GUI support
 #
-DISTRO_FEATURES_append = " opengl x11"
+DISTRO_FEATURES_append = " opengl virtualization x11"
 DISTRO_FEATURES_remove = "ptest"
 PACKAGECONFIG_remove_pn-qtbase = "tests"
 PACKAGECONFIG_pn-gnuradio += "qtgui5 grc zeromq uhd"
@@ -195,7 +195,7 @@ GENIUX_CONF_VERSION = "1"
 
 FORTRAN_forcevariable = ",fortran"
 
-# Settings for Petalinux Tools / Vivado 2021.1
+# Settings for Petalinux Tools / Vivado 2021.2
 DISTRO_FEATURES_append_zcu102-zynqmp = " fbdev"
 PACKAGECONFIG_remove_pn-xserver-xorg_zcu102-zynqmp = "glamor"
 PACKAGECONFIG_remove_pn-xserver-xorg_zcu102-zynqmp = "glx"
@@ -210,6 +210,7 @@ PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
 PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
+PREFERRED_PROVIDER_virtual/boot-bin_zcu102-zynqmp = "xilinx-bootbin"
 
 PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 

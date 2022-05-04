@@ -9,6 +9,8 @@ BBLAYERS ?= " \
   ##COREBASE##/meta \
   ##COREBASE##/../meta-xilinx/meta-xilinx-bsp \
   ##COREBASE##/../meta-xilinx/meta-xilinx-contrib \
+  ##COREBASE##/../meta-xilinx/standalone \
+  ##COREBASE##/../meta-xilinx-tools \
   ##COREBASE##/../meta-oe/meta-oe \
   ##COREBASE##/../meta-oe/meta-networking \
   ##COREBASE##/../meta-oe/meta-filesystems \
@@ -19,6 +21,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-qt5 \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-intel \
+  ##COREBASE##/../meta-virtualization \
   ##COREBASE##/../meta-swupdate \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
