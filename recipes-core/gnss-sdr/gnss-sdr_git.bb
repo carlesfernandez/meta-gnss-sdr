@@ -31,12 +31,12 @@ EXTRA_OECMAKE += " \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.17"
+PV = "0.0.17.git"
 
-SRCREV = "bba80cb920ea79e4989d77352f9f7dd4bb3e4d2a"
+SRCREV = "7cc72faee838d3b9f394e4aa425d63ca6e4b0f9f"
 
 # Make it easy to test against branches
-GIT_BRANCH = "main"
+GIT_BRANCH = "next"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https"
 
