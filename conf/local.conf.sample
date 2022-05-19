@@ -236,7 +236,7 @@ LICENSE_FLAGS_WHITELIST += "xilinx"
 
 PACKAGECONFIG:remove:pn-qtbase = "tests"
 PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
-PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq"
+PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq iio"
 PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glamor"
