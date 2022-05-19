@@ -5,7 +5,7 @@ LICENSE = "GPL-3.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 PR = "r2"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
+DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls \
            gtest pugixml gpstk git git-native protobuf protobuf-native pkgconfig \
            python3-mako python3-mako-native"
 
@@ -23,6 +23,7 @@ EXTRA_OECMAKE += " \
  -DENABLE_UNIT_TESTING_EXTRA=ON \
  -DENABLE_SYSTEM_TESTING_EXTRA=ON \
  -DCMAKE_INSTALL_PREFIX=/usr \
+ -DENABLE_PLUTOSDR=ON \
  -DENABLE_FMCOMMS2=ON \
  -DENABLE_AD9361=ON \
  -DENABLE_RAW_UDP=ON \
