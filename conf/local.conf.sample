@@ -205,7 +205,7 @@ PACKAGECONFIG_pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_glog = "0.5.0"
-PREFERRED_VERSION_gtest = "1.12.0"
+PREFERRED_VERSION_gtest = "1.12.1"
 PREFERRED_VERSION_iio-oscilloscope = "2019-R1"
 PREFERRED_VERSION_lapack = "3.7.0"
 PREFERRED_VERSION_libad9361-iio = "2019-R1"
