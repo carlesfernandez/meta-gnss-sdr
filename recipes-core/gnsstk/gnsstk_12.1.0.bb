@@ -1,26 +1,26 @@
-SUMMARY = "The GPS Toolkit"
-DESCRIPTION = "Libraries and applications to facilitate working with GPS data for research and high accuracy uses."
+SUMMARY = "GNSSTk C++ Library"
+DESCRIPTION = "The goal of the gnsstk project is to provide an open source library to the satellite navigation community--to free researchers to focus on research, not lower level coding."
 AUTHOR = "ARL:UT"
-HOMEPAGE = "https://github.com/SGL-UT/gnsstk/"
-PR = "r3"
+HOMEPAGE = "https://github.com/SGL-UT/gnsstk"
+PR = "r0"
 
-LICENSE = "LGPL-3.0-only"
+LICENSE = "LGPLv3"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 
 GIT_BRANCH = "stable"
 SRC_URI = "git://github.com/SGL-UT/gnsstk.git;branch=${GIT_BRANCH};protocol=https"
-SRCREV = "7f4c840d21c7bac40c5d554bdaab386ba2ee59ef"
+SRCREV = "39156a5ace73e4586032a0d5ba6a58fb1e88b2f4"
 S = "${WORKDIR}/git"
-
+RDEPENDS:${PN} += "bash"
 inherit cmake
 
 EXTRA_OECMAKE += " -DCMAKE_SKIP_INSTALL_RPATH=ON -DCMAKE_SKIP_RPATH=ON -DUSE_RPATH=OFF -DBUILD_EXT=ON -DBUILD_PYTHON=OFF"
 
-PACKAGES = "gpstk gpstk-dev gpstk-dbg"
+PACKAGES = "gnsstk gnsstk-dev gnsstk-dbg"
 
 FILES:${PN} += " ${bindir}/* "
 FILES:${PN}-dev += " ${includedir}/* ${libdir}/* /usr/share/cmake/*"
 FILES:${PN}-dbg += " \
-     ${prefix}/src/debug/gpstk/* \
+     ${prefix}/src/debug/gnsstk/* \
      ${bindir}/.debug/* \
 "
