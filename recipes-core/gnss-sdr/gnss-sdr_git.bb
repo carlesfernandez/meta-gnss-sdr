@@ -3,10 +3,10 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r7"
+PR = "r8"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
-           gtest pugixml gpstk git git-native protobuf protobuf-native pkgconfig \
+           gtest pugixml gnsstk git git-native protobuf protobuf-native pkgconfig \
            python3-mako python3-mako-native"
 
 RDEPENDS_${PN} = "gnuplot-x11 gnss-simulator"
