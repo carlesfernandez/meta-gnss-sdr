@@ -11,7 +11,7 @@ GIT_BRANCH = "stable"
 SRC_URI = "git://github.com/SGL-UT/gnsstk.git;branch=${GIT_BRANCH};protocol=https"
 SRCREV = "39156a5ace73e4586032a0d5ba6a58fb1e88b2f4"
 S = "${WORKDIR}/git"
-RDEPENDS:${PN} += "bash"
+RDEPENDS:${PN} = "bash"
 inherit cmake
 
 EXTRA_OECMAKE += " -DCMAKE_SKIP_INSTALL_RPATH=ON -DCMAKE_SKIP_RPATH=ON -DUSE_RPATH=OFF -DBUILD_EXT=ON -DBUILD_PYTHON=OFF"
