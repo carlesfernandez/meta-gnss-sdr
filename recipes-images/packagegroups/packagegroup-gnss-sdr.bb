@@ -26,14 +26,13 @@ RDEPENDS:packagegroup-gnss-sdr-base = " \
     gflags \
     gflags-bash-completion \
     glog \
+    gnsstk-dev \
     gnss-sdr-monitor \
     gnss-simulator \
     gnuplot \
     gnuplot-x11 \
     gnuradio \
     gnutls \
-    gpstk \
-    gpstk-dev \
     gtest \
     hdf5 \
     lapack \
