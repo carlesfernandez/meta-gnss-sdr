@@ -21,7 +21,7 @@ DISTRO ??= "geniux"
 DISTRO_FEATURES_append = " opengl x11"
 DISTRO_FEATURES_remove = "ptest"
 PACKAGECONFIG_remove_pn-qtbase = "tests"
-PACKAGECONFIG_pn-gnuradio += "grc uhd"
+PACKAGECONFIG_pn-gnuradio += "grc uhd zeromq"
 PACKAGECONFIG_pn-gnuplot += "cairo"
 # If you remove GUI support, please also uncomment the following three lines:
 #PACKAGECONFIG_pn-gnuradio += "uhd"
