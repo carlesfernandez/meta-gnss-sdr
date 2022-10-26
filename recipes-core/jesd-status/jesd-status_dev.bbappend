@@ -1,0 +1,1 @@
+SRC_URI = "git://github.com/analogdevicesinc/jesd-eye-scan-gtk.git;branch=${BRANCH};protocol=https"
