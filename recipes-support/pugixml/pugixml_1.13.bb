@@ -1,12 +1,12 @@
 SUMMARY = "Light-weight C++ XML Processing Library"
 HOMEPAGE = "https://pugixml.org"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://readme.txt;md5=a631ae00f08e5904238e3a2653d66404"
-PR = "r1"
+LIC_FILES_CHKSUM = "file://readme.txt;md5=541223080e6b4f0b05f2dbfaa3d222a2"
+PR = "r0"
 
 SRC_URI = "https://github.com/zeux/pugixml/releases/download/v${PV}/pugixml-${PV}.tar.gz"
-SRC_URI[md5sum] = "2d2730d3412b08d3e70c795bc17003df"
-SRC_URI[sha256sum] = "8ddf57b65fb860416979a3f0640c2ad45ddddbbafa82508ef0a0af3ce7061716"
+SRC_URI[md5sum] = "3e4c588e03bdca140844f3c47c1a995e"
+SRC_URI[sha256sum] = "40c0b3914ec131485640fa57e55bf1136446026b41db91c1bef678186a12abbe"
 
 inherit cmake
 
