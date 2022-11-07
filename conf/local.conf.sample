@@ -207,6 +207,7 @@ PREFERRED_VERSION_fftw = "3.3.9"
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_glog = "0.5.0"
 PREFERRED_VERSION_gtest = "1.12.1"
+PREFERRED_VERSION_pugixml = "1.13"
 
 INSANE_SKIP_sip3-native_append = "already-stripped"
 
