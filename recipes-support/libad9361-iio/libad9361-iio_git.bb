@@ -4,11 +4,11 @@ AUTHOR = "Analog Devices, Inc."
 HOMEPAGE = "https://github.com/analogdevicesinc/libad9361-iio"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=40d2542b8c43a3ec2b7f5da31a697b88"
-PR = "r1"
+PR = "r2"
 
 DEPENDS = "libiio"
 
-SRCREV = "003083ab9fc7da57835be9697a1ac9bd7a91ef49"
+SRCREV = "43643ab0ef8a3fbdb6c7595f42842f534a291664"
 
 PV = "0.2"
 GIT_BRANCH = "master"
