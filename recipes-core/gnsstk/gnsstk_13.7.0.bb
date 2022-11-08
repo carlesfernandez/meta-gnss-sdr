@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 
 GIT_BRANCH = "stable"
 SRC_URI = "git://github.com/SGL-UT/gnsstk.git;branch=${GIT_BRANCH};protocol=https"
-SRCREV = "aa7e8a2144310b3d41f285657d5e047212f6a0ab"
+SRCREV = "90eb02cd63c342e01c375dfc0fca8cecdf91162e"
 S = "${WORKDIR}/git"
 RDEPENDS:${PN} = "bash"
 inherit cmake
