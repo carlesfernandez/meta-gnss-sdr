@@ -11,6 +11,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-xilinx/meta-xilinx-contrib \
   ##COREBASE##/../meta-xilinx/meta-xilinx-standalone \
   ##COREBASE##/../meta-xilinx-tools \
+  ##COREBASE##/../meta-adi/meta-adi-core \
   ##COREBASE##/../meta-oe/meta-oe \
   ##COREBASE##/../meta-oe/meta-networking \
   ##COREBASE##/../meta-oe/meta-filesystems \
