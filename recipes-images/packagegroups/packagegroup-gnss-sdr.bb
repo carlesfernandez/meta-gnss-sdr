@@ -29,9 +29,9 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gnuplot-x11 \
     gnuradio \
     gnutls \
+    googletest \
     gpstk \
     gpstk-dev \
-    gtest \
     hdf5 \
     lapack \
     libpcap \
