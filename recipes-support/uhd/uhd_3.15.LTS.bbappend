@@ -10,7 +10,12 @@ SRCREV = "7a3f15164f78a7a3b705a0d099eb5dc335ccd9f6"
 PV = "3.15.LTS+git${SRCPV}"
 
 # Workaround for maximum shebang size exceeded error
-INSANE_SKIP_${PN} += " file-rdeps shebang-size"
+INSANE_SKIP_${PN} += " shebang-size"
+
+do_install_append () {
+    rm ${D}/usr/lib/uhd/utils/uhd_images_downloader.py
+    rm ${D}/usr/bin/uhd_images_downloader
+}
 
 # Fix installed-vs-shipped warning
 FILES_${PN} += " \
