@@ -33,7 +33,7 @@ RDEPENDS:packagegroup-gnss-sdr-base = " \
     gnuplot-x11 \
     gnuradio \
     gnutls \
-    gtest \
+    googletest \
     hdf5 \
     lapack \
     libpcap \
