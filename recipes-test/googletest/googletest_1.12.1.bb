@@ -14,8 +14,6 @@ SRC_URI = "git://github.com/google/googletest.git;protocol=https;branch=main"
 ALLOW_EMPTY_${PN} = "1"
 ALLOW_EMPTY_${PN}-dbg = "1"
 
-RDEPENDS_${PN}-dev += "${PN}-staticdev"
-
 BBCLASSEXTEND = "native nativesdk"
 
 # GTest developers recommend to use source code instead of linking
