@@ -2,7 +2,7 @@ SUMMARY = "Packagegroup definitions to help the GNSS-SDR community build \
  images they like."
 
 LICENSE = "MIT"
-PR = "r7"
+PR = "r8"
 
 inherit packagegroup
 
@@ -23,15 +23,14 @@ RDEPENDS_packagegroup-gnss-sdr-base = " \
     gflags \
     gflags-bash-completion \
     glog \
+    gnsstk \
     gnss-sdr-monitor \
     gnss-simulator \
     gnuplot \
     gnuplot-x11 \
     gnuradio \
     gnutls \
-    gpstk \
-    gpstk-dev \
-    gtest \
+    googletest \
     hdf5 \
     lapack \
     libpcap \
@@ -64,7 +63,7 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     libiio-tests \
     rtl-sdr \
     uhd \
-  "
+"
 
 SUMMARY_packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
 RDEPENDS_packagegroup-gnss-sdr-base-extended = "\

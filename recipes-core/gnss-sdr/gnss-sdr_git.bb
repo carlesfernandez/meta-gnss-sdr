@@ -3,19 +3,20 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r6"
+PR = "r12"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
-           gtest pugixml gpstk git git-native protobuf protobuf-native pkgconfig \
+           googletest pugixml gnsstk git git-native protobuf protobuf-native pkgconfig \
            python3-mako python3-mako-native"
 
 RDEPENDS_${PN} = "gnuplot-x11 gnss-simulator"
 
-PACKAGECONFIG ??= "osmosdr fpga"
+PACKAGECONFIG ??= "osmosdr fpga zeromq"
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
+PACKAGECONFIG[zeromq] = "-DENABLE_ZMQ=ON,-DENABLE_ZMQ=OFF "
 
 inherit distutils3-base cmake pkgconfig python3native
 
@@ -34,7 +35,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.17.git"
 
-SRCREV = "cb3a9df7a06335330277b1d853a3cc1716f745ed"
+SRCREV = "72b7311c6c1624ebaea38f39302c1356441c0db6"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
