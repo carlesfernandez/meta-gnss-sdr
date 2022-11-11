@@ -33,7 +33,7 @@ RDEPENDS:packagegroup-gnss-sdr-base = " \
     gnuplot-x11 \
     gnuradio \
     gnutls \
-    gtest \
+    googletest \
     hdf5 \
     lapack \
     libpcap \
@@ -166,7 +166,7 @@ RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dhcp-server", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dpkg-start-stop", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "ifupdown", d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', '', 'resolvconf', d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "resolvconf", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "keyboard", "kbd", "", d)} \
 "
 

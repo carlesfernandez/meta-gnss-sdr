@@ -1,30 +1,26 @@
-SUMMARY = "Google C++ Testing Framework"
-DESCRIPTION = "Google's framework for writing C++ tests. This recipe installs the source code in the target."
+DESCRIPTION = "Google's framework for writing C++ tests"
 HOMEPAGE = "https://github.com/google/googletest"
 SECTION = "libs"
+PR = "r0"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
-PR = "r0"
 
 PROVIDES += "gmock gtest"
 
 S = "${WORKDIR}/git"
 SRCREV = "219af0d535635f173e58d7e8ef197b0bc48b878a"
-SRC_URI = "git://github.com/google/googletest.git;protocol=https;branch=main"
+SRC_URI = "git://github.com/google/googletest.git;branch=main;protocol=https"
 
 inherit cmake
 
 ALLOW_EMPTY:${PN} = "1"
 ALLOW_EMPTY:${PN}-dbg = "1"
 
-BCLASSEXTEND = "native nativesdk"
-RDEPENDS:${PN}-dev = ""
-EXTRA_OECMAKE += "-DBUILD_GTEST=ON"
+BBCLASSEXTEND = "native nativesdk"
 
 # GTest developers recommend to use source code instead of linking
 # against a prebuilt library.
-
-do_install() {
+do_install:append() {
     _incdir=${includedir}/gtest
     _srcdir=${prefix}/src/gtest
 
