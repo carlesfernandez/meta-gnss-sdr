@@ -65,11 +65,6 @@ RDEPENDS:packagegroup-gnss-sdr-drivers = " \
     libiio-iiod \
     libiio-tests \
     rtl-sdr \
-    ${@bb.utils.contains("MACHINE", "zedboard_zynq7", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "plnx-zynq", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu102_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu208_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
-    ${@bb.utils.contains("MACHINE", "plnx-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
 "
 
 SUMMARY:packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
