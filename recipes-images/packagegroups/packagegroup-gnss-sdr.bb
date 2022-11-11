@@ -24,15 +24,14 @@ RDEPENDS:packagegroup-gnss-sdr-base = " \
     gflags \
     gflags-bash-completion \
     glog \
+    gnsstk-dev \
     gnss-sdr-monitor \
     gnss-simulator \
     gnuplot \
     gnuplot-x11 \
     gnuradio \
     gnutls \
-    gpstk \
-    gpstk-dev \
-    gtest \
+    googletest \
     hdf5 \
     lapack \
     libpcap \
@@ -64,10 +63,10 @@ RDEPENDS:packagegroup-gnss-sdr-drivers = " \
     libiio-iiod \
     libiio-tests \
     rtl-sdr \
-    ${@bb.utils.contains("MACHINE", "zedboard_zynq7", "ezdma", "", d)} \
+    ${@bb.utils.contains("MACHINE", "zedboard-zynq7", "ezdma", "", d)} \
     ${@bb.utils.contains("MACHINE", "plnx-zynq", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu102_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu208_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
+    ${@bb.utils.contains("MACHINE", "zcu102-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
+    ${@bb.utils.contains("MACHINE", "zcu208-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
     ${@bb.utils.contains("MACHINE", "plnx-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
 "
 
