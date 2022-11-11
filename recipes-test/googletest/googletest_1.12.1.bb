@@ -16,8 +16,6 @@ inherit cmake
 ALLOW_EMPTY:${PN} = "1"
 ALLOW_EMPTY:${PN}-dbg = "1"
 
-RDEPENDS:${PN}-dev += "${PN}-staticdev"
-
 BBCLASSEXTEND = "native nativesdk"
 
 # GTest developers recommend to use source code instead of linking
