@@ -50,9 +50,9 @@ RDEPENDS:packagegroup-gnss-sdr-bin = " \
 
 SUMMARY:packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS:packagegroup-gnss-sdr-drivers = " \
-    ezdma \
     dma-proxy \
     dma-proxy-test \
+    ezdma \
     gnuradio-iio \
     gr-osmosdr \
     iio-oscilloscope \
@@ -63,11 +63,6 @@ RDEPENDS:packagegroup-gnss-sdr-drivers = " \
     libiio-iiod \
     libiio-tests \
     rtl-sdr \
-    ${@bb.utils.contains("MACHINE", "zedboard-zynq7", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "plnx-zynq", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu102-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu208-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
-    ${@bb.utils.contains("MACHINE", "plnx-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
 "
 
 SUMMARY:packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
