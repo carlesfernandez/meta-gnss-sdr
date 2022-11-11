@@ -161,7 +161,8 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     zip \
     zlib \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "debianutils-run-parts", d)} \
-    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dhcp-server", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "kea", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dhcpcd", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dpkg-start-stop", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "ifupdown", d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', '', 'resolvconf', d)} \
