@@ -1,5 +1,7 @@
-# Workaround for maximum shebang size exceeded error
-INSANE_SKIP_${PN} += " file-rdeps shebang-size"
+do_install_append () {
+    rm ${D}/usr/lib/uhd/utils/uhd_images_downloader.py
+    rm ${D}/usr/bin/uhd_images_downloader
+}
 
 # Fix installed-vs-shipped warning
 FILES_${PN} += " \
