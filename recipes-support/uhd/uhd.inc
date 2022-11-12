@@ -1,6 +1,6 @@
 SUMMARY = "Universal Hardware Driver for Ettus Research products."
-HOMEPAGE = "http://www.ettus.com"
-LICENSE = "GPLv3+"
+HOMEPAGE = "https://www.ettus.com"
+LICENSE = "GPL-3.0-or-later"
 
 DEPENDS = "git-native python3-mako-native boost uhd-firmware \
            ncurses udev python3-requests-native python3-numpy-native \
