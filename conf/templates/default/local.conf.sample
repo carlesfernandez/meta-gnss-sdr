@@ -232,6 +232,9 @@ INHERIT += "create-spdx"
 
 FORTRAN:forcevariable = ",fortran"
 
+LICENSE_FLAGS_ACCEPTED += "xilinx"
+LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
+
 PACKAGECONFIG:remove:pn-qtbase = "tests"
 PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
 PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq uhd iio"
