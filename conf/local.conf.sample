@@ -236,7 +236,7 @@ LICENSE_FLAGS_ACCEPTED += "xilinx"
 
 PACKAGECONFIG:remove:pn-qtbase = "tests"
 PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
-PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq iio"
+PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq uhd iio"
 PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glamor"
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glx"
@@ -253,6 +253,7 @@ PREFERRED_PROVIDER_virtual/libgl:zcu102-zynqmp = "mesa-gl"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_googletest = "1.12.1"
+PREFERRED_VERSION_uhd = "4.3"
 
 INSANE_SKIP:sip3-native:append = "already-stripped"
 
