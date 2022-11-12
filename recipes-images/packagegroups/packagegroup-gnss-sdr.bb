@@ -63,6 +63,7 @@ RDEPENDS:packagegroup-gnss-sdr-drivers = " \
     libiio-iiod \
     libiio-tests \
     rtl-sdr \
+    uhd \
 "
 
 SUMMARY:packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
