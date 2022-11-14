@@ -201,6 +201,8 @@ PACKAGECONFIG_append_pn-qtbase_zcu102-zynqmp = "gles2"
 
 PREFERRED_PROVIDER_virtual/libgl_zcu102-zynqmp = "mesa-gl"
 
+KERNEL_DTB_zc706-zynq7 = "zynq-zc706-adv7511-ad9361-fmcomms5"
+
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
