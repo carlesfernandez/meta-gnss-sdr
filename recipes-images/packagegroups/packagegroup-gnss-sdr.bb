@@ -49,6 +49,9 @@ RDEPENDS_packagegroup-gnss-sdr-bin = " \
 
 SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS_packagegroup-gnss-sdr-drivers = " \
+    dma-proxy \
+    dma-proxy-test \
+    ezdma \
     gr-iio \
     gr-osmosdr \
     iio-oscilloscope \
@@ -60,11 +63,6 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     libiio-tests \
     rtl-sdr \
     uhd \
-    ${@bb.utils.contains("MACHINE", "zedboard-zynq7", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "plnx-zynq", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu102-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
-    ${@bb.utils.contains("MACHINE", "zcu208-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
-    ${@bb.utils.contains("MACHINE", "plnx-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
 "
 
 SUMMARY_packagegroup-gnss-sdr-base-extended = "Basic packages for an image with regular UNIX utilities."
@@ -161,7 +159,8 @@ RDEPENDS_packagegroup-gnss-sdr-base-extended = "\
     zip \
     zlib \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "debianutils-run-parts", d)} \
-    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dhcp-server", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "kea", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dhcpcd", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dpkg-start-stop", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "ifupdown", d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', '', 'resolvconf', d)} \
