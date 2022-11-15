@@ -164,7 +164,7 @@ RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dhcpcd", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "dpkg-start-stop", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "ifupdown", d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', '', 'resolvconf', d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "systemd", "", "resolvconf", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "keyboard", "kbd", "", d)} \
 "
 
