@@ -129,6 +129,7 @@ RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     pm-utils \
     procps \
     psmisc \
+    pv \
     python3 \
     python3-cython \
     python3-distutils \
