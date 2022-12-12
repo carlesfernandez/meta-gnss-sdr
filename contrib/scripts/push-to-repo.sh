@@ -33,6 +33,12 @@ if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
     exit 0
 fi
 
+if [ "$#" -gt 1 ]; then
+   echo "Error: wrong number of parameters."
+   display_usage
+   exit 1
+fi
+
 remote=${1:-"https://github.com/carlesfernandez/meta-gnss-sdr"}
 currentbranch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
