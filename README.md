@@ -136,14 +136,15 @@ https://gnss-sdr.org/docs/tutorials/cross-compiling/
 
 ## Copyright and License
 
-Copyright: &copy; 2016-2021 Carles Fern&aacute;ndez-Prades. All rights reserved.
+Copyright: &copy; 2016-2022 Carles Fern&aacute;ndez-Prades. All rights reserved.
 
 The content of this repository is released under the [MIT](./COPYING.MIT)
 license.
 
 ## Acknowledgements
 
-This work was partially supported by the Spanish Ministry of Science,
-Innovation, and Universities through the Statistical Learning and Inference for
-Large Dimensional Communication Systems (ARISTIDES, RTI2018-099722-B-I00)
-project.
+This work was partially supported by Grant PID2021-128373OB-I00 funded by
+MCIN/AEI/10.13039/501100011033. Formerly, it was also supported by the Spanish
+Ministry of Science, Innovation, and Universities through the Statistical
+Learning and Inference for Large Dimensional Communication Systems (ARISTIDES,
+RTI2018-099722-B-I00) project.
