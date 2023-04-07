@@ -3,7 +3,7 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r21"
+PR = "r0"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
            googletest pugixml gnsstk git git-native protobuf protobuf-native pkgconfig \
@@ -33,12 +33,12 @@ EXTRA_OECMAKE += " \
  -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.17.git"
+PV = "0.0.18"
 
-SRCREV = "3a235e4859dfb2744bf71c941817a66e53574de5"
+SRCREV = "d955266d55c6e23fb887cd0c73ef788f89134eb4"
 
 # Make it easy to test against branches
-GIT_BRANCH = "next"
+GIT_BRANCH = "main"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https"
 
