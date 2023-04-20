@@ -7,6 +7,7 @@ SDK_EXTRA_TOOLS = " \
     nativesdk-cmake nativesdk-python3-mako \
     nativesdk-protobuf nativesdk-protobuf-compiler \
     nativesdk-make nativesdk-ninja nativesdk-g++ nativesdk-gcc \
+    nativesdk-grpc nativesdk-grpc-compiler \
 "
 
 SDK_EXTRA_TOOLS_task-populate-sdk-ext = ""
