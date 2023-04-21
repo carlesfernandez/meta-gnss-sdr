@@ -27,7 +27,7 @@ https://github.com/carlesfernandez/yocto-geniux
 
 ### Tested Environment
 
-Ubuntu 16.04 64 bits in a Virtual Machine
+Ubuntu 20.04 64 bits in a Virtual Machine
 
 ```
 $ sudo apt-get install build-essential xz-utils python3 curl git ca-certificates \
