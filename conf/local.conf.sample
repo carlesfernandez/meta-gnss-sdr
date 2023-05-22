@@ -194,6 +194,7 @@ GENIUX_CONF_VERSION = "1"
 FORTRAN_forcevariable = ",fortran"
 
 # Settings for Petalinux Tools / Vivado 2021.2
+LICENSE_FLAGS_WHITELIST += " commercial"
 DISTRO_FEATURES_append_zcu102-zynqmp = " fbdev"
 PACKAGECONFIG_remove_pn-xserver-xorg_zcu102-zynqmp = "glamor"
 PACKAGECONFIG_remove_pn-xserver-xorg_zcu102-zynqmp = "glx"
