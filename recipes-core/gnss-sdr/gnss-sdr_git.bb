@@ -3,11 +3,11 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r0"
+PR = "r1"
 
 DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
-           gtest pugixml gpstk git git-native protobuf protobuf-native pkgconfig \
-           python3-mako python3-mako-native"
+     gtest pugixml gpstk git git-native protobuf protobuf-native pkgconfig \
+     python3-mako python3-mako-native"
 
 RDEPENDS_${PN} = "gnuplot gnss-simulator"
 
@@ -21,24 +21,24 @@ PACKAGECONFIG[zeromq] = "-DENABLE_ZMQ=ON,-DENABLE_ZMQ=OFF "
 inherit distutils3-base cmake pkgconfig python3native
 
 EXTRA_OECMAKE += " \
- -DENABLE_UNIT_TESTING_EXTRA=ON \
- -DENABLE_SYSTEM_TESTING_EXTRA=ON \
- -DCMAKE_INSTALL_PREFIX=/usr \
- -DENABLE_PLUTOSDR=ON \
- -DENABLE_FMCOMMS2=ON \
- -DENABLE_AD9361=ON \
- -DENABLE_RAW_UDP=ON \
- -DENABLE_INSTALL_TESTS=ON \
- -DENABLE_PACKAGING=ON \
- -DENABLE_GNSS_SIM_INSTALL=OFF \
+     -DENABLE_UNIT_TESTING_EXTRA=ON \
+     -DENABLE_SYSTEM_TESTING_EXTRA=ON \
+     -DCMAKE_INSTALL_PREFIX=/usr \
+     -DENABLE_PLUTOSDR=ON \
+     -DENABLE_FMCOMMS2=ON \
+     -DENABLE_AD9361=ON \
+     -DENABLE_RAW_UDP=ON \
+     -DENABLE_INSTALL_TESTS=ON \
+     -DENABLE_PACKAGING=ON \
+     -DENABLE_GNSS_SIM_INSTALL=OFF \
 "
 
-PV = "0.0.18"
+PV = "0.0.18.git"
 
-SRCREV = "d955266d55c6e23fb887cd0c73ef788f89134eb4"
+SRCREV = "b116c17937a5899e3bf8e985284605b42043b7e3"
 
 # Make it easy to test against branches
-GIT_BRANCH = "main"
+GIT_BRANCH = "next"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https"
 
