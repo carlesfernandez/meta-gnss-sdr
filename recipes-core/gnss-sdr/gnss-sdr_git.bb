@@ -35,7 +35,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.18.git"
 
-SRCREV = "d955266d55c6e23fb887cd0c73ef788f89134eb4"
+SRCREV = "b116c17937a5899e3bf8e985284605b42043b7e3"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
