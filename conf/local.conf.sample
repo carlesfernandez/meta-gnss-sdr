@@ -173,6 +173,15 @@ BB_DISKMON_DIRS = "\
 #file://.* file:///some/local/dir/sstate/PATH"
 
 #
+# CTTC mirror
+#
+MIRRORS += "\
+    git://.*/.* https://sites.cttc.cat/gnss_files/mirror/sources/gatesgarth/ \n \
+    ftp://.*/.* https://sites.cttc.cat/gnss_files/mirror/sources/gatesgarth/ \n \
+    http://.*/.* https://sites.cttc.cat/gnss_files/mirror/sources/gatesgarth/ \n \
+    https://.*/.* https://sites.cttc.cat/gnss_files/mirror/sources/gatesgarth/ \n"
+
+#
 # Local mirror
 #
 
