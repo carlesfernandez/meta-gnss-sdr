@@ -3,9 +3,10 @@ SECTION = "PETALINUX/modules"
 HOMEPAGE = "https://github.com/jeremytrimble/ezdma"
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=12f884d2ae1ff87c09e5b7ccc2c4ca7e"
-PR = "r1"
+PR = "r2"
 
 inherit module
+inherit create-spdx
 
 SRC_URI = "file://Makefile \
     file://ezdma.c \
