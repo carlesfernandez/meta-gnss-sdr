@@ -7,7 +7,7 @@ PR = "r0"
 DEPENDS = "zlib hdf5"
 
 SRC_URI = "gitsm://github.com/tbeu/matio.git;branch=master;protocol=https"
-SRCREV = "b07ee6c1512ab788f91e71910d07fc3ea954f812"
+SRCREV = "5bc74f03d69fe700ad590b9243f0e0a3ef4949ed"
 S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig
