@@ -1,0 +1,24 @@
+From 5745cbf059422afc614ae6d05f75a60d0196434a Mon Sep 17 00:00:00 2001
+From: Carles Fernandez <carles.fernandez@cttc.es>
+Date: Thu, 7 Dec 2023 13:07:31 +0000
+Subject: [PATCH] Patch for GCC13
+
+---
+ core/lib/GNSSCore/ObsID.hpp | 1 +
+ 1 file changed, 1 insertion(+)
+ mode change 100755 => 100644 core/lib/GNSSCore/ObsID.hpp
+
+diff --git a/core/lib/GNSSCore/ObsID.hpp b/core/lib/GNSSCore/ObsID.hpp
+old mode 100755
+new mode 100644
+index d0251fe4c..612e4d2fa
+--- a/core/lib/GNSSCore/ObsID.hpp
++++ b/core/lib/GNSSCore/ObsID.hpp
+@@ -47,6 +47,7 @@
+ #ifndef OBSID_HPP
+ #define OBSID_HPP
+ 
++#include <cstdint>
+ #include <iostream>
+ #include <iomanip>
+ #include <sstream>
