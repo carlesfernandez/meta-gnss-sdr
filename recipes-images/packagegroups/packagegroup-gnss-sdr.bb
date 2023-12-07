@@ -27,7 +27,6 @@ RDEPENDS:packagegroup-gnss-sdr-base = " \
     gflags-bash-completion \
     glog \
     gnsstk-dev \
-    gnss-sdr-monitor \
     gnss-simulator \
     gnuplot \
     gnuplot-x11 \
