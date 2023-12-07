@@ -8,7 +8,9 @@ LICENSE = "LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 
 GIT_BRANCH = "stable"
-SRC_URI = "git://github.com/SGL-UT/gnsstk.git;branch=${GIT_BRANCH};protocol=https"
+SRC_URI = "git://github.com/SGL-UT/gnsstk.git;branch=${GIT_BRANCH};protocol=https \
+          file://0001-Patch-for-GCC13.patch \
+          "
 SRCREV = "90eb02cd63c342e01c375dfc0fca8cecdf91162e"
 S = "${WORKDIR}/git"
 RDEPENDS:${PN} = "bash"
