@@ -67,7 +67,7 @@ $ git config --global user.email your.name@example.com
 
     Tell Repo where to find the manifest
 
-        $ repo init -u https://github.com/carlesfernandez/oe-gnss-sdr-manifest.git -b mickledore
+        $ repo init -u https://github.com/carlesfernandez/oe-gnss-sdr-manifest.git -b nanbield
 
     A successful initialization will end with a message stating that Repo is
     initialized in your working directory. Your client directory should now
@@ -136,7 +136,7 @@ https://gnss-sdr.org/docs/tutorials/cross-compiling/
 
 ## Copyright and License
 
-Copyright: &copy; 2016-2022 Carles Fern&aacute;ndez-Prades. All rights reserved.
+Copyright: &copy; 2016-2023 Carles Fern&aacute;ndez-Prades. All rights reserved.
 
 The content of this repository is released under the [MIT](./COPYING.MIT)
 license.
