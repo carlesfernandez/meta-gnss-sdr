@@ -13,6 +13,7 @@
 
 # Distro customization
 DISTRO ??= "geniux"
+DISTRO_FEATURES:append = " usrmerge"
 
 #
 # Distro features
