@@ -51,7 +51,6 @@ SUMMARY_packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     dma-proxy \
     dma-proxy-test \
-    ezdma \
     gr-iio \
     gr-osmosdr \
     iio-oscilloscope \
