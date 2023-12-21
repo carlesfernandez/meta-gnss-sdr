@@ -19,7 +19,6 @@ DISTRO ??= "geniux"
 #
 DISTRO_FEATURES:append = " opengl x11"
 DISTRO_FEATURES:remove = "ptest"
-DISTRO_FEATURES:append:zcu102-zynqmp = " fbdev"
 
 #
 # Use systemd for system initialization
@@ -247,9 +246,6 @@ PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
-PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
-PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
-PREFERRED_PROVIDER_virtual/libgl:zcu102-zynqmp = "mesa-gl"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_googletest = "1.12.1"
