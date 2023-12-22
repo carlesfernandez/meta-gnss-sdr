@@ -61,8 +61,8 @@ RDEPENDS_packagegroup-gnss-sdr-drivers = " \
     libiio-tests \
     rtl-sdr \
     uhd \
-    ${@bb.utils.contains("MACHINE", "zedboard_zynq7", "ezdma", "", d)} \
-    ${@bb.utils.contains("MACHINE", "plnx-zynq", "ezdma", "", d)} \
+    ${@bb.utils.contains("MACHINE", "zedboard_zynq7", "dma-proxy dma-proxy-test", "", d)} \
+    ${@bb.utils.contains("MACHINE", "plnx-zynq", "dma-proxy dma-proxy-test", "", d)} \
     ${@bb.utils.contains("MACHINE", "zcu102_zynqmp", "dma-proxy dma-proxy-test", "", d)} \
     ${@bb.utils.contains("MACHINE", "plnx-zynqmp", "dma-proxy dma-proxy-test", "", d)} \
 "
