@@ -236,8 +236,12 @@ LICENSE_FLAGS_ACCEPTED += "xilinx"
 LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
 
 PACKAGECONFIG:remove:pn-qtbase = "tests examples"
-PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
-PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq uhd iio"
+# Deactivate Qt5 until fix
+# PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
+# PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq uhd iio"
+PACKAGECONFIG:append:pn-gnuplot = " cairo"
+PACKAGECONFIG:append:pn-gnuradio = " grc zeromq uhd iio"
+PACKAGECONFIG:remove:pn-gnuradio = "qtgui5"
 PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
