@@ -6,7 +6,7 @@ PR = "r1"
 
 SRCREV = "c33a08a5e070207c6aee15955301552002af8619"
 
-GIT_BRANCH = "master"
+GIT_BRANCH = "main"
 SRC_URI = "git://github.com/analogdevicesinc/iio-oscilloscope.git;branch=${GIT_BRANCH};protocol=https"
 
 S = "${WORKDIR}/git"
