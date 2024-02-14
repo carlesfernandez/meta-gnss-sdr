@@ -17,7 +17,7 @@ DISTRO ??= "geniux"
 #
 # Distro features
 #
-DISTRO_FEATURES:append = " opengl x11"
+DISTRO_FEATURES:append = " x11"
 DISTRO_FEATURES:remove = "ptest"
 DISTRO_FEATURES:append:zcu102-zynqmp = " fbdev"
 
@@ -234,22 +234,19 @@ FORTRAN:forcevariable = ",fortran"
 
 LICENSE_FLAGS_WHITELIST += "xilinx"
 
-PACKAGECONFIG:remove:pn-qtbase = "tests"
+PACKAGECONFIG:remove:pn-qtbase = "tests gl"
 PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
-PACKAGECONFIG:append:pn-gnuradio = " qtgui5 grc zeromq uhd iio"
+PACKAGECONFIG:append:pn-gnuradio = " grc zeromq uhd iio"
+PACKAGECONFIG:remove:pn-gnuradio = "qtgui5"
 PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glamor"
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glx"
-PACKAGECONFIG:remove:pn-qtbase:zcu102-zynqmp = "tests gl"
-PACKAGECONFIG:append:pn-qtbase:zcu102-zynqmp = "gles2"
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
-
-PREFERRED_PROVIDER_virtual/libgl:zcu102-zynqmp = "mesa-gl"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_googletest = "1.12.1"
