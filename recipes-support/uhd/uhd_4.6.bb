@@ -10,11 +10,6 @@ S = "${WORKDIR}/git/host"
 
 EXTRA_OECMAKE:append = " -DUHD_RELEASE_MODE=release"
 
-do_install:append () {
-    rm ${D}/usr/lib/uhd/utils/uhd_images_downloader.py
-    rm ${D}/usr/bin/uhd_images_downloader
-}
-
 FILES:${PN} += " \
     ${PYTHON_SITEPACKAGES_DIR}/uhd/* \
     ${PYTHON_SITEPACKAGES_DIR}/usrp_mpm/* \
