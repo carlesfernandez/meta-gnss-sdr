@@ -17,9 +17,11 @@ DISTRO ??= "geniux"
 #
 # Distro features
 #
-DISTRO_FEATURES:append = " x11"
+DISTRO_FEATURES:append = " opengl x11"
 DISTRO_FEATURES:remove = "ptest"
 DISTRO_FEATURES:append:zcu102-zynqmp = " fbdev"
+DISTRO_FEATURES:append:zcu208-zynqmp = " fbdev"
+DISTRO_FEATURES:remove:zcu102-zynqmp = "opengl"
 
 #
 # Use systemd for system initialization
@@ -242,11 +244,20 @@ PACKAGECONFIG:pn-gr-osmosdr = "rtl-sdr hackrf"
 
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glamor"
 PACKAGECONFIG:remove:pn-xserver-xorg:zcu102-zynqmp = "glx"
+PACKAGECONFIG:remove:pn-xserver-xorg:zc706-zynq7 = "glamor"
+PACKAGECONFIG:remove:pn-xserver-xorg:zcu208-zynqmp = "glamor"
+PACKAGECONFIG:remove:pn-xserver-xorg:zcu208-zynqmp = "glx"
+
+PACKAGECONFIG:append:pn-qtbase:zc706-zynq7 = " no-opengl"
+PACKAGECONFIG:append:pn-qtbase:zcu208-zynqmp = " no-opengl"
 
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
+
+PREFERRED_PROVIDER_virtual/libgbm:zc706-zynq7 = "mesa"
+PREFERRED_PROVIDER_virtual/libgbm:zcu208-zynqmp = "mesa"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_googletest = "1.12.1"
