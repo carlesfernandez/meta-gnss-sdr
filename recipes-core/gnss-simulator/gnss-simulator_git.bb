@@ -3,13 +3,13 @@ AUTHOR = "Javier Arribas <jarribas@cttc.es>"
 HOMEPAGE = "https://bitbucket.org/jarribas/gnss-simulator/"
 LICENSE = "GPL-3.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r4"
+PR = "r5"
 
 DEPENDS = "volk boost gflags glog"
 
 PV = "1.0.git"
 
-SRCREV = "e9aa854434b5c9b050e528251b2ef7c2a559760e"
+SRCREV = "fc10db2df26d36d13312d2eefc00ba5c6c466c15"
 
 # Make it easy to test against branches
 GIT_BRANCH = "master"
