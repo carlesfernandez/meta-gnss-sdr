@@ -9,7 +9,7 @@ DEPENDS = "volk boost gflags glog"
 
 PV = "1.0.git"
 
-SRCREV = "da6b704b39bec80e3ba8a6bfd776df8993644cc0"
+SRCREV = "b9db078852d0cd97d90ca9ad6ac9370342d48ceb"
 
 # Make it easy to test against branches
 GIT_BRANCH = "master"
