@@ -19,7 +19,6 @@ DISTRO ??= "geniux"
 #
 DISTRO_FEATURES:append = " opengl x11 usrmerge"
 DISTRO_FEATURES:remove = "ptest"
-DISTRO_FEATURES:append:zcu102-zynqmp = " fbdev"
 
 #
 # Use systemd for system initialization
@@ -210,7 +209,7 @@ PACKAGECONFIG:append:pn-nativesdk-qemu = " sdl"
 #
 
 # Configure a local mirror:
-SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/nanbield/"
+SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/scarthgap/"
 INHERIT += "own-mirrors"
 
 # Use the line below to keep source files under build/download, build the
@@ -250,8 +249,8 @@ PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 PREFERRED_PROVIDER_qemu-native = "qemu-native"
 PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
-PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
-PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
+# PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
+# PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 
 PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_googletest = "1.12.1"
