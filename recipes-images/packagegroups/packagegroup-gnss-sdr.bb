@@ -51,11 +51,8 @@ RDEPENDS:packagegroup-gnss-sdr-bin = " \
 
 SUMMARY:packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS:packagegroup-gnss-sdr-drivers = " \
-    dma-proxy \
-    dma-proxy-test \
     gnuradio-iio \
     gr-osmosdr \
-    iio-oscilloscope \
     libad9361-iio \
     libad9361-iio-dev \
     libhackrf \
