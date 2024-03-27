@@ -53,6 +53,7 @@ SUMMARY:packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS:packagegroup-gnss-sdr-drivers = " \
     gnuradio-iio \
     gr-osmosdr \
+    iio-oscilloscope \
     libad9361-iio \
     libad9361-iio-dev \
     libhackrf \
@@ -117,6 +118,7 @@ RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     nfs-utils-client \
     ntp \
     ntp-utils \
+    ntpdate \
     openssh-sftp \
     openssh-sftp-server \
     openssh-sshd \
