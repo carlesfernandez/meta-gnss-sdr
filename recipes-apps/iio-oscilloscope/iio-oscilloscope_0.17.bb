@@ -4,14 +4,15 @@ LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://license.txt;md5=cfe3dd5eb030dee299c43cb6f0b93096"
 PR = "r2"
 
-SRCREV = "74a00e66ddcafc7bb0bc6e36641f364254ef6da6"
+SRCREV = "39879ab906d4b370069623aadd6837addcda5c8f"
 
-GIT_BRANCH = "ubuntu20.04-v0.14"
+GIT_BRANCH = "main"
 SRC_URI = "git://github.com/analogdevicesinc/iio-oscilloscope.git;branch=${GIT_BRANCH};protocol=https"
 
 S = "${WORKDIR}/git"
 
 FILES:${PN} += "*"
 
-DEPENDS = "glib-2.0 gtk+ gtkdatabox fftw libxml2 curl jansson matio libad9361-iio"
+DEPENDS = "glib-2.0 gtk+3 gtkdatabox fftw libxml2 curl jansson matio libad9361-iio"
 inherit autotools cmake pkgconfig
+
