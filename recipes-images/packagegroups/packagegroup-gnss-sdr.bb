@@ -118,7 +118,6 @@ RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     nfs-utils-client \
     ntp \
     ntp-utils \
-    ntpdate \
     openssh-sftp \
     openssh-sftp-server \
     openssh-sshd \
