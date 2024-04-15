@@ -51,6 +51,10 @@ RDEPENDS:packagegroup-gnss-sdr-bin = " \
 
 SUMMARY:packagegroup-gnss-sdr-drivers = "RF front-end drivers and utilities."
 RDEPENDS:packagegroup-gnss-sdr-drivers = " \
+    ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "dma-proxy", "", d)} \
+    ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "dma-proxy-test", "", d)} \
+    ${@bb.utils.contains("SOC_FAMILY", "zynq", "dma-proxy", "", d)} \
+    ${@bb.utils.contains("SOC_FAMILY", "zynq", "dma-proxy-test", "", d)} \
     gnuradio-iio \
     gr-osmosdr \
     iio-oscilloscope \
