@@ -252,7 +252,6 @@ PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 # PREFERRED_PROVIDER_qemu-native_zedboard_zynq7 = "qemu-native-xilinx"
 # PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 
-PREFERRED_VERSION_gflags = "2.2.2"
 PREFERRED_VERSION_googletest = "1.12.1"
 PREFERRED_VERSION_uhd = "4.6"
 

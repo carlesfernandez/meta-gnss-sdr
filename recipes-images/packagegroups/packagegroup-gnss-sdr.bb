@@ -20,12 +20,10 @@ PROVIDES = "${PACKAGES}"
 
 SUMMARY:packagegroup-gnss-sdr-base = "Required packages."
 RDEPENDS:packagegroup-gnss-sdr-base = " \
+    abseil-cpp \
     armadillo \
     boost \
     fmt \
-    gflags \
-    gflags-bash-completion \
-    glog \
     gnsstk-dev \
     gnss-simulator \
     gnuplot \
