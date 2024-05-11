@@ -5,7 +5,7 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 PR = "r3"
 
-DEPENDS = "armadillo boost gflags git git-native glog gnsstk gnuradio gnutls googletest gr-iio \
+DEPENDS = "armadillo boost gflags git git-native glog gnsstk gnuradio gnutls googletest \
      libad9361-iio libiio libpcap matio pkgconfig protobuf protobuf-native pugixml \
      python3-mako-native volk"
 
