@@ -5,9 +5,9 @@ LICENSE = "GPL-3.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
 PR = "r3"
 
-DEPENDS = "volk boost gnuradio armadillo abseil-cpp matio libpcap gnutls \
-     googletest pugixml gnsstk git git-native protobuf protobuf-native pkgconfig \
-     python3-mako-native"
+DEPENDS = "abseil-cpp armadillo boost gnutls gnsstk googletest git git-native gnuradio \
+     libad9361-iio libiio libpcap matio pkgconfig protobuf protobuf-native pugixml \
+     python3-mako-native volk"     
 
 RDEPENDS:${PN} = "gnss-simulator gnuplot-x11"
 
@@ -39,7 +39,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.19.git"
 
-SRCREV = "4836785baca6c36b98d74e1998d812e2734e4ce6"
+SRCREV = "f80c5373b78b5124e70d1e6743654a79145f0721"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
