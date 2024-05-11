@@ -3,15 +3,19 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r2"
+PR = "r3"
 
-DEPENDS = "volk boost gnuradio armadillo gflags glog matio libpcap gnutls libiio libad9361-iio gr-iio \
-     googletest pugixml gpstk git git-native protobuf protobuf-native pkgconfig \
-     python3-mako python3-mako-native"
+DEPENDS = "armadillo boost gflags git git-native glog gnuradio gnutls gpstk gr-iio googletest \
+     libad9361-iio libiio libpcap matio pkgconfig protobuf protobuf-native pugixml \
+     python3-mako-native volk"
 
 RDEPENDS_${PN} = "gnuplot-x11 gnss-simulator"
 
-PACKAGECONFIG ??= "osmosdr fpga zeromq"
+PACKAGECONFIG ??= " \
+     osmosdr \
+     zeromq \
+     ${@bb.utils.contains("SOC_FAMILY", "zynq", "fpga", "", d)} \
+     ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "fpga", "", d)} "
 
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
@@ -35,7 +39,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.19.git"
 
-SRCREV = "fbc216c1a3822d248c76f07fd0ae32c730d4665d"
+SRCREV = "f80c5373b78b5124e70d1e6743654a79145f0721"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
