@@ -3,11 +3,11 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r3"
+PR = "r4"
 
-DEPENDS = "armadillo boost gflags git git-native glog gnuradio gnutls gpstk gr-iio googletest \
-     libad9361-iio libiio libpcap matio pkgconfig protobuf protobuf-native pugixml \
-     python3-mako-native volk"
+DEPENDS = "armadillo boost gflags git git-native glog gnuplot gnuradio gnutls gpstk \
+     gr-iio googletest libad9361-iio libiio libpcap matio pkgconfig protobuf protobuf-native \
+     pugixml python3-mako-native volk"
 
 RDEPENDS_${PN} = "gnuplot-x11 gnss-simulator"
 
@@ -17,15 +17,15 @@ PACKAGECONFIG ??= " \
      ${@bb.utils.contains("SOC_FAMILY", "zynq", "fpga", "", d)} \
      ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "fpga", "", d)} "
 
-PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
-PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
+PACKAGECONFIG[alltests] = "-DENABLE_UNIT_TESTING_EXTRA=ON, -DENABLE_UNIT_TESTING_EXTRA=OFF "
 PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
+PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
+PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
 PACKAGECONFIG[zeromq] = "-DENABLE_ZMQ=ON,-DENABLE_ZMQ=OFF "
 
 inherit distutils3-base cmake pkgconfig python3native
 
 EXTRA_OECMAKE += " \
-     -DENABLE_UNIT_TESTING_EXTRA=ON \
      -DENABLE_SYSTEM_TESTING_EXTRA=ON \
      -DCMAKE_INSTALL_PREFIX=/usr \
      -DENABLE_PLUTOSDR=ON \
