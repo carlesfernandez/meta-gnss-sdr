@@ -17,7 +17,7 @@ PACKAGECONFIG ??= " \
      ${@bb.utils.contains("SOC_FAMILY", "zynq", "fpga", "", d)} \
      ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "fpga", "", d)} "
 
-PACKAGECONFIG[alltests] = " -DENABLE_UNIT_TESTING_EXTRA=ON, -DENABLE_UNIT_TESTING_EXTRA=OFF "
+PACKAGECONFIG[alltests] = "-DENABLE_UNIT_TESTING_EXTRA=ON, -DENABLE_UNIT_TESTING_EXTRA=OFF "
 PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
