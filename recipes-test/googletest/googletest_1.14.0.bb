@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
 PROVIDES += "gmock gtest"
 
 S = "${WORKDIR}/git"
-SRCREV = "219af0d535635f173e58d7e8ef197b0bc48b878a"
+SRCREV = "f8d7d77c06936315286eb55f8de22cd23c188571"
 SRC_URI = "git://github.com/google/googletest.git;branch=main;protocol=https"
 
 inherit cmake
