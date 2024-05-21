@@ -228,7 +228,7 @@ CONF_VERSION = "2"
 GENIUX_CONF_VERSION = "1"
 
 # Add software bill-of-materials (SBoM) in SPDX json format
-INHERIT += "create-spdx"
+# INHERIT += "create-spdx"
 
 FORTRAN:forcevariable = ",fortran"
 
