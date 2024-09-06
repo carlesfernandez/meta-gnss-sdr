@@ -11,10 +11,9 @@ DEPENDS = "armadillo boost gflags glog gnuradio gpstk gtest git git-native gnutl
 
 RDEPENDS_${PN} = "gnuplot gnss-simulator"
 
-GNSSSDR_DRIVER_DEPS = "${@bb.utils.contains("SOC_FAMILY", "zynq", "ad9361 dmaproxy", "fmcomms2 osmosdr plutosdr uhd", d)} "
+GNSSSDR_DRIVER_DEPS = "${@bb.utils.contains("SOC_FAMILY", "zynq", "ad9361 dmaproxy", "fmcomms2 logging osmosdr plutosdr uhd", d)} "
 
 PACKAGECONFIG ??= " \
-     logging \
      zeromq \
      ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "ad9361 dmaproxy", "${GNSSSDR_DRIVER_DEPS}", d)} "
 
