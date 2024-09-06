@@ -3,34 +3,43 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r8"
+PR = "r9"
 
-DEPENDS = "armadillo boost gflags glog gnuradio gpstk gr-iio gtest git git-native gnutls \
-     libad9361-iio libiio libpcap matio pkgconfig protobuf protobuf-native pugixml \
+DEPENDS = "armadillo boost gflags glog gnuradio gpstk gtest git git-native gnutls \
+     libpcap matio pkgconfig protobuf protobuf-native pugixml \
      python3-mako-native volk"
 
 RDEPENDS_${PN} = "gnuplot gnss-simulator"
 
-PACKAGECONFIG ??= " \
-     osmosdr \
-     zeromq \
-     ${@bb.utils.contains("SOC_FAMILY", "zynq", "fpga", "", d)} \
-     ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "fpga", "", d)} "
+GNSSSDR_DRIVER_DEPS = "${@bb.utils.contains("SOC_FAMILY", "zynq", "ad9361 dmaproxy", "fmcomms2 osmosdr plutosdr uhd", d)} "
 
+PACKAGECONFIG ??= " \
+     logging \
+     zeromq \
+     ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "ad9361 dmaproxy", "${GNSSSDR_DRIVER_DEPS}", d)} "
+
+# General flags
 PACKAGECONFIG[alltests] = "-DENABLE_UNIT_TESTING_EXTRA=ON, -DENABLE_UNIT_TESTING_EXTRA=OFF "
-PACKAGECONFIG[fpga] = "-DENABLE_FPGA=ON,-DENABLE_FPGA=OFF "
 PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
+
+# Signal sources
+PACKAGECONFIG[customplutosdr] = "-DENABLE_AD936X_SDR=ON,-DENABLE_AD936X_SDR=OFF,libiio libad9361-iio "
+PACKAGECONFIG[fmcomms2] = "-DENABLE_FMCOMMS2=ON,-DENABLE_FMCOMMS2=OFF,libiio libad9361-iio gr-iio "
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
+PACKAGECONFIG[plutosdr] = "-DENABLE_PLUTOSDR=ON,-DENABLE_PLUTOSDR=OFF,libiio libad9361-iio gr-iio "
+PACKAGECONFIG[uhd] = "-DENABLE_UHD=ON,-DENABLE_UHD=OFF "
 PACKAGECONFIG[zeromq] = "-DENABLE_ZMQ=ON,-DENABLE_ZMQ=OFF "
+
+# Signal sources for FPGA
+PACKAGECONFIG[ad9361] = "-DENABLE_FPGA=ON -DENABLE_AD9361=ON,-DENABLE_AD9361=OFF,libiio libad9361-iio "
+PACKAGECONFIG[dmaproxy] = "-DENABLE_FPGA=ON -DENABLE_DMA_PROXY=ON,-DENABLE_DMA_PROXY=OFF,dma-proxy dma-proxy-test "
+PACKAGECONFIG[max2771] = "-DENABLE_FPGA=ON -DENABLE_MAX2771=ON,-DENABLE_MAX2771=OFF "
 
 inherit distutils3-base cmake pkgconfig python3native
 
 EXTRA_OECMAKE += " \
      -DENABLE_SYSTEM_TESTING_EXTRA=ON \
      -DCMAKE_INSTALL_PREFIX=/usr \
-     -DENABLE_PLUTOSDR=ON \
-     -DENABLE_FMCOMMS2=ON \
-     -DENABLE_AD9361=ON \
      -DENABLE_RAW_UDP=ON \
      -DENABLE_INSTALL_TESTS=ON \
      -DENABLE_PACKAGING=ON \
@@ -39,7 +48,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.19.git"
 
-SRCREV = "6836ac44fb5cb8d9fc5327aac5bb1b8ab1d9b370"
+SRCREV = "951520f581bd7c1cd15264efda570489d24a3387"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
