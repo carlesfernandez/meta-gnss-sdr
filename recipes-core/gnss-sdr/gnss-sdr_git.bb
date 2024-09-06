@@ -3,7 +3,7 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r8"
+PR = "r9"
 
 DEPENDS = "armadillo boost gflags git git-native glog gnsstk gnuplot gnuradio gnutls \
      googletest libpcap matio pkgconfig protobuf protobuf-native \
@@ -23,9 +23,9 @@ PACKAGECONFIG[logging] = "-DENABLE_LOG=ON,-DENABLE_LOG=OFF "
 
 # Signal sources
 PACKAGECONFIG[customplutosdr] = "-DENABLE_AD936X_SDR=ON,-DENABLE_AD936X_SDR=OFF,libiio libad9361-iio "
-PACKAGECONFIG[fmcomms2] = "-DENABLE_FMCOMMS2=ON,-DENABLE_FMCOMMS2=OFF,libiio libad9361-iio gr-iio "
+PACKAGECONFIG[fmcomms2] = "-DENABLE_FMCOMMS2=ON,-DENABLE_FMCOMMS2=OFF,libiio libad9361-iio "
 PACKAGECONFIG[osmosdr] = "-DENABLE_OSMOSDR=ON,-DENABLE_OSMOSDR=OFF,rtl-sdr gr-osmosdr, "
-PACKAGECONFIG[plutosdr] = "-DENABLE_PLUTOSDR=ON,-DENABLE_PLUTOSDR=OFF,libiio libad9361-iio gr-iio "
+PACKAGECONFIG[plutosdr] = "-DENABLE_PLUTOSDR=ON,-DENABLE_PLUTOSDR=OFF,libiio libad9361-iio "
 PACKAGECONFIG[uhd] = "-DENABLE_UHD=ON,-DENABLE_UHD=OFF "
 PACKAGECONFIG[zeromq] = "-DENABLE_ZMQ=ON,-DENABLE_ZMQ=OFF "
 
