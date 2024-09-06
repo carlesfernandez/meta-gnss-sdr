@@ -11,11 +11,11 @@ DEPENDS = "armadillo boost gflags glog gnuradio gpstk gtest git git-native gnutl
 
 RDEPENDS_${PN} = "gnuplot gnss-simulator"
 
-GNSSSDR_DRIVER_DEPS = "${@bb.utils.contains("SOC_FAMILY", "zynq", "ad9361 dmaproxy", "fmcomms2 logging osmosdr plutosdr uhd", d)} "
+GNSSSDR_DRIVER_DEPS = "${@bb.utils.contains("SOC_FAMILY", "zynq", "ad9361 dmaproxy max2771", "fmcomms2 logging osmosdr plutosdr uhd", d)} "
 
 PACKAGECONFIG ??= " \
      zeromq \
-     ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "ad9361 dmaproxy", "${GNSSSDR_DRIVER_DEPS}", d)} "
+     ${@bb.utils.contains("SOC_FAMILY", "zynqmp", "ad9361 dmaproxy max2771", "${GNSSSDR_DRIVER_DEPS}", d)} "
 
 # General flags
 PACKAGECONFIG[alltests] = "-DENABLE_UNIT_TESTING_EXTRA=ON, -DENABLE_UNIT_TESTING_EXTRA=OFF "
@@ -47,7 +47,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.19.git"
 
-SRCREV = "951520f581bd7c1cd15264efda570489d24a3387"
+SRCREV = "85f935afe9cb3b8990c9e4352122449550fc44c0"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
