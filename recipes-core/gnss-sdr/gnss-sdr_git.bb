@@ -3,7 +3,7 @@ AUTHOR = "Carles Fernandez-Prades <carles.fernandez@cttc.es>"
 HOMEPAGE = "https://gnss-sdr.org"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=31f43bdb1ab7b19dae6e891241ca0568"
-PR = "r12"
+PR = "r13"
 
 DEPENDS = "armadillo boost gflags glog gnuradio gnuplot gpstk gtest git git-native gnutls \
      libpcap matio pkgconfig protobuf protobuf-native pugixml \
@@ -47,7 +47,7 @@ EXTRA_OECMAKE += " \
 
 PV = "0.0.19.git"
 
-SRCREV = "3df1237dda821f6dd0750eb5da84575a79b8443d"
+SRCREV = "dc55847aeee29432c43076709c4916b5c577eb36"
 
 # Make it easy to test against branches
 GIT_BRANCH = "next"
