@@ -19,6 +19,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-xilinx/meta-xilinx-core \
   ##COREBASE##/../meta-xilinx/meta-xilinx-standalone \
   ##COREBASE##/../meta-xilinx-tools \
+  ##COREBASE##/../meta-arm \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-intel \
   ##COREBASE##/../meta-sdr \
