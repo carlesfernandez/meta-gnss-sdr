@@ -2,6 +2,7 @@ From d6d1402eefe7708df781fdbd6edfde8b89411462 Mon Sep 17 00:00:00 2001
 From: Carles Fernandez <carles.fernandez@gmail.com>
 Date: Mon, 31 Aug 2020 19:32:46 +0200
 Subject: [PATCH] remove-example
+Upstream-Status: Pending
 
 ---
  Makefile.am | 2 +-
