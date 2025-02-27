@@ -11,7 +11,8 @@ SRC_URI = " \
 	file://LICENSE \
 "
 
-S = "${WORKDIR}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 DEPENDS = "dma-proxy"
 
