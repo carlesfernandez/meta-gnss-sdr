@@ -8,6 +8,9 @@ RDEPENDS:${PN} = "e2fsprogs-resize2fs parted"
 
 SRC_URI = "file://resize-rootfs.sh"
 
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
+
 inherit update-rc.d
 
 INITSCRIPT_NAME = "resize-rootfs"
@@ -15,7 +18,7 @@ INITSCRIPT_PARAMS = "start 10 S ."
 
 do_install () {
     install -d ${D}${sysconfdir}/init.d
-    install -m 0755 ${WORKDIR}/resize-rootfs.sh ${D}${sysconfdir}/init.d/${PN}
+    install -m 0755 ${UNPACKDIR}/resize-rootfs.sh ${D}${sysconfdir}/init.d/${PN}
 }
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
