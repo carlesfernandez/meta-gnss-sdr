@@ -233,6 +233,7 @@ FORTRAN:forcevariable = ",fortran"
 
 LICENSE_FLAGS_ACCEPTED += "xilinx"
 LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
+XILINX_WITH_ESW ?= "sdt"
 
 PACKAGECONFIG:remove:pn-qtbase = "tests examples"
 
