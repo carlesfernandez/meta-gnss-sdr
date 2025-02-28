@@ -1,19 +1,20 @@
 SUMMARY = "A GTK widget to display large sets of data as dots (or lines)"
 HOMEPAGE = "https://github.com/erikd/gtkdatabox"
 LICENSE = "LGPL-2.0-only"
-LIC_FILES_CHKSUM = "file://COPYING;md5=7fbc338309ac38fefcd64b04bb903e34"
-PR = "r1"
+LIC_FILES_CHKSUM = "file://COPYING;md5=6f256a235d543063c2bfb726feda0a13"
+PR = "r0"
 
-PV = "0.9.3.1.GTK2"
+PV = "1.0"
 
-GIT_BRANCH = "GTK2"
-SRC_URI = "git://git.code.sf.net/p/gtkdatabox/git;branch=${GIT_BRANCH};protocol=https \
-           file://0001-remove-example.patch \
-           "
-SRCREV = "e877aecac861042b4da5bf209dc9178583d7d2f7"
+SRC_URI = "https://sourceforge.net/projects/gtkdatabox/files/gtkdatabox-1/gtkdatabox-1.0.0.tar.gz \
+          file://0001-remove-example.patch \
+          "
 
-S = "${WORKDIR}/git"
+SRC_URI[md5sum] = "db3a37a4495e18533cfed42f556a59f6"
+SRC_URI[sha256sum] = "8bee70206494a422ecfec9a88d32d914c50bb7a0c0e8fedc4512f5154aa9d3e3"
 
-DEPENDS = "pkgconfig gtk+ gtk-doc pango cairo glib-2.0 glib-2.0-native"
+S = "${WORKDIR}/gtkdatabox-1.0.0"
+
+DEPENDS = "pkgconfig gtk+3 gtk-doc-native glade pango cairo glib-2.0 glib-2.0-native"
 
 inherit autotools pkgconfig

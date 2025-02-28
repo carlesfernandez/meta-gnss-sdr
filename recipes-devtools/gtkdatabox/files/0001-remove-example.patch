@@ -2,6 +2,7 @@ From d6d1402eefe7708df781fdbd6edfde8b89411462 Mon Sep 17 00:00:00 2001
 From: Carles Fernandez <carles.fernandez@gmail.com>
 Date: Mon, 31 Aug 2020 19:32:46 +0200
 Subject: [PATCH] remove-example
+Upstream-Status: Pending
 
 ---
  Makefile.am | 2 +-
@@ -11,12 +12,16 @@ diff --git a/Makefile.am b/Makefile.am
 index ac1c11f..c7e1818 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -3,7 +3,7 @@
+@@ -3,10 +3,10 @@
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = gtkdatabox.pc
  
--SUBDIRS = gtk glade examples 
+-SUBDIRS = gtk glade examples doc
 +SUBDIRS = gtk glade
  
- EXTRA_DIST = depcomp scripts gtkdatabox.pc.in gtkdatabox.spec.in glade/gtkdatabox.xml api
+ EXTRA_DIST = m4 depcomp scripts gtkdatabox.pc.in gtkdatabox.spec.in glade/gtkdatabox.xml
  
+-DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc
++DISTCHECK_CONFIGURE_FLAGS = --enable-glade
+
+ ACLOCAL_AMFLAGS = -I m4
