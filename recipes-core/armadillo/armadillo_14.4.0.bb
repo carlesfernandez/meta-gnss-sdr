@@ -6,9 +6,11 @@ PR = "r0"
 
 SRC_URI = "https://sourceforge.net/projects/arma/files/armadillo-${PV}.tar.xz"
 
-SRC_URI[md5sum] = "c33b4eb1cd593d2449db3e17235c84a0"
-SRC_URI[sha256sum] = "03b62f8c09e4f5d74643b478520741b8e27b55e7e4525978fcae2f5d791ac3bf"
+SRC_URI[md5sum] = "abb97193a856b6223ef6ef1b297efe21"
+SRC_URI[sha256sum] = "023242fd59071d98c75fb015fd3293c921132dc39bf46d221d4b059aae8d79f4"
 
+# FIXME: Build paths are currently embedded
+INSANE_SKIP:${PN}-dev += "buildpaths"
 
 EXTRA_OECMAKE += " -DBUILD_SHARED_LIBS=ON"
 DEPENDS = "lapack"
