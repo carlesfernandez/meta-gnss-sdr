@@ -16,6 +16,9 @@ S = "${WORKDIR}/git"
 RDEPENDS:${PN} = "bash"
 inherit cmake
 
+# FIXME: Build paths are currently embedded
+INSANE_SKIP:${PN}-dev += "buildpaths"
+
 EXTRA_OECMAKE += " -DCMAKE_SKIP_INSTALL_RPATH=ON -DCMAKE_SKIP_RPATH=ON -DUSE_RPATH=OFF -DBUILD_EXT=ON -DBUILD_PYTHON=OFF"
 
 PACKAGES = "gnsstk gnsstk-dev gnsstk-dbg"
