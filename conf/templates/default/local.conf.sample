@@ -253,7 +253,7 @@ PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 # PREFERRED_PROVIDER_nativesdk-qemu_zedboard_zynq7 = "nativesdk-qemu-xilinx"
 
 PREFERRED_VERSION_googletest = "1.14.0"
-PREFERRED_VERSION_uhd = "4.6"
+PREFERRED_VERSION_uhd = "4.8"
 
 INSANE_SKIP:sip3-native:append = "already-stripped"
 
