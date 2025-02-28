@@ -58,6 +58,7 @@ S = "${WORKDIR}/git"
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
 
 INSANE_SKIP:gnss-sdr:append = "already-stripped"
+INSANE_SKIP:${PN}-dbg += "buildpaths"
 
 FILES:${PN} = "${bindir}/ \
      ${bindir}/gnss-sdr \
