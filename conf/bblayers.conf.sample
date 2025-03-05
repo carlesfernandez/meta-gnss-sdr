@@ -21,6 +21,7 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-xilinx/meta-xilinx-vendor \
   ##COREBASE##/../meta-xilinx/meta-xilinx-standalone \
   ##COREBASE##/../meta-xilinx-tools \
+  ##COREBASE##/../meta-adi/meta-adi-core \
   ##COREBASE##/../meta-raspberrypi \
   ##COREBASE##/../meta-intel \
   ##COREBASE##/../meta-swupdate \

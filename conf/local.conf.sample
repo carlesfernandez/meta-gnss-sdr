@@ -235,6 +235,8 @@ GENIUX_CONF_VERSION = "1"
 FORTRAN:forcevariable = ",fortran"
 
 LICENSE_FLAGS_WHITELIST += "xilinx"
+KERNEL_DTB:zcu102-zynqmp = "zynqmp-zcu102-rev10-ad9361-fmcomms5"
+KERNEL_DTB:zc706-zynq7 = "zynq-zc706-adv7511-ad9361-fmcomms5"
 
 PACKAGECONFIG:remove:pn-qtbase = "tests gl"
 PACKAGECONFIG:append:pn-gnuplot = " cairo qt5"
