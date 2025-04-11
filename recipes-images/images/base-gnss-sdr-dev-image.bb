@@ -7,7 +7,6 @@ require native-sdk.inc
 require version-image.inc
 
 IMAGE_FEATURES += " \
-    debug-tweaks \
     dev-pkgs \
     package-management \
     splash \

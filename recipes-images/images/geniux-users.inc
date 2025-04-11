@@ -1,6 +1,3 @@
-IMAGE_FEATURES:remove = "debug-tweaks"
-EXTRA_IMAGE_FEATURES:remove = "debug-tweaks"
-
 inherit extrausers
 
 # All passwords set to 'geniux' (without quotes)

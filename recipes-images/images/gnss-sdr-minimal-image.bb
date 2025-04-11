@@ -7,7 +7,6 @@ PR = "r4"
 inherit core-image image-buildinfo
 
 IMAGE_FEATURES += " \
-    debug-tweaks \
     ssh-server-openssh \
     splash \
 "
