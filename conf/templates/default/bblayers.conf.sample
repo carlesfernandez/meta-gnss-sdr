@@ -15,7 +15,6 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-oe/meta-gnome \
   ##COREBASE##/../meta-oe/meta-multimedia \
   ##COREBASE##/../meta-qt5 \
-  ##COREBASE##/../meta-xilinx/meta-xilinx-bsp \
   ##COREBASE##/../meta-xilinx/meta-xilinx-core \
   ##COREBASE##/../meta-xilinx/meta-xilinx-standalone \
   ##COREBASE##/../meta-xilinx-tools \
@@ -26,3 +25,5 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
   "
+
+  BBMASK = "meta-xilinx/meta-xilinx-core/recipes-graphics/drm/libdrm_%.bbappend"
