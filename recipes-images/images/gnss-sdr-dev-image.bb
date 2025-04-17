@@ -4,6 +4,7 @@ SUMMARY = "An image with a development/debug environment suitable for building G
 LICENSE = "MIT"
 PR = "r3"
 
+IMAGE_FEATURES += "allow-empty-password allow-root-login empty-root-password post-install-logging"
 EXTRA_IMAGE_FEATURES += " tools-profile dbg-pkgs"
 
 TOOLCHAIN_TARGET_TASK += " \
