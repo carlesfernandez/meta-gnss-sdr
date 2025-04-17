@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 
 version="1.0"
-branches="master styhead scarthgap nanbield mickledore langdale kirkstone honister hardknott gatesgarth dunfell zeus warrior thud sumo rocko"
+branches="master walnascar styhead scarthgap nanbield mickledore langdale kirkstone honister hardknott gatesgarth dunfell zeus warrior thud sumo rocko"
 
 if ! [ -x "$(command -v git)" ]; then
     echo "Please install git before using this script."
