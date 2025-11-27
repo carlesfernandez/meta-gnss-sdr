@@ -105,9 +105,6 @@ RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     libuio \
     lighttpd \
     linux-firmware \
-    lttng-modules \
-    lttng-tools \
-    lttng-ust \
     nano \
     ncurses \
     net-tools \
