@@ -1,1 +1,0 @@
-DEPENDS += "ca-certificates-native"

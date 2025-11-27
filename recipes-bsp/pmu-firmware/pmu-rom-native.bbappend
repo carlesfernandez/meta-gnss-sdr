@@ -1,1 +1,0 @@
-SRC_URI = "https://www.xilinx.com/bin/public/openDownload?filename=PMU_ROM.tar.gz;downloadfilename=PMU_ROM.tar.gz"

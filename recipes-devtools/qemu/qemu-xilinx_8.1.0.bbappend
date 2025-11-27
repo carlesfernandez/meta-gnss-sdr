@@ -1,1 +1,0 @@
-INSANE_SKIP:${PN}-common += "textrel"
