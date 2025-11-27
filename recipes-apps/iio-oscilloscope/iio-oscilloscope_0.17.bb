@@ -9,8 +9,6 @@ SRCREV = "39879ab906d4b370069623aadd6837addcda5c8f"
 GIT_BRANCH = "main"
 SRC_URI = "git://github.com/analogdevicesinc/iio-oscilloscope.git;branch=${GIT_BRANCH};protocol=https"
 
-S = "${WORKDIR}/git"
-
 FILES:${PN} += "*"
 
 DEPENDS = "glib-2.0 gtk+3 gtkdatabox fftw libxml2 curl jansson matio libad9361-iio"

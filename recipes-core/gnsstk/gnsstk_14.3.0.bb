@@ -12,7 +12,6 @@ SRC_URI = "git://github.com/SGL-UT/gnsstk.git;branch=${GIT_BRANCH};protocol=http
           file://0001-Patch-for-GCC13.patch \
           "
 SRCREV = "fe45a3933ddbdc82d28900897ed43fe989c6dfae"
-S = "${WORKDIR}/git"
 RDEPENDS:${PN} = "bash"
 inherit cmake
 
