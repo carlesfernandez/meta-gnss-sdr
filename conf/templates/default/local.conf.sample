@@ -206,7 +206,7 @@ PACKAGECONFIG:append:pn-nativesdk-qemu = " sdl"
 #
 
 # Configure a local mirror:
-SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/walnascar/"
+SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/whinlatter/"
 INHERIT += "own-mirrors"
 
 # Use the line below to keep source files under build/download, build the
