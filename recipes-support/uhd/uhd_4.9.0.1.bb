@@ -1,7 +1,7 @@
 include uhd.inc
 PR = "r0"
 
-LIC_FILES_CHKSUM = "file://LICENSE.md;md5=d20118f84adb62b1e27fcce89b9b240a"
+LIC_FILES_CHKSUM = "file://../LICENSE.md;md5=d20118f84adb62b1e27fcce89b9b240a"
 
 SRC_URI = "git://github.com/EttusResearch/uhd.git;protocol=https;branch=UHD-4.9"
 
