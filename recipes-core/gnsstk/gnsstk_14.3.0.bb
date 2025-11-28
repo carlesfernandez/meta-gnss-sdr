@@ -10,6 +10,7 @@ LIC_FILES_CHKSUM = "file://COPYING.md;md5=d32239bcb673463ab874e80d47fae504"
 GIT_BRANCH = "stable"
 SRC_URI = "git://github.com/SGL-UT/gnsstk.git;branch=${GIT_BRANCH};protocol=https \
           file://0001-Patch-for-GCC13.patch \
+          file://0002-Patch-for-GCC15.patch \
           "
 SRCREV = "fe45a3933ddbdc82d28900897ed43fe989c6dfae"
 RDEPENDS:${PN} = "bash"
