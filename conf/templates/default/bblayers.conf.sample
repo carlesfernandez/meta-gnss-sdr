@@ -23,5 +23,3 @@ BBLAYERS ?= " \
   ##COREBASE##/../meta-sdr \
   ##COREBASE##/../meta-gnss-sdr \
   "
-
-BBMASK = "meta-xilinx/meta-xilinx-core/recipes-graphics/drm/libdrm_%.bbappend"
