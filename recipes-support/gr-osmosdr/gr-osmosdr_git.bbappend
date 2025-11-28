@@ -1,4 +1,2 @@
-SRC_URI = "git://gitea.osmocom.org/sdr/gr-osmosdr;protocol=https;branch=master"
-
-# Disable Python until fix
-EXTRA_OECMAKE = "-DENABLE_DEFAULT=OFF -DENABLE_PYTHON=OFF"
+SRC_URI = "git://github.com/carlesfernandez/gr-osmosdr;protocol=https;branch=fix-boost189"
+SRCREV = "68f30489d233d29667981afa9ed6aa2b77135e30"
