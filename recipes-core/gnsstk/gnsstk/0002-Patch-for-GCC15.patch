@@ -14,3 +14,4 @@ Upstream-Status: Pending
 +#include <cstdint>
  #include "CommonTime.hpp"
  #include "SVHealth.hpp"
+ 
