@@ -1,14 +1,13 @@
 SUMMARY = "MATLAB MAT File I/O Library"
 HOMEPAGE = "https://github.com/tbeu/matio"
 LICENSE = "BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://COPYING;md5=34985bae1a265d9bf53226089cd74566"
+LIC_FILES_CHKSUM = "file://COPYING;md5=9d9dce8b2ae887cf64af04913523847c"
 PR = "r0"
 
 DEPENDS = "zlib hdf5"
 
 SRC_URI = "gitsm://github.com/tbeu/matio.git;branch=master;protocol=https"
-SRCREV = "4677b3fd4030c52e0fe45a863c840c78fb56f9a3"
-S = "${WORKDIR}/git"
+SRCREV = "9a032693865af286a1ebb1bb0a0fac726553dea3"
 
 inherit autotools pkgconfig
 
