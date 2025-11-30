@@ -3,11 +3,11 @@
 #
 # Usage: ./push-to-repo.sh [remote]
 #
-# SPDX-FileCopyrightText: 2023-2025 Carles Fernandez-Prades <cfernandez(at)cttc.es>
+# SPDX-FileCopyrightText: 2023 Carles Fernandez-Prades <cfernandez(at)cttc.es>
 # SPDX-License-Identifier: MIT
 
-version="2.0"
-branches="master whinlatter walnascar styhead scarthgap nanbield mickledore langdale kirkstone honister hardknott gatesgarth"
+version="1.0"
+branches="master walnascar styhead scarthgap nanbield mickledore langdale kirkstone honister hardknott gatesgarth dunfell zeus warrior thud sumo rocko"
 
 if ! [ -x "$(command -v git)" ]; then
     echo "Please install git before using this script."
