@@ -3,7 +3,7 @@
 #
 # Usage: ./push-to-repo.sh [remote]
 #
-# SPDX-FileCopyrightText: 2023 Carles Fernandez-Prades <cfernandez(at)cttc.es>
+# SPDX-FileCopyrightText: 2023-2025 Carles Fernandez-Prades <cfernandez(at)cttc.es>
 # SPDX-License-Identifier: MIT
 
 version="1.0"
