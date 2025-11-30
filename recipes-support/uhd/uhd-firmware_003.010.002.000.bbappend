@@ -1,1 +1,0 @@
-S = "${UNPACKDIR}/uhd-images_${PV}-release"
