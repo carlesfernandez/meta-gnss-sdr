@@ -252,7 +252,7 @@ PREFERRED_PROVIDER_nativesdk-qemu = "nativesdk-qemu"
 
 PREFERRED_RPROVIDER_libnss-mdns = "avahi-libnss-mdns"
 
-PREFERRED_VERSION_googletest = "1.16.0"
+PREFERRED_VERSION_googletest = "1.17.0"
 PREFERRED_VERSION_uhd = "4.9.0.1"
 
 INSANE_SKIP:sip3-native:append = "already-stripped"
