@@ -257,3 +257,5 @@ BBMASK += "/meta-sdr/recipes-support/bladerf/libtecla.*"
 
 BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
+
+ROOT_HOME = "/root"
