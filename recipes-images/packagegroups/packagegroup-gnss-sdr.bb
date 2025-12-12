@@ -138,6 +138,7 @@ RDEPENDS:packagegroup-gnss-sdr-base-extended = "\
     tcpdump \
     time \
     unzip \
+    usbutils \
     util-linux \
     vim \
     vim-vimrc \
