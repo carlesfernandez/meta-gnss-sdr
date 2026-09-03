@@ -5,6 +5,6 @@ PR = "r1"
 
 do_install:append() {
     install -d ${D}${sysconfdir}/ssh
-    install -m 0644 ${WORKDIR}/geniux_banner ${D}${sysconfdir}/ssh/geniux_banner
+    install -m 0644 ${UNPACKDIR}/geniux_banner ${D}${sysconfdir}/ssh/geniux_banner
     echo "Banner /etc/ssh/geniux_banner" >> ${D}${sysconfdir}/ssh/sshd_config
 }

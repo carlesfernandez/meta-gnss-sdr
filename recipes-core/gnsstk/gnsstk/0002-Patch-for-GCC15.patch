@@ -1,0 +1,17 @@
+From 5745cbf059422afc614ae6d05f75a60d0196434a Mon Sep 17 00:00:00 2001
+From: Carles Fernandez <carles.fernandez@cttc.es>
+Date: Thu, 7 Dec 2023 13:07:31 +0000
+Subject: [PATCH] Patch for GCC13
+Upstream-Status: Pending
+
+---
+--- a/core/lib/NewNav/GLOCNavHeader.hpp
++++ b/core/lib/NewNav/GLOCNavHeader.hpp
+@@ -39,6 +39,7 @@
+ #ifndef GNSSTK_GLOCNAVHEADER_HPP
+ #define GNSSTK_GLOCNAVHEADER_HPP
+ 
++#include <cstdint>
+ #include "CommonTime.hpp"
+ #include "SVHealth.hpp"
+ 

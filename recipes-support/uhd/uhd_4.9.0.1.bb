@@ -3,12 +3,11 @@ PR = "r0"
 
 LIC_FILES_CHKSUM = "file://../LICENSE.md;md5=d20118f84adb62b1e27fcce89b9b240a"
 
-SRC_URI = "git://github.com/EttusResearch/uhd.git;protocol=https;branch=UHD-4.8"
+SRC_URI = "git://github.com/EttusResearch/uhd.git;protocol=https;branch=UHD-4.9"
 
-SRCREV = "308126a479ca19dfaebfe4784b375e608788d763"
+SRCREV = "9ec1f58234c572adbb3624c225c7c641b5115d3b"
 
-S = "${WORKDIR}/sources-unpack/git/host/git/host"
-UNPACKDIR = "${WORKDIR}/sources-unpack/git/host"
+S = "${UNPACKDIR}/${BP}/host"
 
 INSANE_SKIP:${PN}-src += "buildpaths"
 INSANE_SKIP:${PN} += "buildpaths"

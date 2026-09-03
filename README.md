@@ -3,9 +3,9 @@
 This repo defines an OpenEmbedded layer for the execution of
 [gnss-sdr](https://gnss-sdr.org) on embedded devices.
 
-**DO NOU USE THE MASTER BRANCH OF THIS REPOSITORY, IT IS ONLY FOR
-EXPERIMENTAL PURPOSES. IF YOU ARE INTERESTED IN BUILDING IMAGES AND THE SDK
-DEFINED IN THIS LAYER ON A VIRTUALIZED ENVIRONMENT, PLEASE CHECK
+**DO NOU USE THE MASTER BRANCH OF THIS REPOSITORY, IT IS ONLY FOR EXPERIMENTAL
+PURPOSES. IF YOU ARE INTERESTED IN BUILDING IMAGES AND THE SDK DEFINED IN THIS
+LAYER ON A VIRTUALIZED ENVIRONMENT, PLEASE CHECK
 https://github.com/carlesfernandez/yocto-geniux**
 
 Check the branches of this repo to get the meta-gnss-sdr layer for different

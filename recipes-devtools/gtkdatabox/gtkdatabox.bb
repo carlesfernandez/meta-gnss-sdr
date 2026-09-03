@@ -13,7 +13,7 @@ SRC_URI = "https://sourceforge.net/projects/gtkdatabox/files/gtkdatabox-1/gtkdat
 SRC_URI[md5sum] = "db3a37a4495e18533cfed42f556a59f6"
 SRC_URI[sha256sum] = "8bee70206494a422ecfec9a88d32d914c50bb7a0c0e8fedc4512f5154aa9d3e3"
 
-S = "${WORKDIR}/gtkdatabox-1.0.0"
+S = "${UNPACKDIR}/gtkdatabox-1.0.0"
 
 DEPENDS = "pkgconfig gtk+3 gtk-doc-native glade pango cairo glib-2.0 glib-2.0-native"
 

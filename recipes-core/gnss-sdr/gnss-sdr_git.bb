@@ -53,11 +53,10 @@ GIT_BRANCH = "next"
 
 SRC_URI = "git://github.com/gnss-sdr/gnss-sdr.git;branch=${GIT_BRANCH};protocol=https"
 
-S = "${WORKDIR}/git"
-
 PACKAGES = "gnss-sdr-dbg gnss-sdr"
 
 INSANE_SKIP:gnss-sdr:append = "already-stripped"
+INSANE_SKIP:${PN}-dbg += "buildpaths"
 
 FILES:${PN} = "${bindir}/ \
      ${bindir}/gnss-sdr \
